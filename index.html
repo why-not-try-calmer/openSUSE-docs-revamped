@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="None">
+    
+    
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>openSUSE User Documentation Project</title>
+    <link href="./css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="./css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="./css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/bootstrap-3.3.7.min.js"></script>
+    <script src="./js/highlight.pack.js"></script>
+    
+      <script src="./js/elasticlunr.min.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '.';
+      var is_top_frame = (window === window.parent);
+        
+        var pageToc = [
+          {title: "Welcome", url: "#_top", children: [
+              {title: "For New Users", url: "#for-new-users" },
+              {title: "For experienced Users", url: "#for-experienced-users" },
+              {title: "Documentation Sections", url: "#documentation-sections" },
+          ]},
+        ];
+
+    </script>
+    <script src="./js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+<nav class="navbar wm-page-top-frame">
+  <div class="container-fluid wm-top-container">
+    
+    <div class="wm-top-tool pull-right wm-vcenter">
+      <form class="dropdown wm-vcentered" id="wm-search-form" action="./search.html">
+        
+        <button id="wm-search-show" class="btn btn-sm btn-default" type="submit"
+          ><i class="fa fa-search" aria-hidden="true"></i></button>
+
+        <div class="input-group input-group-sm wm-top-search">
+          <input type="text" name="q" class="form-control" id="mkdocs-search-query" placeholder="Search" autocomplete="off">
+          <span class="input-group-btn" role="search">
+            
+            <button class="btn btn-default dropdown-toggle collapse" data-toggle="dropdown" type="button"><span class="caret"></span></button>
+            <ul id="mkdocs-search-results" class="dropdown-menu dropdown-menu-right"></ul>
+            <button id="wm-search-go" class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+          </span>
+        </div>
+      </form>
+    </div>
+
+    
+    <div class="wm-top-tool wm-vcenter pull-right wm-small-left">
+      <button id="wm-toc-button" type="button" class="btn btn-sm btn-default wm-vcentered"><i class="fa fa-th-list" aria-hidden="true"></i></button>
+    </div>
+
+    
+    
+
+    
+    <a href="" class="wm-top-brand wm-top-link wm-vcenter">
+      
+      <div class="wm-top-title">
+        openSUSE User Documentation Project<br>
+        
+      </div>
+    </a>
+  </div>
+</nav>
+
+  <div id="main-content" class="wm-page-top-frame">
+    
+<nav class="wm-toc-pane">
+  
+  <ul class="wm-toctree">
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Pre-Install</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="new_user_considerations.md" class="wm-article-link wm-toc-text">New user nstall considerations</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="distro_choice.md" class="wm-article-link wm-toc-text">Leap or Tumbleweed</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="desktop_choice.md" class="wm-article-link wm-toc-text">Desktop Environment</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="media_choice.md" class="wm-article-link wm-toc-text">Full, Live  or net install</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="full_or_dual_boot.md" class="wm-article-link wm-toc-text">Full disk install or Dual Boot</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="disk_partition.md" class="wm-article-link wm-toc-text">Partitioning your disk</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="disk_encryption.md" class="wm-article-link wm-toc-text">Disk Encryption</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="btrfs.md" class="wm-article-link wm-toc-text">Snapshots and Btrfs</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="other_distros.md" class="wm-article-link wm-toc-text">Distros for special uses</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="help.md" class="wm-article-link wm-toc-text">Getting Help</a>
+</li>
+  </ul>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Install</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Preparing the Install media</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev3 "><a href="usb_windows.md" class="wm-article-link wm-toc-text">Prepare USB on Windows</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev3 "><a href="disk_windows.md" class="wm-article-link wm-toc-text">Prepare CD/DVD on Windows</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev3 "><a href="usb_macos.md" class="wm-article-link wm-toc-text">Prepare USB on macOS</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev3 "><a href="disk_macos.md" class="wm-article-link wm-toc-text">Prepare CD/DVD on macOS</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev3 "><a href="usb_linux.md" class="wm-article-link wm-toc-text">Prepare USB on Linux</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev3 "><a href="disk_linux.md" class="wm-article-link wm-toc-text">Prepare CD/DVD on Linux</a>
+</li>
+  </ul>
+</li>
+
+      <li class="wm-toc-li wm-toc-lev2 "><a href="install-steps.md" class="wm-article-link wm-toc-text">Step by step install</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="install_quick.md" class="wm-article-link wm-toc-text">Quick install guide for the experienced</a>
+</li>
+  </ul>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Orientation</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="kde_desktop.md" class="wm-article-link wm-toc-text">The KDE Desktop</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="kde_settings.md" class="wm-article-link wm-toc-text">KDE Settings</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="kde_resources.md" class="wm-article-link wm-toc-text">KDE Resources</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="yast.md" class="wm-article-link wm-toc-text">YaST</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="snapshots.md" class="wm-article-link wm-toc-text">Snapshot Managment</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="install_package.md" class="wm-article-link wm-toc-text">Installing packages</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="upgrade.md" class="wm-article-link wm-toc-text">Upgrading</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="backup.md" class="wm-article-link wm-toc-text">Backup</a>
+</li>
+  </ul>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">After Install Setup</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="install_proprietary.md" class="wm-article-link wm-toc-text">Proprietary drivers</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="install_printer.md" class="wm-article-link wm-toc-text">Printers</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="install_scanner.md" class="wm-article-link wm-toc-text">Scanners</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="install_wacom.md" class="wm-article-link wm-toc-text">Wacom tablet</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="non_packaged_binaries.md" class="wm-article-link wm-toc-text">Non-packaged binaries</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="bluetooth.md" class="wm-article-link wm-toc-text">Bluetooth Sound</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="sharing.md" class="wm-article-link wm-toc-text">Sharing files</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="sync.md" class="wm-article-link wm-toc-text">Syncing files with other devices</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="advanced_partitioning.md" class="wm-article-link wm-toc-text">Advanced partitioning schemes</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="display_server.md" class="wm-article-link wm-toc-text">Wayland vs. xorg</a>
+</li>
+  </ul>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Recommended Setups</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_office.md" class="wm-article-link wm-toc-text">Office users</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_internet.md" class="wm-article-link wm-toc-text">Internet  and social media</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_privacy.md" class="wm-article-link wm-toc-text">Privacy advocates</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_graphics.md" class="wm-article-link wm-toc-text">Graphics designers</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_3d.md" class="wm-article-link wm-toc-text">3D animators</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_audio.md" class="wm-article-link wm-toc-text">Audio recording</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_photography.md" class="wm-article-link wm-toc-text">Photographers</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_video.md" class="wm-article-link wm-toc-text">Video editors</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_education.md" class="wm-article-link wm-toc-text">Education</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_developer.md" class="wm-article-link wm-toc-text">Software developers</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_admin.md" class="wm-article-link wm-toc-text">System administrators</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_hacker.md" class="wm-article-link wm-toc-text">Hackers</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_gis.md" class="wm-article-link wm-toc-text">GIS users</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_automation.md" class="wm-article-link wm-toc-text">Home automation</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_server.md" class="wm-article-link wm-toc-text">Servers/NAS</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_network.md" class="wm-article-link wm-toc-text">Firewall/Router</a>
+</li>
+  </ul>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Advanced Topics</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="yast.md" class="wm-article-link wm-toc-text">Yast overview</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="yast-zypper.md" class="wm-article-link wm-toc-text">Yast vs. Zypper</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="zypper.md" class="wm-article-link wm-toc-text">Zypper overview</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="snapper.md" class="wm-article-link wm-toc-text">Recovering using Snapper</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="reporting_bugs.md" class="wm-article-link wm-toc-text">Rporting Bugs</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="contribute.md" class="wm-article-link wm-toc-text">Contribuiting to the community</a>
+</li>
+  </ul>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Other Documentation</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="reference_docs/" class="wm-article-link wm-toc-text">Reference Documentation</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="wiki_info.md" class="wm-article-link wm-toc-text">Wiki</a>
+</li>
+  </ul>
+</li>
+
+  </ul>
+</nav>
+
+    <div class="wm-content-pane">
+      <iframe class="wm-article" name="article"></iframe>
+    </div>
+  </div>
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <h1 id="welcome">Welcome</h1>
+<p>Are you looking for <strong>sane</strong> Linux documentation? You are in the right place. This is a young project that aims
+to provide a user friendly guide for quickly installing and setting up openSUSE with minimum fuss.</p>
+<h2 id="for-new-users">For New Users</h2>
+<p>The documentation is layed out in a user friendly manner. You will find that it caters for beginners or 
+new-to-Linux users and will gets you and running quickly. Installing Linux can seem daunting since it has a 
+lot of new concepts, many choices and tons of options. Choice is good, but it can be overwelming or confusing 
+for new users. </p>
+<p>Initially, the installation instruction will cover only the necessary options and configuration choices to help you quickly setup a running system suitable with sane defaults suitable for daily use. With the system running and productive you can lean at your leisue how to perform different routine system tasks such as installing apps, adjusting the system settings or custmizing openSUSE. And, if you're so inclined, start honing your Linux-foo skills. </p>
+<h2 id="for-experienced-users">For experienced Users</h2>
+<p>For the experienced Linux user the documentation includes short pointers on how things are done in
+openSUSE and what's different about it. Links to advanced topic in this site or elswere will get you
+aquainted with the system and up and running quickly.</p>
+<h2 id="documentation-sections">Documentation Sections</h2>
+<h3 id="pre-install">Pre-Install</h3>
+<p>We will make it easy to install openSUSE. Here you will learn what you need to know to get a system running. This can be the absolute minimum and go with the defaults, or you can make a few choices. For example you can choose a Desktop Environment. What is a Desktop Environment? you'll find out in this section if you want to make that choice. </p>
+<p>Experienced users will learn about what differentiates openSUSE from other distros and get to know it's unique features to make informed choises during the install process. For example you can find about the power of snapshots using Btrfs as well as other advanced distros featuring atomic transactional updates and about distros designed to run container loads.</p>
+<h3 id="install">Install</h3>
+<p>Now that you have a plan, this section will walk you step by step preparing your installation media and will walk you during the installation. All of this depending on choice you made pre-install.</p>
+<p>Experienced user will find a quick info cheet on notable installation options and procedures for reference. </p>
+<p>At this stage and with minimum fuss you will have a running system with sane defaults that is ready for daily use. From here you can move forward at your leisure, or when you need to.</p>
+<h3 id="os-orientation">OS Orientation</h3>
+<p>Here you will find several walk-though for the different features of Linux in general and openSUSE in
+paticular. You will become familiar with the user interface, system settings, installing and upgrading
+software and general good computing practices. You will also learn how the use the unique openSUSE features
+like YaST and snapshots.</p>
+<h3 id="after-install-setup">After Install Setup</h3>
+<p>In this section you will find setup information for devices you might or might not have. This could
+be a printer, scanner or a dedicated grapic card. You will also find information on how to install 
+software that you cannot find in the official openSUSE software repositories.</p>
+<h3 id="advanced-install">Advanced Install</h3>
+<p>If you are an experienced user you might want to setup your system in a particular way to take
+advantage of the latest Linux technologies. In this section you will find information on how to
+setup openSUSE with these technologies. Topics covered include advanced partitioning schemes, encryption, 
+display servers, vulnerability mitigation, etc.</p>
+<h3 id="advanced-topics">Advanced Topics</h3>
+<p>Now that you're familiar with Linux and openSUSE, you might want to get the most out of it. In this section 
+you'll find information on how to take full advantage of the Linux and openSUSE tools like YaST,
+Zypper, Snapper, etc.</p>
+<h3 id="other-documentation">Other Documentation</h3>
+<p>In this section you will have reference documentation and guides suitable for corporate users and system 
+administrators in various formats (HTML, PDF and EPUB)</p>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
+<!--
+MkDocs version : 1.1.2
+Build Date UTC : 2020-12-01 01:31:17.349285+00:00
+-->

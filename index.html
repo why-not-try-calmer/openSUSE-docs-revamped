@@ -82,6 +82,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
     <a href="" class="wm-top-brand wm-top-link wm-vcenter">
       
+        <img class="wm-top-logo" src="./image/geeko-color.png"/>
+      
       <div class="wm-top-title">
         openSUSE User Documentation Project<br>
         
@@ -95,25 +97,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <nav class="wm-toc-pane">
   
   <ul class="wm-toctree">
+        <li class="wm-toc-li wm-toc-lev1 "><a href="" class="wm-article-link wm-toc-text">Home</a>
+</li>
         <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Pre-Install</span>
 </li>
 <li class="wm-toc-li-nested collapse">
   <ul class="wm-toctree">
       <li class="wm-toc-li wm-toc-lev2 "><a href="new_user_considerations.md" class="wm-article-link wm-toc-text">New user nstall considerations</a>
 </li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="distro_choice.md" class="wm-article-link wm-toc-text">Leap or Tumbleweed</a>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="distro_choice.md" class="wm-article-link wm-toc-text">Leap or Tumbleweed?</a>
 </li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="desktop_choice.md" class="wm-article-link wm-toc-text">Desktop Environment</a>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="desktop_choice.md" class="wm-article-link wm-toc-text">Desktop Environments</a>
 </li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="media_choice.md" class="wm-article-link wm-toc-text">Full, Live  or net install</a>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="media_choice.md" class="wm-article-link wm-toc-text">Full, Live  or net install?</a>
 </li>
       <li class="wm-toc-li wm-toc-lev2 "><a href="full_or_dual_boot.md" class="wm-article-link wm-toc-text">Full disk install or Dual Boot</a>
 </li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="disk_partition.md" class="wm-article-link wm-toc-text">Partitioning your disk</a>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="disk_partition.md" class="wm-article-link wm-toc-text">Disk Partitioning</a>
 </li>
       <li class="wm-toc-li wm-toc-lev2 "><a href="disk_encryption.md" class="wm-article-link wm-toc-text">Disk Encryption</a>
 </li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="btrfs.md" class="wm-article-link wm-toc-text">Snapshots and Btrfs</a>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="btrfs.md" class="wm-article-link wm-toc-text">Snapshots/Btrfs</a>
 </li>
       <li class="wm-toc-li wm-toc-lev2 "><a href="other_distros.md" class="wm-article-link wm-toc-text">Distros for special uses</a>
 </li>
@@ -187,6 +191,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
       <li class="wm-toc-li wm-toc-lev2 "><a href="install_wacom.md" class="wm-article-link wm-toc-text">Wacom tablet</a>
 </li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="add_repo.md" class="wm-article-link wm-toc-text">Adding repositories</a>
+</li>
       <li class="wm-toc-li wm-toc-lev2 "><a href="non_packaged_binaries.md" class="wm-article-link wm-toc-text">Non-packaged binaries</a>
 </li>
       <li class="wm-toc-li wm-toc-lev2 "><a href="bluetooth.md" class="wm-article-link wm-toc-text">Bluetooth Sound</a>
@@ -206,9 +212,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 <li class="wm-toc-li-nested collapse">
   <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_office.md" class="wm-article-link wm-toc-text">Office users</a>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_internet.md" class="wm-article-link wm-toc-text">Internet & social</a>
 </li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_internet.md" class="wm-article-link wm-toc-text">Internet  and social media</a>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_office.md" class="wm-article-link wm-toc-text">Office users</a>
 </li>
       <li class="wm-toc-li wm-toc-lev2 "><a href="recommend_privacy.md" class="wm-article-link wm-toc-text">Privacy advocates</a>
 </li>
@@ -284,6 +290,25 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="reference_docs/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="reference_docs/" class="btn btn-xs btn-link">
+        Reference Documentation
+      </a>
+    </div>
+    
+  </div>
+
+    
 
     <h1 id="welcome">Welcome</h1>
 <p>Are you looking for <strong>sane</strong> Linux documentation? You are in the right place. This is a young project that aims
@@ -331,6 +356,25 @@ administrators in various formats (HTML, PDF and EPUB)</p>
   <br>
     
 
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="reference_docs/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="reference_docs/" class="btn btn-xs btn-link">
+        Reference Documentation
+      </a>
+    </div>
+    
+  </div>
+
     <br>
 </div>
 
@@ -342,5 +386,5 @@ administrators in various formats (HTML, PDF and EPUB)</p>
 </html>
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2020-12-01 01:31:56.679827+00:00
+Build Date UTC : 2020-12-01 21:38:32.735772+00:00
 -->

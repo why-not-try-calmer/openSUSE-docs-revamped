@@ -47,7 +47,9 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="green" data-md-color-accent="red">
+      
+        <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
       
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -265,8 +267,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../new_user_considerations.md" class="md-nav__link">
-      New user nstall considerations
+    <a href="../new_user_guide/" class="md-nav__link">
+      New user Guide
     </a>
   </li>
 
@@ -277,7 +279,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../distro_choice.md" class="md-nav__link">
+    <a href="../distribution/" class="md-nav__link">
       Leap or Tumbleweed?
     </a>
   </li>
@@ -289,7 +291,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../media_choice.md" class="md-nav__link">
+    <a href="../install_media.md" class="md-nav__link">
       Full, Live  or net install?
     </a>
   </li>
@@ -301,7 +303,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../desktop_choice.md" class="md-nav__link">
+    <a href="../desktop_environment.md" class="md-nav__link">
       Desktop Environments
     </a>
   </li>
@@ -313,7 +315,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../full_or_dual_boot.md" class="md-nav__link">
+    <a href="../dual_boot.md" class="md-nav__link">
       Full disk install or Dual Boot
     </a>
   </li>
@@ -325,7 +327,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../disk_partition.md" class="md-nav__link">
+    <a href="../drive_partitioning.md" class="md-nav__link">
       Disk Partitioning
     </a>
   </li>

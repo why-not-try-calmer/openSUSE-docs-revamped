@@ -6,8 +6,16 @@ body > div.container {
   flex: 1 1 auto;
 }
 
-.navbar .container {
+body > div.container > .row {
+  margin: 0;
+}
+
+.navbar .container, body > div.container {
   max-width: 100%;
+  padding: 0;
+}
+
+footer.col-md-12 {
   padding: 0;
 }
 

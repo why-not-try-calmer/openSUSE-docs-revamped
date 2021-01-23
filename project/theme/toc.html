@@ -1,11 +1,18 @@
-{%- for toc_item in toc_item.children %}
-    <li class="toctree-l{{ navlevel}}"><a class="reference internal" href="{% if not nav_item == page %}{{ nav_item.url|url }}{% endif %}{{ toc_item.url }}">{{ toc_item.title }}</a>
-    {%- set navlevel = navlevel + 1 %}
-    {%- if navlevel <= config.theme.navigation_depth and toc_item.children %}
-        <ul>
-            {%- include 'toc.html' %}
-        </ul>
+{% macro toc_item(item) %}
+    {%- if item.level <= config.theme.navigation_depth %}
+        <li class="nav-item" data-level="{{ item.level }}"><a href="{{ item.url }}" class="nav-link p-0">{{ item.title }}</a>
+          <ul class="nav flex-column">
+            {%- for child in item.children %}
+                {{- toc_item(child) }}
+            {%- endfor %}
+          </ul>
+        </li>
     {%- endif %}
-    {%- set navlevel = navlevel - 1 %}
-    </li>
-{%- endfor %}
+{%- endmacro %}
+<div id="toc-collapse" class="">
+    <ul class="nav flex-column">
+    {%- for item in page.toc %}
+        {{ toc_item(item) }}
+    {%- endfor %}
+    </ul>
+</div>

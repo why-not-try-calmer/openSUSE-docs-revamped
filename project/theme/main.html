@@ -41,8 +41,11 @@
 {%- endblock %}
 
 {%- block content %}
-<div class="col-md-3 d-none d-lg-block sidebar">{% include "sidebar.html" %}</div>
-<div class="col-md-9" role="main">{% include "content.html" %}</div>
+<div class="col-lg-3 col-xl-2 d-none d-lg-block sidebar border-right">{% include "sidebar.html" %}</div>
+<div class="col-lg-6 col-xl-8" role="main">
+    <div class="container">{% include "content.html" %}</div>
+</div>
+<div class="col-lg-3 col-xl-2 d-none d-lg-block sidebar border-left">{% include "toc.html" %}</div>
 {%- endblock %}
 
 {%- block footer %}

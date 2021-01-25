@@ -11,7 +11,7 @@
             {%- endfor %}
         </ul>
         </details>
-    {%- elif nav_item.is_page %}
+    {%- elif nav_item.is_link and nav_item.is_page %}
         <a class="{% if nav_item.active%} current{%endif%}" href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
     {%- endif %}
 {%- endfor %}

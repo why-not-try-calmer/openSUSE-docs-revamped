@@ -28,11 +28,11 @@ footer.col-md-12 {
   overflow-y: auto;
 }
 
-.sidebar a {
+.sidebar a, .sidebar summary {
   opacity: 75%;
 }
 
-.sidebar .current > a {
+.sidebar .current > a, .sidebar .current > details > summary {
   font-weight: bold;
   opacity: 100%
 }

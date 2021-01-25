@@ -41,7 +41,9 @@
 {%- endblock %}
 
 {%- block content %}
-<div class="col-lg-3 col-xl-2 d-none d-lg-block sidebar border-right">{% include "sidebar.html" %}</div>
+<div class="col-lg-3 col-xl-2 d-none d-lg-block sidebar border-right">
+    <ul class="list-unstyled">{% include "sidebar.html" %}</ul>
+</div>
 <div class="col-lg-6 col-xl-8" role="main">
     <div class="container">{% include "content.html" %}</div>
 </div>

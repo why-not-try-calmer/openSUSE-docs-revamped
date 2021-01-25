@@ -1,8 +1,9 @@
 {%- set navlevel = 1 %}
 {%- for nav_item in nav %}
     {%- if nav_item.is_section %}
+        <li class="toctree-l{{ navlevel }}{% if nav_item.active%} current{%endif%}">
         <details{% if nav_item.active %} open{% endif %}>
-        <summary><b>{{ nav_item.title }}</b></summary>
+        <summary>{{ nav_item.title }}</summary>
         <ul class="list-unstyled pl-3">
             {%- for nav_item in nav_item.children %}
             <li class="toctree-l{{ navlevel }}{% if nav_item.active %} current{% endif %}">
@@ -11,5 +12,8 @@
             {%- endfor %}
         </ul>
         </details>
+        </li>
+    {%- elif nav_item.is_link or nav_item.is_page %}
+        <li><a class="{% if nav_item.active%} current{%endif%}" href="{{ nav_item.url|url }}">{{ nav_item.title }}</a></li>
     {%- endif %}
 {%- endfor %}

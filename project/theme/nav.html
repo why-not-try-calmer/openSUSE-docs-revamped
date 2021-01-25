@@ -1,10 +1,11 @@
-<a class="{% if not nav_item.is_link %}reference internal{% endif %}{% if nav_item.active%} current{%endif%}" href="{% if not nav_item.is_section %}{{ nav_item.url|url }}{% else %}#{% endif %}">{{ nav_item.title }}</a>
 {%- set navlevel = navlevel + 1 %}
 {%- if navlevel <= config.theme.navigation_depth
     and ((nav_item.is_page and nav_item.toc.items
     and (not config.theme.titles_only
     and (nav_item == page or not config.theme.collapse_navigation)))
     or (nav_item.is_section and nav_item.children)) %}
+    <details{% if nav_item.active %} open{% endif %}>
+    <summary>{{ nav_item.title }}</summary>
     <ul class="pl-3 list-unstyled">
         {%- if nav_item.is_section %}
             {%- for nav_item in nav_item.children %}
@@ -14,5 +15,8 @@
             {%- endfor %}
         {%- endif %}
     </ul>
+    </details>
+{%- else  %}
+<a class="{% if nav_item.active%} current{%endif%}" href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
 {%- endif %}
 {%- set navlevel = navlevel - 1 %}

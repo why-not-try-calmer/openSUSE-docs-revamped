@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="https://static.opensuse.org/favicon.svg">
+        
+        <title>Zypper - openSUSE User Documentation Project - 0.3.1</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" href="https://static.opensuse.org/chameleon-3.0/dist/css/chameleon.css">
+
+
+
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-custom sticky-top mb-3">
+            <div class="container">
+<a class="navbar-brand" href="..">
+  
+  <img src="https://static.opensuse.org/favicon.svg" class="d-inline-block align-top" alt="openSUSE" title="openSUSE" width="30" height="30">
+  <span class="navbar-title">User Documentation Project - 0.3.1</span>
+  
+</a>
+
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav d-lg-none">
+          <li class="navitem">
+              <a href=".." class="nav-link">Home</a>
+          </li>
+          <li class="navitem">
+              <a href="../../" class="nav-link">Version Selector</a>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Before installing <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+<li>
+    <a href="../pick_an_image/" class="dropdown-item">Choosing the right image</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Installation setups</a>
+</li>
+                  
+<li>
+    <a href="../media_choice/" class="dropdown-item">Preparing the installation media</a>
+</li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Installing <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+<li>
+    <a href="../yast_installer/" class="dropdown-item">Step by step guide</a>
+</li>
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Quick install for experienced users</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../microos_getting_started/" class="dropdown-item">microOS specials</a>
+</li>
+    </ul>
+  </li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Distro basics <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+<li>
+    <a href=".." class="dropdown-item">KDE Plasma basics</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">GNOME basics</a>
+</li>
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Interlude -- Fundamental openSUSE concepts</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../snapper/" class="dropdown-item">Snapper</a>
+</li>
+    </ul>
+  </li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Getting & installing software</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Updating and upgrading</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Managing snapshots</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Troubleshooting with autonomy</a>
+</li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Completing and fine-tuning your setup <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Finding & installing additional software</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../install_proprietary/" class="dropdown-item">NVIDIA driver</a>
+</li>
+    </ul>
+  </li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Security basics</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Wifi & network</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Power management</a>
+</li>
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pairing, syncing, sharing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../bluetooth/" class="dropdown-item">Bluetooth</a>
+</li>
+    </ul>
+  </li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Advanced fine-tunings</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">More partitioning</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Recommended setups</a>
+</li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Giving back to the community <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+<li>
+    <a href=".." class="dropdown-item">Reporting bug reports</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Resources</a>
+</li>
+                  
+<li>
+    <a href="../reference_docs/" class="dropdown-item">Other sources of documentation</a>
+</li>
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contribute to this docs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../markdown/" class="dropdown-item">Markdown flavour</a>
+</li>
+            
+<li>
+    <a href="../todo/" class="dropdown-item">Todo</a>
+</li>
+    </ul>
+  </li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">A contributor's checklist <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+<li>
+    <a href=".." class="dropdown-item">openSUSE distributions</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">desktop Environments</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">getting the right installer</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">FAQ, Issues & solutions</a>
+</li>
+              </ul>
+          </li>
+      </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/Nycticorax/openSUSE-docs-revamped" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+<div class="col-lg-3 col-xl-2 d-none d-lg-block sidebar border-right">
+    <ul class="list-unstyled">
+        <li><a class="" href="..">Home</a></li>
+        <li><a class="" href="../../">Version Selector</a></li>
+        <li class="toctree-l1">
+        <details>
+        <summary>
+            
+              Before installing
+            
+        </summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1">
+    <details>
+    <summary>
+    
+      <a class="" href="../pick_an_image/">Choosing the right image</a>
+    
+    </summary>
+    <ul class="pl-3 list-unstyled">
+    </ul>
+    </details>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">Installation setups</a>
+            </li>
+            <li class="toctree-l1">
+    <details>
+    <summary>
+    
+      <a class="" href="../media_choice/">Preparing the installation media</a>
+    
+    </summary>
+    <ul class="pl-3 list-unstyled">
+    </ul>
+    </details>
+            </li>
+        </ul>
+        </details>
+        </li>
+        <li class="toctree-l1">
+        <details>
+        <summary>
+            
+              Installing
+            
+        </summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1">
+    <details>
+    <summary>
+    
+      <a class="" href="../yast_installer/">Step by step guide</a>
+    
+    </summary>
+    <ul class="pl-3 list-unstyled">
+    </ul>
+    </details>
+            </li>
+            <li class="toctree-l1">
+    <details>
+    <summary>
+    
+      Quick install for experienced users
+    
+    </summary>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2">
+<a class="" href="../microos_getting_started/">microOS specials</a>
+                </li>
+    </ul>
+    </details>
+            </li>
+        </ul>
+        </details>
+        </li>
+        <li class="toctree-l1">
+        <details>
+        <summary>
+            
+              Distro basics
+            
+        </summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1">
+<a class="" href="..">KDE Plasma basics</a>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">GNOME basics</a>
+            </li>
+            <li class="toctree-l1">
+    <details>
+    <summary>
+    
+      Interlude -- Fundamental openSUSE concepts
+    
+    </summary>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2">
+<a class="" href="../snapper/">Snapper</a>
+                </li>
+    </ul>
+    </details>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">Getting & installing software</a>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">Updating and upgrading</a>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">Managing snapshots</a>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">Troubleshooting with autonomy</a>
+            </li>
+        </ul>
+        </details>
+        </li>
+        <li class="toctree-l1">
+        <details>
+        <summary>
+            
+              Completing and fine-tuning your setup
+            
+        </summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1">
+    <details>
+    <summary>
+    
+      Finding & installing additional software
+    
+    </summary>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2">
+<a class="" href="../install_proprietary/">NVIDIA driver</a>
+                </li>
+    </ul>
+    </details>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">Security basics</a>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">Wifi & network</a>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">Power management</a>
+            </li>
+            <li class="toctree-l1">
+    <details>
+    <summary>
+    
+      Pairing, syncing, sharing
+    
+    </summary>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2">
+<a class="" href="../bluetooth/">Bluetooth</a>
+                </li>
+    </ul>
+    </details>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">Advanced fine-tunings</a>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">More partitioning</a>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">Recommended setups</a>
+            </li>
+        </ul>
+        </details>
+        </li>
+        <li class="toctree-l1">
+        <details>
+        <summary>
+            
+              Giving back to the community
+            
+        </summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1">
+<a class="" href="..">Reporting bug reports</a>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">Resources</a>
+            </li>
+            <li class="toctree-l1">
+    <details>
+    <summary>
+    
+      <a class="" href="../reference_docs/">Other sources of documentation</a>
+    
+    </summary>
+    <ul class="pl-3 list-unstyled">
+    </ul>
+    </details>
+            </li>
+            <li class="toctree-l1">
+    <details>
+    <summary>
+    
+      Contribute to this docs
+    
+    </summary>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2">
+<a class="" href="../markdown/">Markdown flavour</a>
+                </li>
+                <li class="toctree-l2">
+<a class="" href="../todo/">Todo</a>
+                </li>
+    </ul>
+    </details>
+            </li>
+        </ul>
+        </details>
+        </li>
+        <li class="toctree-l1">
+        <details>
+        <summary>
+            
+              A contributor's checklist
+            
+        </summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1">
+<a class="" href="..">openSUSE distributions</a>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">desktop Environments</a>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">getting the right installer</a>
+            </li>
+            <li class="toctree-l1">
+<a class="" href="..">FAQ, Issues & solutions</a>
+            </li>
+        </ul>
+        </details>
+        </li></ul>
+</div>
+<div class="col-lg-6 col-xl-8" role="main">
+    <div class="container">
+
+<h2 id="zypper">Zypper<a class="headerlink" href="#zypper" title="Permanent link">⚓︎</a></h2>
+<p>Zypper is a command line package manager for installing, updating and removing packages. It also manages repositories, can perform various queries, and is a command-line interface to ZYpp system management library (libzypp).</p>
+<h3 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">⚓︎</a></h3>
+<details class="info"><summary>Show Definitions</summary><dl>
+<dt><code>repository</code></dt>
+<dd>Local or remote directory containing packages and various package information (package metadata).</dd>
+<dt><code>package</code></dt>
+<dd>Software package (RPM package, source package). Patches, patterns, and products are also commonly referred to as different types of packages.</dd>
+<dt><code>patch</code></dt>
+<dd>Represents a package or a group of packages needed to install an update (a bug fix mostly).</dd>
+<dt><code>pattern</code></dt>
+<dd>Represents a group of packages. For example an Http Server pattern would have the dependencies defined so that all packages needed to run and manage an http server would have been triggered for installation when upon installing the pattern.</dd>
+<dt><code>product</code></dt>
+<dd>Represents the whole product (e.g. 'openSUSE Leap 15.3').</dd>
+</dl>
+</details>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">⚓︎</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The components enclosed in brackets are not required, thus the simplest way to execute zypper is to type its name followed by a command. See zypper help for a list of general options and all commands. To get help for a specific command, type zypper help command</p>
+</div>
+<p><code># zypper [--GLOBAL-OPTIONS] &lt;COMMAND&gt; [--COMMAND-OPTIONS] [ARGUMENTS]</code></p>
+<p><code># zypper &lt;SUBCOMMAND&gt; [--COMMAND-OPTIONS] [ARGUMENTS]</code></p>
+<div class="admonition note on user prompts">
+<p class="admonition-title">Note</p>
+<p>Whenever Zypper needs input, it lists possible answers in brackets next to the prompt text. To choose the default answer, press &lt;<strong>Enter</strong>&gt; (the default answer is printed in capitals, with the exception of non-ascii characters). Some prompts also have help available, in which case there is a question mark '?' listed as a possible answer.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To make Zypper use the default answers without user interaction, use the <code>--non-interactive</code> global option.</p>
+</div>
+<h3 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">⚓︎</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Zypper provides commands to be used in various manners, but it also provides abbreviated aliases of those commands. If there is an alias it will be listed next to the command.</p>
+<p><code># zypper</code> without any commands or arguments will print a list of commands and options.</p>
+</div>
+<h4 id="repository-management">Repository Management<a class="headerlink" href="#repository-management" title="Permanent link">⚓︎</a></h4>
+<h5 id="list-all-defined-repositories">List all defined repositories<a class="headerlink" href="#list-all-defined-repositories" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>repos</code> or <code>lr</code></li>
+</ul>
+<h5 id="add-a-new-repository">Add a new repository<a class="headerlink" href="#add-a-new-repository" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>addrepo</code> or <code>ar</code></li>
+</ul>
+<h5 id="remove-specified-repository">Remove specified repository<a class="headerlink" href="#remove-specified-repository" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>removerepo</code> or <code>rr</code></li>
+</ul>
+<h5 id="rename-specified-repository">Rename specified repository<a class="headerlink" href="#rename-specified-repository" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>renamerepo</code> or <code>nr</code></li>
+</ul>
+<h5 id="modify-specified-repository">Modify specified repository<a class="headerlink" href="#modify-specified-repository" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>modifyrepo</code> or <code>mr</code></li>
+</ul>
+<h5 id="refresh-all-repositories">Refresh all repositories<a class="headerlink" href="#refresh-all-repositories" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>refresh</code> or <code>ref</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>$ sudo zypper ref</code></p>
+</div>
+<h5 id="clean-local-caches">Clean local caches<a class="headerlink" href="#clean-local-caches" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>clean</code> or <code>cc</code></li>
+</ul>
+<h4 id="software-management">Software Management<a class="headerlink" href="#software-management" title="Permanent link">⚓︎</a></h4>
+<h5 id="install-packages">Install packages<a class="headerlink" href="#install-packages" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>install</code> or <code>in</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>$ sudo zypper in [package]</code></p>
+<p><code>$ sudo zypper in [package1] [package2] [...]</code></p>
+</div>
+<h5 id="remove-packages">Remove packages<a class="headerlink" href="#remove-packages" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>remove</code> or <code>rm</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>$ sudo zypper rm [package]</code></p>
+<p><code>$ sudo zypper rm [package1] [package2] [...]</code></p>
+</div>
+<h5 id="verify-integrity-of-package-dependencies">Verify integrity of package dependencies<a class="headerlink" href="#verify-integrity-of-package-dependencies" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>verify</code> or <code>ve</code></li>
+</ul>
+<h5 id="install-source-packages-and-their-build-dependencies">Install source packages and their build dependencies<a class="headerlink" href="#install-source-packages-and-their-build-dependencies" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>source-install</code> or <code>si</code></li>
+</ul>
+<h5 id="install-newly-added-packages-recommended-by-installed-packages">Install newly added packages recommended by installed packages<a class="headerlink" href="#install-newly-added-packages-recommended-by-installed-packages" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>install-new-recommends</code> or <code>inr</code></li>
+</ul>
+<h4 id="update-management">Update Management<a class="headerlink" href="#update-management" title="Permanent link">⚓︎</a></h4>
+<h5 id="update-installed-packages-with-newer-versions">Update installed packages with newer versions<a class="headerlink" href="#update-installed-packages-with-newer-versions" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>update</code> or <code>up</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>$ sudo zypper up</code></p>
+</div>
+<h5 id="list-available-updates">List available updates<a class="headerlink" href="#list-available-updates" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>list-updates</code> or <code>lu</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>$ sudo zypper lu</code></p>
+</div>
+<h5 id="install-needed-patches">Install needed patches<a class="headerlink" href="#install-needed-patches" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>patch</code></li>
+</ul>
+<h5 id="list-available-patches">List available patches<a class="headerlink" href="#list-available-patches" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>list-patches</code> or <code>lp</code></li>
+</ul>
+<h5 id="perform-a-distribution-upgrade">Perform a distribution upgrade<a class="headerlink" href="#perform-a-distribution-upgrade" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>dist-upgrade</code> or <code>dup</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>$ sudo zypper dup</code></p>
+</div>
+<h5 id="check-for-patches">Check for patches<a class="headerlink" href="#check-for-patches" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>patch-check</code> or <code>pchk</code></li>
+</ul>
+<h4 id="querying">Querying<a class="headerlink" href="#querying" title="Permanent link">⚓︎</a></h4>
+<h5 id="search-for-packages-matching-a-pattern">Search for packages matching a pattern<a class="headerlink" href="#search-for-packages-matching-a-pattern" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>search</code> or <code>se</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code># zypper se [package]</code></p>
+<details class="example"><summary>Example: Search for Firefox</summary><div class="highlight"><pre><span></span><code># zypper se firefox
+Loading repository data...
+Reading installed packages...
+
+S  | Name                               | Summary                                      | Type
+---+------------------------------------+----------------------------------------------+--------
+i+ | MozillaFirefox                     | Mozilla Firefox Web Browser                  | package
+i+ | MozillaFirefox-branding-openSUSE   | openSUSE branding of MozillaFirefox          | package
+   | MozillaFirefox-branding-upstream   | Upstream branding for Firefox                | package
+   | MozillaFirefox-buildsymbols        | Breakpad buildsymbols for Firefox            | package
+   | MozillaFirefox-devel               | Devel package for Firefox                    | package
+   | MozillaFirefox-translations-common | Common translations for Firefox              | package
+   | MozillaFirefox-translations-other  | Extra translations for Firefox               | package
+   | eid-mw-firefox                     | Firefox Extension for Belgium eID Middleware | package
+   | firefox-esr-branding-openSUSE      | openSUSE branding of MozillaFirefox          | package
+   | firefox-uget-integrator            | Integration of uGet with Firefox             | package
+</code></pre></div>
+</details>
+</div>
+<h5 id="show-full-information-for-specified-packages">Show full information for specified packages<a class="headerlink" href="#show-full-information-for-specified-packages" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>info</code> or <code>if</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>$ sudo zypper if [package]</code></p>
+</div>
+<h5 id="show-full-information-for-specified-patches">Show full information for specified patches<a class="headerlink" href="#show-full-information-for-specified-patches" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>patch-info</code></li>
+</ul>
+<h5 id="show-full-information-for-specified-patterns">Show full information for specified patterns<a class="headerlink" href="#show-full-information-for-specified-patterns" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>pattern-info</code></li>
+</ul>
+<h5 id="show-full-information-for-specified-products">Show full information for specified products<a class="headerlink" href="#show-full-information-for-specified-products" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>product-info</code></li>
+</ul>
+<h5 id="list-all-available-patches">List all available patches<a class="headerlink" href="#list-all-available-patches" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>patches</code> or <code>pch</code></li>
+</ul>
+<h5 id="list-all-available-packages">List all available packages<a class="headerlink" href="#list-all-available-packages" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>packages</code> or <code>pa</code></li>
+</ul>
+<h5 id="list-all-available-patterns">List all available patterns<a class="headerlink" href="#list-all-available-patterns" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>patterns</code> or <code>pt</code></li>
+</ul>
+<h5 id="list-all-available-products">List all available products<a class="headerlink" href="#list-all-available-products" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>products</code> or <code>pd</code></li>
+</ul>
+<details class="example"><summary>Example</summary><div class="highlight"><pre><span></span><code># zypper pd
+Loading repository data...
+Reading installed packages...
+S  | Repository                  | Internal Name         | Name                  | Version    | Arch   | Is Base
+---+-----------------------------+-----------------------+-----------------------+------------+--------+--------
+i+ | @System                     | openSUSE              | openSUSE Tumbleweed   | 20201216-0 | x86_64 | Yes
+   | openSUSE-Tumbleweed-Non-Oss | openSUSE-Addon-NonOss | openSUSE NonOSS Addon | 20201218-0 | x86_64 | No
+   | openSUSE-Tumbleweed-Non-Oss | openSUSE-Addon-NonOss | openSUSE NonOSS Addon | 20201218-0 | i586   | No
+v  | openSUSE-Tumbleweed-Oss     | openSUSE              | openSUSE Tumbleweed   | 20201218-0 | x86_64 | No
+v  | openSUSE-Tumbleweed-Oss     | openSUSE              | openSUSE Tumbleweed   | 20201218-0 | i586   | No
+   | openSUSE-Tumbleweed-Oss     | MicroOS               | openSUSE MicroOS      | 20201218-0 | x86_64 | No
+   | openSUSE-Tumbleweed-Oss     | MicroOS               | openSUSE MicroOS      | 20201218-0 | i586   | No
+</code></pre></div>
+</details>
+<h5 id="list-packages-providing-specified-capability">List packages providing specified capability<a class="headerlink" href="#list-packages-providing-specified-capability" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>what-provides</code> or <code>wp</code></li>
+</ul>
+<h4 id="package-locks">Package Locks<a class="headerlink" href="#package-locks" title="Permanent link">⚓︎</a></h4>
+<h5 id="add-a-package-lock">Add a package lock<a class="headerlink" href="#add-a-package-lock" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>locks</code> or <code>ll</code></li>
+</ul>
+<h5 id="remove-a-package-lock">Remove a package lock<a class="headerlink" href="#remove-a-package-lock" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>addlock</code> or <code>al</code></li>
+</ul>
+<h5 id="list-current-package-locks">List current package locks<a class="headerlink" href="#list-current-package-locks" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>removelock</code> or <code>rl</code></li>
+</ul>
+<h5 id="remove-useless-locks">Remove useless locks<a class="headerlink" href="#remove-useless-locks" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>cleanlocks</code> or <code>cl</code></li>
+</ul>
+<h4 id="locale-management">Locale Management<a class="headerlink" href="#locale-management" title="Permanent link">⚓︎</a></h4>
+<h5 id="list-requested-locales-languages-codes">List requested locales (languages codes)<a class="headerlink" href="#list-requested-locales-languages-codes" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>locales</code> or <code>lloc</code></li>
+</ul>
+<h5 id="add-locales-to-requested-locales">Add locale(s) to requested locales<a class="headerlink" href="#add-locales-to-requested-locales" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>addlocale</code> or <code>aloc</code></li>
+</ul>
+<h5 id="remove-locales-from-requested-locales">Remove locale(s) from requested locales<a class="headerlink" href="#remove-locales-from-requested-locales" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>removelocale</code> or <code>rloc</code></li>
+</ul>
+<h4 id="other-commands">Other Commands<a class="headerlink" href="#other-commands" title="Permanent link">⚓︎</a></h4>
+<h5 id="get-command-specific-help">Get command-specific help<a class="headerlink" href="#get-command-specific-help" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>help</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>$ zypper help in</code></p>
+</div>
+<h5 id="compare-two-version-strings">Compare two version strings<a class="headerlink" href="#compare-two-version-strings" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>versioncmp</code> or <code>vcmp</code></li>
+</ul>
+<h5 id="print-the-target-operating-system-id-string">Print the target operating system ID string<a class="headerlink" href="#print-the-target-operating-system-id-string" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>targetos</code> or <code>tos</code></li>
+</ul>
+<h5 id="print-report-about-licenses-and-eulas-of-installed-packages">Print report about licenses and EULAs of installed packages<a class="headerlink" href="#print-report-about-licenses-and-eulas-of-installed-packages" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>licenses</code></li>
+</ul>
+<h5 id="download-rpms-specified-on-the-commandline-to-a-local-directory">Download rpms specified on the commandline to a local directory<a class="headerlink" href="#download-rpms-specified-on-the-commandline-to-a-local-directory" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>download</code></li>
+</ul>
+<h5 id="download-source-rpms-for-all-installed-packages-to-a-local-directory">Download source rpms for all installed packages to a local directory<a class="headerlink" href="#download-source-rpms-for-all-installed-packages-to-a-local-directory" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>source-download</code></li>
+</ul>
+<h5 id="check-if-the-needs-reboot-flag-was-set">Check if the needs-reboot flag was set<a class="headerlink" href="#check-if-the-needs-reboot-flag-was-set" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>needs-rebooting</code></li>
+</ul>
+<h5 id="list-running-processes-which-might-still-use-files-and-libraries-deleted-by-recent-upgrades">List running processes which might still use files and libraries deleted by recent upgrades<a class="headerlink" href="#list-running-processes-which-might-still-use-files-and-libraries-deleted-by-recent-upgrades" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>ps</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code># zypper ps</code></p>
+<p><code>$ sudo zypper ps</code></p>
+</div>
+<h5 id="remove-old-kernels">Remove old kernels<a class="headerlink" href="#remove-old-kernels" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>purge-kernels</code></li>
+</ul>
+<h3 id="global-options">Global Options<a class="headerlink" href="#global-options" title="Permanent link">⚓︎</a></h3>
+<details class="info"><summary>Show Options</summary><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Alias</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--color</td>
+<td>Use colors in output</td>
+<td></td>
+</tr>
+<tr>
+<td>--config &lt;FILE&gt;</td>
+<td>Use specified config file instead of the default</td>
+<td>-c &lt;FILE&gt;</td>
+</tr>
+<tr>
+<td>--help</td>
+<td>Help</td>
+<td>-h</td>
+</tr>
+<tr>
+<td>--ignore-unknown</td>
+<td>Ignore unknown packages</td>
+<td>-i</td>
+</tr>
+<tr>
+<td>--no-abbrev</td>
+<td>Do not abbreviate text in tables</td>
+<td>-A</td>
+</tr>
+<tr>
+<td>--no-color</td>
+<td>Do no use colors in output</td>
+<td></td>
+</tr>
+<tr>
+<td>--non-interactive</td>
+<td>Do not ask anything, use default answers automatically</td>
+<td>-n</td>
+</tr>
+<tr>
+<td>--promptids</td>
+<td>Output a list of zypper's user prompts</td>
+<td></td>
+</tr>
+<tr>
+<td>--quiet</td>
+<td>Surpress normal output, print only error messages</td>
+<td>-q</td>
+</tr>
+<tr>
+<td>--table-style &lt;INTEGER&gt;</td>
+<td>Table style (0-11)</td>
+<td>-s &lt;INTEGER&gt;</td>
+</tr>
+<tr>
+<td>--terse</td>
+<td>Terse output for machine consumption</td>
+<td>-t</td>
+</tr>
+<tr>
+<td>--userdata &lt;STRING&gt;</td>
+<td>User defined transaction id used in history and plugins</td>
+<td></td>
+</tr>
+<tr>
+<td>--verbose</td>
+<td>Increase verbosity</td>
+<td>-v</td>
+</tr>
+<tr>
+<td>--version</td>
+<td>Output the version number</td>
+<td>-V</td>
+</tr>
+<tr>
+<td>--xmlout</td>
+<td>Switch to XML output</td>
+<td>-x</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="repository-options">Repository Options<a class="headerlink" href="#repository-options" title="Permanent link">⚓︎</a></h3>
+<details class="info"><summary>Show Options</summary><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Alias</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--disable-repositories</td>
+<td>Do not read meta-data from repositories</td>
+<td></td>
+</tr>
+<tr>
+<td>--gpg-auto-import-keys</td>
+<td>Automatically trust and import new repository signing keys</td>
+<td></td>
+</tr>
+<tr>
+<td>--no-gpg-checks</td>
+<td>Ingore GPG check failures</td>
+<td></td>
+</tr>
+<tr>
+<td>--no-cd</td>
+<td>Ignore CD/DVD repositories</td>
+<td></td>
+</tr>
+<tr>
+<td>--no-refresh</td>
+<td>Do not refresh the repositories</td>
+<td></td>
+</tr>
+<tr>
+<td>--no-remote</td>
+<td>Ignore remote repositories</td>
+<td></td>
+</tr>
+<tr>
+<td>--plus-content &lt;TAG&gt;</td>
+<td>Additionally use disabled repositories providing a specific keyword</td>
+<td></td>
+</tr>
+<tr>
+<td>--plus-repo &lt;URI&gt;</td>
+<td>Use an additional repository</td>
+<td>-p &lt;URI&gt;</td>
+</tr>
+<tr>
+<td>--releasever</td>
+<td>Set the value of $releasever in all .repo files</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="command-options">Command Options<a class="headerlink" href="#command-options" title="Permanent link">⚓︎</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Command-specific options can be obtained using <code># zypper help &lt;COMMAND&gt;</code></p>
+</div>
+<details class="example"><summary>Example</summary><div class="highlight"><pre><span></span><code># zypper help in
+install (in) [OPTIONS] &lt;CAPABILITY|RPM_FILE_URI&gt; ...
+
+Install packages with specified capabilities or RPM files with specified location. A capability is
+NAME[.ARCH][OP&lt;VERSION&gt;], where OP is one of &lt;, &lt;=, =, &gt;=, &gt;.
+
+Command options:
+
+-t, --type &lt;TYPE&gt;           Type of package (package, patch, pattern, product).
+-n, --name                  Select packages by plain name, not by capability. Default: false
+-C, --capability            Select packages solely by capability. Default: false
+    --details               Show the detailed installation summary. Default: false
+    --from &lt;ALIAS|#|URI&gt;    Select packages from the specified repository.
+    --oldpackage            Allow to replace a newer item with an older one. Handy if you are doing
+                            a rollback. Unlike --force it will not enforce a reinstall. Default:
+                            false
+    --allow-unsigned-rpm    Silently install unsigned rpm packages given as commandline parameters.
+                            Default: false
+-f, --force                 Install even if the item is already installed (reinstall), downgraded or
+                            changes vendor or architecture. Default: false
+-r, --repo &lt;ALIAS|#|URI&gt;    Work only with the specified repository.
+-y, --no-confirm            Don&#39;t require user interaction. Alias for the --non-interactive global
+                            option. Default: false
+-D, --dry-run               Don&#39;t change anything, just report what would be done. A meaningful file
+                            conflict check can only be performed if used together with
+                            &#39;--download-only&#39;. Default: false
+    --replacefiles          Install the packages even if they replace files from other, already
+                            installed, packages. Default is to treat file conflicts as an error.
+                            --download-as-needed disables the fileconflict check. Default: false
+-l, --auto-agree-with-licenses
+                            Automatically say &#39;yes&#39; to third party license confirmation prompt. See
+                            &#39;man zypper&#39; for more details. Default: false
+    --download &lt;MODE&gt;       Set the download-install mode. Available modes: only, in-advance,
+                            in-heaps, as-needed Default: DownloadDefault
+-d, --download-only         Only download the packages, do not install.
+
+Solver options
+
+    --debug-solver          Create a solver test case for debugging.
+    --force-resolution      Force the solver to find a solution (even an aggressive one) rather than
+                            asking.
+-R, --no-force-resolution   Do not force the solver to find a solution, let it ask.
+    --solver-focus &lt;MODE&gt;   Set the solvers general attitude when resolving a job.
+    --recommends            Install also recommended packages in addition to the required ones.
+    --no-recommends         Do not install recommended packages, only required ones.
+
+Expert options
+
+    --allow-downgrade
+    --no-allow-downgrade    Whether to allow downgrading installed resolvables.
+    --allow-name-change
+    --no-allow-name-change  Whether to allow changing the names of installed resolvables.
+    --allow-arch-change
+    --no-allow-arch-change  Whether to allow changing the architecture of installed resolvables.
+    --allow-vendor-change
+    --no-allow-vendor-change
+                            Whether to allow changing the vendor of installed resolvables.
+</code></pre></div>
+</details></div>
+</div>
+<div class="col-lg-3 col-xl-2 d-none d-lg-block sidebar border-left">
+<div id="toc-collapse" class="">
+    <ul class="nav flex-column">
+        
+        <li class="nav-item" data-level="2"><a href="#zypper" class="nav-link p-0">Zypper</a>
+          <ul class="nav flex-column">
+          </ul>
+        </li>
+    </ul>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+<footer class="footer">
+  <div class="container">
+    <div class="d-flex justify-content-between">
+      
+      <div class="footer-copyright">
+        © 2011–2020 openSUSE contributors
+      </div>
+      
+      <div class="list-inline">
+        <a class="list-inline-item" href="https://github.com/openSUSE/openSUSE-docs-revamped">Source Code</a>
+      </div>
+    </div>
+  </div>
+</footer>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../js/extra.js" defer></script>
+        <script src="https://static.opensuse.org/chameleon-3.0/dist/js/chameleon.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

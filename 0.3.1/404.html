@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="https://static.opensuse.org/favicon.svg">
+        
+        <title>openSUSE User Documentation Project - 0.3.1</title>
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="/js/jquery-1.10.2.min.js" defer></script>
+        <script src="/js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-custom sticky-top mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="/.">openSUSE User Documentation Project - 0.3.1</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="/." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="/../" class="nav-link">Version Selector</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Before installing <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="/pick_an_image/" class="dropdown-item">Choosing the right image</a>
+</li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">Installation setups</a>
+</li>
+                                    
+<li>
+    <a href="/media_choice/" class="dropdown-item">Preparing the installation media</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Installing <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Step by step guide</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="/leap_installer/" class="dropdown-item">openSUSE Leap</a>
+</li>
+            
+<li>
+    <a href="/tw_installer.md" class="dropdown-item">openSUSE Tumbleweed</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Quick install for experienced users</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="/microos_getting_started/" class="dropdown-item">microOS specials</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Distro basics <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="/." class="dropdown-item">KDE Plasma basics</a>
+</li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">GNOME basics</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Interlude -- Fundamental openSUSE concepts</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="/snapper/" class="dropdown-item">Snapper</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">Getting & installing software</a>
+</li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">Updating and upgrading</a>
+</li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">Managing snapshots</a>
+</li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">Troubleshooting with autonomy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Completing and fine-tuning your setup <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Finding & installing additional software</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="/install_proprietary/" class="dropdown-item">NVIDIA driver</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">Security basics</a>
+</li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">Wifi & network</a>
+</li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">Power management</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pairing, syncing, sharing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="/bluetooth/" class="dropdown-item">Bluetooth</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">Advanced fine-tunings</a>
+</li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">More partitioning</a>
+</li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">Recommended setups</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Giving back to the community <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="/." class="dropdown-item">Reporting bug reports</a>
+</li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">Resources</a>
+</li>
+                                    
+<li>
+    <a href="/reference_docs/" class="dropdown-item">Other sources of documentation</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contribute to this docs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="/markdown/" class="dropdown-item">Markdown flavour</a>
+</li>
+            
+<li>
+    <a href="/todo/" class="dropdown-item">Todo</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">A contributor's checklist <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="/." class="dropdown-item">openSUSE distributions</a>
+</li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">desktop Environments</a>
+</li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">getting the right installer</a>
+</li>
+                                    
+<li>
+    <a href="/." class="dropdown-item">FAQ, Issues & solutions</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/Nycticorax/openSUSE-docs-revamped" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+    <div class="row-fluid">
+      <div id="main-content" class="span12">
+        <h1 id="404-page-not-found" style="text-align: center">404</h1>
+        <p style="text-align: center"><strong>Page not found</strong></p>
+      </div>
+    </div>
+
+
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>© 2020–2021 openSUSE contributors</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "/",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="/js/base.js" defer></script>
+        <script src="/js/extra.js" defer></script>
+        <script src="https://static.opensuse.org/chameleon-3.0/dist/js/chameleon.js" defer></script>
+        <script src="/search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

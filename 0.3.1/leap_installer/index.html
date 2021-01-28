@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="https://static.opensuse.org/favicon.svg">
+        
+        <title>openSUSE Leap - openSUSE User Documentation Project - 0.3.1</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" href="https://static.opensuse.org/chameleon-3.0/dist/css/chameleon.css">
+
+
+
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-custom sticky-top mb-3">
+            <div class="container">
+<a class="navbar-brand" href="..">
+  
+  <img src="https://static.opensuse.org/favicon.svg" class="d-inline-block align-top" alt="openSUSE" title="openSUSE" width="30" height="30">
+  <span class="navbar-title">User Documentation Project - 0.3.1</span>
+  
+</a>
+
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav d-lg-none">
+          <li class="navitem">
+              <a href=".." class="nav-link">Home</a>
+          </li>
+          <li class="navitem">
+              <a href="../../" class="nav-link">Version Selector</a>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Before installing <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+<li>
+    <a href="../pick_an_image/" class="dropdown-item">Choosing the right image</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Installation setups</a>
+</li>
+                  
+<li>
+    <a href="../media_choice/" class="dropdown-item">Preparing the installation media</a>
+</li>
+              </ul>
+          </li>
+          <li class="dropdown active">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Installing <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Step by step guide</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">openSUSE Leap</a>
+</li>
+            
+<li>
+    <a href="../tw_installer.md" class="dropdown-item">openSUSE Tumbleweed</a>
+</li>
+    </ul>
+  </li>
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Quick install for experienced users</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../microos_getting_started/" class="dropdown-item">microOS specials</a>
+</li>
+    </ul>
+  </li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Distro basics <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+<li>
+    <a href=".." class="dropdown-item">KDE Plasma basics</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">GNOME basics</a>
+</li>
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Interlude -- Fundamental openSUSE concepts</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../snapper/" class="dropdown-item">Snapper</a>
+</li>
+    </ul>
+  </li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Getting & installing software</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Updating and upgrading</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Managing snapshots</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Troubleshooting with autonomy</a>
+</li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Completing and fine-tuning your setup <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Finding & installing additional software</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../install_proprietary/" class="dropdown-item">NVIDIA driver</a>
+</li>
+    </ul>
+  </li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Security basics</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Wifi & network</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Power management</a>
+</li>
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pairing, syncing, sharing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../bluetooth/" class="dropdown-item">Bluetooth</a>
+</li>
+    </ul>
+  </li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Advanced fine-tunings</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">More partitioning</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Recommended setups</a>
+</li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Giving back to the community <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+<li>
+    <a href=".." class="dropdown-item">Reporting bug reports</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Resources</a>
+</li>
+                  
+<li>
+    <a href="../reference_docs/" class="dropdown-item">Other sources of documentation</a>
+</li>
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contribute to this docs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../markdown/" class="dropdown-item">Markdown flavour</a>
+</li>
+            
+<li>
+    <a href="../todo/" class="dropdown-item">Todo</a>
+</li>
+    </ul>
+  </li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">A contributor's checklist <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+<li>
+    <a href=".." class="dropdown-item">openSUSE distributions</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">desktop Environments</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">getting the right installer</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">FAQ, Issues & solutions</a>
+</li>
+              </ul>
+          </li>
+      </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../media_choice/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../microos_getting_started/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/Nycticorax/openSUSE-docs-revamped" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+<div class="col-lg-3 col-xl-2 d-none d-lg-block sidebar border-right">
+        <details>
+        <summary><b>Before installing</b></summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1"><a class="reference internal" href="../pick_an_image/">Choosing the right image</a>
+    <ul class="pl-3 list-unstyled">
+    </ul>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Installation setups</a>
+            </li>
+            <li class="toctree-l1"><a class="reference internal" href="../media_choice/">Preparing the installation media</a>
+    <ul class="pl-3 list-unstyled">
+    </ul>
+            </li>
+        </ul>
+        </details>
+        <details open>
+        <summary><b>Installing</b></summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1 current"><a class="reference internal current" href="#">Step by step guide</a>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">openSUSE Leap</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../tw_installer.md">openSUSE Tumbleweed</a>
+                </li>
+    </ul>
+            </li>
+            <li class="toctree-l1"><a class="reference internal" href="#">Quick install for experienced users</a>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2"><a class="reference internal" href="../microos_getting_started/">microOS specials</a>
+                </li>
+    </ul>
+            </li>
+        </ul>
+        </details>
+        <details>
+        <summary><b>Distro basics</b></summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1"><a class="" href="..">KDE Plasma basics</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">GNOME basics</a>
+            </li>
+            <li class="toctree-l1"><a class="reference internal" href="#">Interlude -- Fundamental openSUSE concepts</a>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2"><a class="reference internal" href="../snapper/">Snapper</a>
+                </li>
+    </ul>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Getting & installing software</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Updating and upgrading</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Managing snapshots</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Troubleshooting with autonomy</a>
+            </li>
+        </ul>
+        </details>
+        <details>
+        <summary><b>Completing and fine-tuning your setup</b></summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1"><a class="reference internal" href="#">Finding & installing additional software</a>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2"><a class="reference internal" href="../install_proprietary/">NVIDIA driver</a>
+                </li>
+    </ul>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Security basics</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Wifi & network</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Power management</a>
+            </li>
+            <li class="toctree-l1"><a class="reference internal" href="#">Pairing, syncing, sharing</a>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2"><a class="reference internal" href="../bluetooth/">Bluetooth</a>
+                </li>
+    </ul>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Advanced fine-tunings</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">More partitioning</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Recommended setups</a>
+            </li>
+        </ul>
+        </details>
+        <details>
+        <summary><b>Giving back to the community</b></summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1"><a class="" href="..">Reporting bug reports</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Resources</a>
+            </li>
+            <li class="toctree-l1"><a class="reference internal" href="../reference_docs/">Other sources of documentation</a>
+    <ul class="pl-3 list-unstyled">
+    </ul>
+            </li>
+            <li class="toctree-l1"><a class="reference internal" href="#">Contribute to this docs</a>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2"><a class="reference internal" href="../markdown/">Markdown flavour</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../todo/">Todo</a>
+                </li>
+    </ul>
+            </li>
+        </ul>
+        </details>
+        <details>
+        <summary><b>A contributor's checklist</b></summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1"><a class="" href="..">openSUSE distributions</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">desktop Environments</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">getting the right installer</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">FAQ, Issues & solutions</a>
+            </li>
+        </ul>
+        </details></div>
+<div class="col-lg-6 col-xl-8" role="main">
+    <div class="container">
+
+<h1 id="step-by-step-guide-for-opensuse-leap">Step by step guide for openSUSE Leap<a class="headerlink" href="#step-by-step-guide-for-opensuse-leap" title="Permanent link">⚓︎</a></h1>
+<h2 id="before-you-continue">Before you continue<a class="headerlink" href="#before-you-continue" title="Permanent link">⚓︎</a></h2>
+<p>This guide is based on <strong>openSUSE Leap</strong> and assumes that you will have no other Linux, Windows or MacOS operating systems installed along openSUSE. However, the differences between the installers for the openSUSE variants - like Tumbleweed, MicroOS and Kubic - are miniscule and most parts of the installer will be identical. Expect slight differences in <em>System Role</em> and <em>Installation Settings</em>.</p>
+<h3 id="minimum-system-requirements">Minimum System Requirements<a class="headerlink" href="#minimum-system-requirements" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>Any AMD64/Intel* EM64T processor (32-bit processors are not supported).</li>
+<li>1 GB physical RAM (4 GB or more strongly recommended).</li>
+<li>10 GB available disk space for a minimal installation, 16 GB for a graphical desktop (more is recommended). In case you plan to use Btrfs snapshots a minimum of 40 GB for the root partition is recommended.</li>
+<li>Supports most modern sound and graphics cards, 1024 x 768 display resolution (higher recommended).</li>
+</ul>
+<h3 id="precautions">Precautions<a class="headerlink" href="#precautions" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>Make sure that you backed up all your data from the disk where you're planning to install openSUSE to.</li>
+<li>If installing it on a separate drive and if you can, go ahead and disconnect the drives that you will not use. You can always foreign operating systems to Grub from a final installation, but selecting the wrong drive to install openSUSE to will overwrite the disk.</li>
+<li>In case you're using a Network image (Netiso) make sure that you have a strong internet connection. A wired connection is always better than a wifi signal.</li>
+<li>If installing it on a laptop it is a good practice to plug in the AC charger.</li>
+</ul>
+<p>If you read the above listed safety measures and hopefully followed them, you're ready to boot your erlier prepared USB drive and turn on your computer. Boot from the USB drive and select installation from the boot menu.</p>
+<p>If you want to see details while the installer is booting you can press <code>ESC</code> on the keyboard.</p>
+<h2 id="welcome">Welcome<a class="headerlink" href="#welcome" title="Permanent link">⚓︎</a></h2>
+<h3 id="language-keyboard-and-license-agreement">Language, Keyboard and License Agreement<a class="headerlink" href="#language-keyboard-and-license-agreement" title="Permanent link">⚓︎</a></h3>
+<p><em>Welcome to the YaST installer!</em></p>
+<p>This is the first step to make to end up with a fully functional openSUSE installation. At this page you can change the language under <code>Language</code> (Alt+L), change the keyboard layout under <code>Keyboard Layout</code> (Alt+K) and you have a chance to test your selected keyboard layout in the field under <code>Keyboard Test</code> (Alt+y).
+If you done all the basic configurations do read through the <code>License Agreement</code> as it is informing you on roles, responsibilities and potential limitations.</p>
+<details class="info"><summary>Info</summary><p>On the left you will see a list of items where you can follow the steps you will take next or took already. You can always press <code>Back</code> in case you want to change something you configured earlier.</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Online repositories</p>
+<p>If you have an active internet conenction over an ethernet cable connected to your computer, right after you pass the <em>"Language, Keyboard and License Agreement"</em> section you will be prompted with a question if you want to <em>"Activate online repositories now?"</em>.It is recommended to select <em>Yes</em> which will provide with a list repositories, pre-selecting the main ones in advance. </p>
+</div>
+<h2 id="network-activation">Network Activation<a class="headerlink" href="#network-activation" title="Permanent link">⚓︎</a></h2>
+<h3 id="network-settings">Network Settings<a class="headerlink" href="#network-settings" title="Permanent link">⚓︎</a></h3>
+<p>If you have an active wired internet connection which can be automatically configured by the system or if you're not planning to use online repositories during the installation process and rely on the packages provided by the DVD installer you can skip this part.   </p>
+<p>When you don't have a network connection - because you have don't have an ethernet port on your machine or you're using wireless connections only - you will be prompted to configure your network settings. By default the YaST system installer is using a network controller software called Wicked. Keep in mind that if you will choose to use Network Manager (NM) instead of Wicked, your network configuration will not be transferred from Wicked to Network Manager.</p>
+<p>You will see a list of available network adapters in a list from which you can select the one that you wish to configure and press <code>Edit</code>. In case of configuring a wireless adapter you will see the <code>Wireless Specific</code> tab open. Here you can <code>Scan Network</code>, select the name of you wireless network (SSID), select the authentication mode - which is in most cases will be WPA-PSK "home" - and input your password. 
+On the <code>Addresses</code> tab you will be able to configure the ip address of your adapter. You can select <code>Dynamic Address</code> in which case you will receive an address from your router/other dhcp server on your network or <code>Statically Assigned IP Address</code> in which case you need to type an ip address, a subnet mask and a hostname. Click <code>Next</code> when finished.  <br />
+<img alt="Wireless configuration" src="../image/yast_wireless_specific.png" /></p>
+<p><strong>If</strong> you configured a statically assigned ip address switch to the <code>Routing</code> tab, press <code>Add</code> and add your default gateway address and select the network adapter to which you want this route to be assigned to.  <br />
+Press <code>OK</code> then <code>Next</code> to apply your changes and continue the installer.</p>
+<h2 id="online-repositories">Online Repositories<a class="headerlink" href="#online-repositories" title="Permanent link">⚓︎</a></h2>
+<h3 id="list-of-online-repositories">List of Online Repositories<a class="headerlink" href="#list-of-online-repositories" title="Permanent link">⚓︎</a></h3>
+<p>These repositories are the following:</p>
+<ul>
+<li>Update Repository (Non-Oss): Non-free - as in Free Open-Source Software (FOSS) - update repository. Provides security and maintenance updates for the distribution. Selected.</li>
+<li>Non-OSS Repository: Non-free repository. Provides packages like Steam. Selected.</li>
+<li>Main Update Repository: Main free - as in FOSS - update repository. Provides security and maintenance updates for the distribution. Selected. </li>
+<li>Main Repository: Main free repository provides FOSS only. Selected.</li>
+<li>Update Repository (Debug): A repository for those who want to debug application updates for openSUSE, for experts only. </li>
+<li>Untested Updates: Security and maintenance updates that requires testing. Add this repository if you want to participate in testing.</li>
+<li>Source Repository: Provides all source packages in the distribution, for experts only.</li>
+<li>Debug Repository: A repository for those who want to debug applications for openSUSE, for experts only.</li>
+</ul>
+<p>NOTE: I need to further clarify this bit!!! Do keep in mind that if you're on a metered network and you choose to add the online repos, the installer will download packages with newer versions. </p>
+<h3 id="system-role">System Role<a class="headerlink" href="#system-role" title="Permanent link">⚓︎</a></h3>
+<p>At this section of the preparation you can select from a list of predefined use cases which will tailor the system for the selected scenario. It is recommended to take a look at the <a href="../pick_an_image/">Choosing the right image</a> page prior to continuing as it provides a brief explanation of desktop environments. Do note if you're using a DVD installer without an active internet connection, some of the listed desktop envirnments will not be available.</p>
+<ul>
+<li>Desktop with KDE Plasma: Will install the Plasma desktop with KDE applications.</li>
+<li>Desktop with GNOME: Will install the GNOME desktop with GNOME applications.</li>
+<li>Generic Desktop: Will install IceWM - a minimal desktop environment - with minimal amount of packages.</li>
+<li>Server: Will perform a server installation without providing any graphical environment.</li>
+<li>Transactional Server: Will perform a server installation with a read-only root filesystem in an immutable server style. This will provide atomic, automatic updates and packages can be installed with <code>transactional-update</code> only.</li>
+</ul>
+<p>Select whichever suits your needs the best and press <code>Next</code> to conitnue.</p>
+<h2 id="disk">Disk<a class="headerlink" href="#disk" title="Permanent link">⚓︎</a></h2>
+<h3 id="suggested-partitioning">Suggested Partitioning<a class="headerlink" href="#suggested-partitioning" title="Permanent link">⚓︎</a></h3>
+<h3 id="guided-setup">Guided Setup<a class="headerlink" href="#guided-setup" title="Permanent link">⚓︎</a></h3>
+<h3 id="expert-partitioner">Expert Partitioner<a class="headerlink" href="#expert-partitioner" title="Permanent link">⚓︎</a></h3></div>
+</div>
+<div class="col-lg-3 col-xl-2 d-none d-lg-block sidebar border-left">
+<div id="toc-collapse" class="">
+    <ul class="nav flex-column">
+        
+        <li class="nav-item" data-level="1"><a href="#step-by-step-guide-for-opensuse-leap" class="nav-link p-0">Step by step guide for openSUSE Leap</a>
+          <ul class="nav flex-column">
+        <li class="nav-item" data-level="2"><a href="#before-you-continue" class="nav-link p-0">Before you continue</a>
+          <ul class="nav flex-column">
+          </ul>
+        </li>
+        <li class="nav-item" data-level="2"><a href="#welcome" class="nav-link p-0">Welcome</a>
+          <ul class="nav flex-column">
+          </ul>
+        </li>
+        <li class="nav-item" data-level="2"><a href="#network-activation" class="nav-link p-0">Network Activation</a>
+          <ul class="nav flex-column">
+          </ul>
+        </li>
+        <li class="nav-item" data-level="2"><a href="#online-repositories" class="nav-link p-0">Online Repositories</a>
+          <ul class="nav flex-column">
+          </ul>
+        </li>
+        <li class="nav-item" data-level="2"><a href="#disk" class="nav-link p-0">Disk</a>
+          <ul class="nav flex-column">
+          </ul>
+        </li>
+          </ul>
+        </li>
+    </ul>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+<footer class="footer">
+  <div class="container">
+    <div class="d-flex justify-content-between">
+      
+      <div class="footer-copyright">
+        © 2011–2020 openSUSE contributors
+      </div>
+      
+      <div class="list-inline">
+        <a class="list-inline-item" href="https://github.com/openSUSE/openSUSE-docs-revamped">Source Code</a>
+      </div>
+    </div>
+  </div>
+</footer>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../js/extra.js" defer></script>
+        <script src="https://static.opensuse.org/chameleon-3.0/dist/js/chameleon.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

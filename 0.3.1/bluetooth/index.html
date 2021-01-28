@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="https://static.opensuse.org/favicon.svg">
+        
+        <title>Bluetooth - openSUSE User Documentation Project - 0.3.1</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" href="https://static.opensuse.org/chameleon-3.0/dist/css/chameleon.css">
+
+
+
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-custom sticky-top mb-3">
+            <div class="container">
+<a class="navbar-brand" href="..">
+  
+  <img src="https://static.opensuse.org/favicon.svg" class="d-inline-block align-top" alt="openSUSE" title="openSUSE" width="30" height="30">
+  <span class="navbar-title">User Documentation Project - 0.3.1</span>
+  
+</a>
+
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav d-lg-none">
+          <li class="navitem">
+              <a href=".." class="nav-link">Home</a>
+          </li>
+          <li class="navitem">
+              <a href="../../" class="nav-link">Version Selector</a>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Before installing <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+<li>
+    <a href="../pick_an_image/" class="dropdown-item">Choosing the right image</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Installation setups</a>
+</li>
+                  
+<li>
+    <a href="../media_choice/" class="dropdown-item">Preparing the installation media</a>
+</li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Installing <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Step by step guide</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../leap_installer/" class="dropdown-item">openSUSE Leap</a>
+</li>
+            
+<li>
+    <a href="../tw_installer.md" class="dropdown-item">openSUSE Tumbleweed</a>
+</li>
+    </ul>
+  </li>
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Quick install for experienced users</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../microos_getting_started/" class="dropdown-item">microOS specials</a>
+</li>
+    </ul>
+  </li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Distro basics <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+<li>
+    <a href=".." class="dropdown-item">KDE Plasma basics</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">GNOME basics</a>
+</li>
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Interlude -- Fundamental openSUSE concepts</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../snapper/" class="dropdown-item">Snapper</a>
+</li>
+    </ul>
+  </li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Getting & installing software</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Updating and upgrading</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Managing snapshots</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Troubleshooting with autonomy</a>
+</li>
+              </ul>
+          </li>
+          <li class="dropdown active">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Completing and fine-tuning your setup <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Finding & installing additional software</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../install_proprietary/" class="dropdown-item">NVIDIA driver</a>
+</li>
+    </ul>
+  </li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Security basics</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Wifi & network</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Power management</a>
+</li>
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pairing, syncing, sharing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">Bluetooth</a>
+</li>
+    </ul>
+  </li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Advanced fine-tunings</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">More partitioning</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Recommended setups</a>
+</li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Giving back to the community <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+<li>
+    <a href=".." class="dropdown-item">Reporting bug reports</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">Resources</a>
+</li>
+                  
+<li>
+    <a href="../reference_docs/" class="dropdown-item">Other sources of documentation</a>
+</li>
+                  
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contribute to this docs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../markdown/" class="dropdown-item">Markdown flavour</a>
+</li>
+            
+<li>
+    <a href="../todo/" class="dropdown-item">Todo</a>
+</li>
+    </ul>
+  </li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">A contributor's checklist <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  
+<li>
+    <a href=".." class="dropdown-item">openSUSE distributions</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">desktop Environments</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">getting the right installer</a>
+</li>
+                  
+<li>
+    <a href=".." class="dropdown-item">FAQ, Issues & solutions</a>
+</li>
+              </ul>
+          </li>
+      </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../install_proprietary/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../reference_docs/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/Nycticorax/openSUSE-docs-revamped" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+<div class="col-lg-3 col-xl-2 d-none d-lg-block sidebar border-right">
+        <details>
+        <summary><b>Before installing</b></summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1"><a class="reference internal" href="../pick_an_image/">Choosing the right image</a>
+    <ul class="pl-3 list-unstyled">
+    </ul>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Installation setups</a>
+            </li>
+            <li class="toctree-l1"><a class="reference internal" href="../media_choice/">Preparing the installation media</a>
+    <ul class="pl-3 list-unstyled">
+    </ul>
+            </li>
+        </ul>
+        </details>
+        <details>
+        <summary><b>Installing</b></summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1"><a class="reference internal" href="#">Step by step guide</a>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2"><a class="reference internal" href="../leap_installer/">openSUSE Leap</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../tw_installer.md">openSUSE Tumbleweed</a>
+                </li>
+    </ul>
+            </li>
+            <li class="toctree-l1"><a class="reference internal" href="#">Quick install for experienced users</a>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2"><a class="reference internal" href="../microos_getting_started/">microOS specials</a>
+                </li>
+    </ul>
+            </li>
+        </ul>
+        </details>
+        <details>
+        <summary><b>Distro basics</b></summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1"><a class="" href="..">KDE Plasma basics</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">GNOME basics</a>
+            </li>
+            <li class="toctree-l1"><a class="reference internal" href="#">Interlude -- Fundamental openSUSE concepts</a>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2"><a class="reference internal" href="../snapper/">Snapper</a>
+                </li>
+    </ul>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Getting & installing software</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Updating and upgrading</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Managing snapshots</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Troubleshooting with autonomy</a>
+            </li>
+        </ul>
+        </details>
+        <details open>
+        <summary><b>Completing and fine-tuning your setup</b></summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1"><a class="reference internal" href="#">Finding & installing additional software</a>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2"><a class="reference internal" href="../install_proprietary/">NVIDIA driver</a>
+                </li>
+    </ul>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Security basics</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Wifi & network</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Power management</a>
+            </li>
+            <li class="toctree-l1 current"><a class="reference internal current" href="#">Pairing, syncing, sharing</a>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Bluetooth</a>
+                </li>
+    </ul>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Advanced fine-tunings</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">More partitioning</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Recommended setups</a>
+            </li>
+        </ul>
+        </details>
+        <details>
+        <summary><b>Giving back to the community</b></summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1"><a class="" href="..">Reporting bug reports</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">Resources</a>
+            </li>
+            <li class="toctree-l1"><a class="reference internal" href="../reference_docs/">Other sources of documentation</a>
+    <ul class="pl-3 list-unstyled">
+    </ul>
+            </li>
+            <li class="toctree-l1"><a class="reference internal" href="#">Contribute to this docs</a>
+    <ul class="pl-3 list-unstyled">
+                <li class="toctree-l2"><a class="reference internal" href="../markdown/">Markdown flavour</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../todo/">Todo</a>
+                </li>
+    </ul>
+            </li>
+        </ul>
+        </details>
+        <details>
+        <summary><b>A contributor's checklist</b></summary>
+        <ul class="list-unstyled pl-3">
+            <li class="toctree-l1"><a class="" href="..">openSUSE distributions</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">desktop Environments</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">getting the right installer</a>
+            </li>
+            <li class="toctree-l1"><a class="" href="..">FAQ, Issues & solutions</a>
+            </li>
+        </ul>
+        </details></div>
+<div class="col-lg-6 col-xl-8" role="main">
+    <div class="container">
+
+<h2 id="pairing-a-bluetooth-device-across-different-operating-systems">Pairing a Bluetooth device across different operating systems<a class="headerlink" href="#pairing-a-bluetooth-device-across-different-operating-systems" title="Permanent link">⚓︎</a></h2>
+<h3 id="with-windows-10-adapted-from-stackexchange">With Windows 10 (adapted from <a href="https://unix.stackexchange.com/questions/255509/bluetooth-pairing-on-dual-boot-of-windows-linux-mint-ubuntu-stop-having-to-p">StackExchange</a>)<a class="headerlink" href="#with-windows-10-adapted-from-stackexchange" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>Pair all devices on Linux </li>
+<li>Pair all devices on Windows</li>
+<li>From Windows, go to <em>Device &amp; Printers</em> in <em>Control Panel</em> and go to your Bluetooth device's properties. Then, in the <em>Bluetooth</em> section, you can find the unique identifier. Copy it as you will need it.</li>
+<li>Download <strong>PsExec</strong> from <a href="http://technet.microsoft.com/en-us/sysinternals/bb897553.aspx">here</a>.</li>
+<li>Unzip the zip you downloaded and open a <em>CMD</em> window with elevated privileges. (Click the Start menu, search for cmd, then right-click the CMD and click <strong>Run as Administrator</strong>.)</li>
+<li><code>cd</code> into the folder where you unzipped your download.</li>
+<li>Run <code>psexec -s -i regedit.exe</code></li>
+<li>Navigate to find the keys under <code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\BTHPORT\Parameters\Keys</code>.  If there is no <em>CurrentControlSet</em>, try <em>ControlSet001</em>.</li>
+<li>You should see a few keys labels with the MAC addresses -- write down the MAC address associated with the unique identifier you copied before.</li>
+<li>Go back to Linux (if not in Linux) and add our Windows key to our Linux config entries. Just note that the Bluetooth port's MAC address is formatted differently when moving from Windows to Linux - referenced as aa1122334455 in Windows in my example above. The Linux version will be in all caps and punctuated by ':' after every two characters - for example <code>AA:11:22:33:44:55</code>.  </li>
+<li>Switch to root: do <code>sudo -s</code></li>
+<li><code>cd</code> to your Bluetooth config location at <code>/var/lib/bluetooth/[bth port  MAC addresses]</code></li>
+<li>Here you'll find folders for each device you've paired with. The folder names being the Bluetooth devices' MAC addresses and contain a single file info. In these files, you'll see the link key you need to replace with your Windows ones, like so:
+<div class="highlight"><pre><span></span><code>[LinkKey]
+Key=&lt; NEW KEY, ex. B99999999FFFFFFFFF999999999FFFFF &gt;
+</code></pre></div></li>
+<li>Finally restart your bluetooth systemd service with <code>sudo systemctl restart bluetooth</code></li>
+</ol></div>
+</div>
+<div class="col-lg-3 col-xl-2 d-none d-lg-block sidebar border-left">
+<div id="toc-collapse" class="">
+    <ul class="nav flex-column">
+        
+        <li class="nav-item" data-level="2"><a href="#pairing-a-bluetooth-device-across-different-operating-systems" class="nav-link p-0">Pairing a Bluetooth device across different operating systems</a>
+          <ul class="nav flex-column">
+          </ul>
+        </li>
+    </ul>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+<footer class="footer">
+  <div class="container">
+    <div class="d-flex justify-content-between">
+      
+      <div class="footer-copyright">
+        © 2011–2020 openSUSE contributors
+      </div>
+      
+      <div class="list-inline">
+        <a class="list-inline-item" href="https://github.com/openSUSE/openSUSE-docs-revamped">Source Code</a>
+      </div>
+    </div>
+  </div>
+</footer>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../js/extra.js" defer></script>
+        <script src="https://static.opensuse.org/chameleon-3.0/dist/js/chameleon.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

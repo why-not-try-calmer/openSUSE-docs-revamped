@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../image/geeko-color.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
@@ -34,6 +34,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="../styles.css">
     
     
       
@@ -271,7 +273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../media_choice/" class="md-nav__link">
+      <a href="../image_choice/" class="md-nav__link">
         Preparing the installation media
       </a>
     </li>
@@ -373,12 +375,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
       
       <label class="md-nav__link" for="nav-5">
         Distro basics
@@ -419,12 +423,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3" checked>
       
       <label class="md-nav__link" for="nav-5-3">
         Interlude -- Fundamental openSUSE concepts
@@ -437,6 +443,505 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Zypper
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Zypper
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zypper" class="md-nav__link">
+    Zypper
+  </a>
+  
+    <nav class="md-nav" aria-label="Zypper">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Definitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repository-management" class="md-nav__link">
+    Repository Management
+  </a>
+  
+    <nav class="md-nav" aria-label="Repository Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-all-defined-repositories" class="md-nav__link">
+    List all defined repositories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-new-repository" class="md-nav__link">
+    Add a new repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-specified-repository" class="md-nav__link">
+    Remove specified repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rename-specified-repository" class="md-nav__link">
+    Rename specified repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-specified-repository" class="md-nav__link">
+    Modify specified repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh-all-repositories" class="md-nav__link">
+    Refresh all repositories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean-local-caches" class="md-nav__link">
+    Clean local caches
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-management" class="md-nav__link">
+    Software Management
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-packages" class="md-nav__link">
+    Install packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-packages" class="md-nav__link">
+    Remove packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-integrity-of-package-dependencies" class="md-nav__link">
+    Verify integrity of package dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-source-packages-and-their-build-dependencies" class="md-nav__link">
+    Install source packages and their build dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-newly-added-packages-recommended-by-installed-packages" class="md-nav__link">
+    Install newly added packages recommended by installed packages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-management" class="md-nav__link">
+    Update Management
+  </a>
+  
+    <nav class="md-nav" aria-label="Update Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-installed-packages-with-newer-versions" class="md-nav__link">
+    Update installed packages with newer versions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-available-updates" class="md-nav__link">
+    List available updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-needed-patches" class="md-nav__link">
+    Install needed patches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-available-patches" class="md-nav__link">
+    List available patches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perform-a-distribution-upgrade" class="md-nav__link">
+    Perform a distribution upgrade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-for-patches" class="md-nav__link">
+    Check for patches
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querying" class="md-nav__link">
+    Querying
+  </a>
+  
+    <nav class="md-nav" aria-label="Querying">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-for-packages-matching-a-pattern" class="md-nav__link">
+    Search for packages matching a pattern
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-full-information-for-specified-packages" class="md-nav__link">
+    Show full information for specified packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-full-information-for-specified-patches" class="md-nav__link">
+    Show full information for specified patches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-full-information-for-specified-patterns" class="md-nav__link">
+    Show full information for specified patterns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-full-information-for-specified-products" class="md-nav__link">
+    Show full information for specified products
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-available-patches" class="md-nav__link">
+    List all available patches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-available-packages" class="md-nav__link">
+    List all available packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-available-patterns" class="md-nav__link">
+    List all available patterns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-available-products" class="md-nav__link">
+    List all available products
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-packages-providing-specified-capability" class="md-nav__link">
+    List packages providing specified capability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-locks" class="md-nav__link">
+    Package Locks
+  </a>
+  
+    <nav class="md-nav" aria-label="Package Locks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-a-package-lock" class="md-nav__link">
+    Add a package lock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-a-package-lock" class="md-nav__link">
+    Remove a package lock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-current-package-locks" class="md-nav__link">
+    List current package locks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-useless-locks" class="md-nav__link">
+    Remove useless locks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locale-management" class="md-nav__link">
+    Locale Management
+  </a>
+  
+    <nav class="md-nav" aria-label="Locale Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-requested-locales-languages-codes" class="md-nav__link">
+    List requested locales (languages codes)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-locales-to-requested-locales" class="md-nav__link">
+    Add locale(s) to requested locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-locales-from-requested-locales" class="md-nav__link">
+    Remove locale(s) from requested locales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-commands" class="md-nav__link">
+    Other Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-command-specific-help" class="md-nav__link">
+    Get command-specific help
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compare-two-version-strings" class="md-nav__link">
+    Compare two version strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print-the-target-operating-system-id-string" class="md-nav__link">
+    Print the target operating system ID string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print-report-about-licenses-and-eulas-of-installed-packages" class="md-nav__link">
+    Print report about licenses and EULAs of installed packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-rpms-specified-on-the-commandline-to-a-local-directory" class="md-nav__link">
+    Download rpms specified on the commandline to a local directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-source-rpms-for-all-installed-packages-to-a-local-directory" class="md-nav__link">
+    Download source rpms for all installed packages to a local directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-if-the-needs-reboot-flag-was-set" class="md-nav__link">
+    Check if the needs-reboot flag was set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-running-processes-which-might-still-use-files-and-libraries-deleted-by-recent-upgrades" class="md-nav__link">
+    List running processes which might still use files and libraries deleted by recent upgrades
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-old-kernels" class="md-nav__link">
+    Remove old kernels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-options" class="md-nav__link">
+    Global Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository-options" class="md-nav__link">
+    Repository Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-options" class="md-nav__link">
+    Command Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
           
             
   
@@ -561,10 +1066,50 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-1-1" type="checkbox" id="nav-6-1-1" >
+      
+      <label class="md-nav__link" for="nav-6-1-1">
+        Graphic Drivers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Graphic Drivers" data-md-level="3">
+        <label class="md-nav__title" for="nav-6-1-1">
+          <span class="md-nav__icon md-icon"></span>
+          Graphic Drivers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
     <li class="md-nav__item">
       <a href="../install_proprietary/" class="md-nav__link">
-        NVIDIA driver
+        Proprietary
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid_graphics/" class="md-nav__link">
+        Hybrid GPUs
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1921,6 +2466,41 @@ Expert options
         
 <footer class="md-footer">
   
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../microos_getting_started/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                microOS specials
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../snapper/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Snapper
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -1966,8 +2546,8 @@ Expert options
       
     </div>
     
-      <script src="../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

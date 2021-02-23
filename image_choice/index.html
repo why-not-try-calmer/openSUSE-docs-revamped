@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../image/geeko-color.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
@@ -34,6 +34,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="../styles.css">
     
     
       
@@ -340,6 +342,46 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#get-to-the-installer" class="md-nav__link">
+    Get to the installer
+  </a>
+  
+    <nav class="md-nav" aria-label="Get to the installer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-the-installation-media-usb-flash-drive" class="md-nav__link">
+    Prepare the installation media (USB flash drive)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reboot-to-the-device" class="md-nav__link">
+    Reboot to the device
+  </a>
+  
+    <nav class="md-nav" aria-label="Reboot to the device">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -513,6 +555,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../zypper/" class="md-nav__link">
+        Zypper
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../snapper/" class="md-nav__link">
         Snapper
       </a>
@@ -631,10 +685,50 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-1-1" type="checkbox" id="nav-6-1-1" >
+      
+      <label class="md-nav__link" for="nav-6-1-1">
+        Graphic Drivers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Graphic Drivers" data-md-level="3">
+        <label class="md-nav__title" for="nav-6-1-1">
+          <span class="md-nav__icon md-icon"></span>
+          Graphic Drivers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
     <li class="md-nav__item">
       <a href="../install_proprietary/" class="md-nav__link">
-        NVIDIA driver
+        Proprietary
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid_graphics/" class="md-nav__link">
+        Hybrid GPUs
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1024,6 +1118,46 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#get-to-the-installer" class="md-nav__link">
+    Get to the installer
+  </a>
+  
+    <nav class="md-nav" aria-label="Get to the installer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-the-installation-media-usb-flash-drive" class="md-nav__link">
+    Prepare the installation media (USB flash drive)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reboot-to-the-device" class="md-nav__link">
+    Reboot to the device
+  </a>
+  
+    <nav class="md-nav" aria-label="Reboot to the device">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1104,6 +1238,27 @@ The check passes just in case the command outputs calls it a success.</p>
 <div class="highlight"><pre><span></span><code>$  sha256sum &lt;Image.iso&gt;
 </code></pre></div>
 The check passes just in case the output of the above equals the checksum written in plain text in the <strong>Target Checksum</strong> (see <a href="#assumptions-definitions">Definitions &amp; assumptions</a>).</p>
+<h2 id="get-to-the-installer">Get to the installer<a class="headerlink" href="#get-to-the-installer" title="Permanent link">⚓︎</a></h2>
+<p>In this section you will learn how to get to a running installer for <em>Tumbleweed</em> or <em>Leap</em>. This involves:</p>
+<ul>
+<li>Using a program to write an installation image -- see <a href="#choosing-an-installation-media">Choosing an installation image above</a> -- to an external device, usually a USB pen drive or some other external storage medium.</li>
+<li>Having the media adequately partioned to host the image, and making it bootable</li>
+<li>Booting on the external media and run the installer.</li>
+</ul>
+<p>We will be assuming that you have downloaded an installation image and optionnally, have performed an authenticity check on it -- see the above sections for details. The next section also assumes that you will be using a USB flash drive as the installation media. The section after that handles external hard drives.</p>
+<h3 id="prepare-the-installation-media-usb-flash-drive">Prepare the installation media (USB flash drive)<a class="headerlink" href="#prepare-the-installation-media-usb-flash-drive" title="Permanent link">⚓︎</a></h3>
+<p>The process for preparing the installation media varies depending on the operating system from which you are following these steps. In different operating systems offer different applications. We recommend using any of the following programs, which we have tested and which are known to be simple to use and reliable on their respective available platforms:
+- Fedora Image Writer (<a href="https://getfedora.org/fmw/FedoraMediaWriter-win32-latest.exe">Windows</a>, Linux [<a href="https://flathub.org/apps/details/org.fedoraproject.MediaWriter">flatpak</a>], <a href="https://getfedora.org/fmw/FedoraMediaWriter-osx-latest.dmg">macOS</a>)</p>
+<p>For <em>Fedora Image Writer</em>:</p>
+<ol>
+<li>Make sure your USB flash drive has enough storage to hold the image (either ~1 GB or ~5 GB) and plug it in.</li>
+<li>Run <em>Fedora Image Writer</em>. From the main menu pick <strong>Custom image</strong> and then select the <code>.iso</code> image to write to the USB flash drive. Make sure that both the image and flash drive have been correctly selected, as in: <img alt="this screenshot" src="../image/image_choice_fiw_conf_prompt.png" /></li>
+<li>Finally click on <strong>Write to Disk</strong>.</li>
+</ol>
+<p>Once writing the image is done, you are ready to reboot from the USB drive. Leaving the USB drive plugged in, use the method appropriate to your operating system to restart your computer.</p>
+<h3 id="reboot-to-the-device">Reboot to the device<a class="headerlink" href="#reboot-to-the-device" title="Permanent link">⚓︎</a></h3>
+<h4 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">⚓︎</a></h4>
+<p>Use <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode">these instructions</a> to reboot to your BIOS or UEFI. From there you will be able to select as boot target the USB flash drive hosting the installation image.</p>
                 
                   
                     
@@ -1112,7 +1267,7 @@ The check passes just in case the output of the above equals the checksum writte
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-01-18
+      Last update: 2021-02-14
     
   </small>
 </div>
@@ -1212,8 +1367,8 @@ The check passes just in case the output of the above equals the checksum writte
       
     </div>
     
-      <script src="../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../image/geeko-color.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
@@ -34,6 +34,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="../styles.css">
     
     
       
@@ -271,7 +273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../media_choice/" class="md-nav__link">
+      <a href="../image_choice/" class="md-nav__link">
         Preparing the installation media
       </a>
     </li>
@@ -445,6 +447,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../zypper/" class="md-nav__link">
+        Zypper
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -480,6 +494,20 @@
   
     <nav class="md-nav" aria-label="Snapper">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snapper-capabilities" class="md-nav__link">
+    Snapper capabilities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults" class="md-nav__link">
+    Defaults
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#choosing-a-snapshot" class="md-nav__link">
@@ -646,10 +674,50 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-1-1" type="checkbox" id="nav-6-1-1" >
+      
+      <label class="md-nav__link" for="nav-6-1-1">
+        Graphic Drivers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Graphic Drivers" data-md-level="3">
+        <label class="md-nav__title" for="nav-6-1-1">
+          <span class="md-nav__icon md-icon"></span>
+          Graphic Drivers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
     <li class="md-nav__item">
       <a href="../install_proprietary/" class="md-nav__link">
-        NVIDIA driver
+        Proprietary
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid_graphics/" class="md-nav__link">
+        Hybrid GPUs
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1007,6 +1075,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#snapper-capabilities" class="md-nav__link">
+    Snapper capabilities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults" class="md-nav__link">
+    Defaults
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#choosing-a-snapshot" class="md-nav__link">
     Choosing a Snapshot
   </a>
@@ -1068,18 +1150,44 @@
                   <h1>Snapper</h1>
                 
                 <h2 id="snapper">Snapper<a class="headerlink" href="#snapper" title="Permanent link">⚓︎</a></h2>
-<p><code>snapper</code> is a command-line interface for filesystem snapshot management. It can create, delete and compare snapshots and undo changes done between snapshots.</p>
+<p>Snapper is a tool for filesystem snapshot management. It can create, delete and compare snapshots and undo changes from one snapshot to the next. Snapper is a powerful maintenance tool to keep your system running, with very little downtime, if something should go wrong. Snapper has both a <strong>Command Line Interface</strong> (CLI) and <strong>Graphical Interface</strong>, not all functionality is available through the graphical interface but inexperienced users should find it sufficient for basic Snapper tasks.</p>
+<p>Snapper is deeply integrated with the Btrfs filesystem, serving as an easy to use helper for the built in functions of Btrfs. The most common Btrfs tasks can be conducted with Snapper, however, there may be instances when it is necessary to interact with Btrfs directly.</p>
+<p>Tumbleweed users should note that understanding how to use Snapper is an important step in maintaining a stable, functional system. As a rolling release, Tumbleweed, is subjected to less testing overall and the occasional system breaking update can be installed. Such problems are quickly and easily resolved with Snapper. </p>
+<h4 id="snapper-capabilities">Snapper capabilities<a class="headerlink" href="#snapper-capabilities" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li>Undo system changes made by <code>zypper</code> and YaST.</li>
+<li>Restore files from previous snapshots.</li>
+<li>Do a system rollback by booting from a snapshot.</li>
+<li>Manually create and manage snapshots, within the running system.</li>
+</ul>
+<h3 id="defaults">Defaults<a class="headerlink" href="#defaults" title="Permanent link">⚓︎</a></h3>
+<p>By default, openSUSE Tumbleweed formats your hard drive with the Btrfs filesystem which provides the powerful snapshot capabilities. Snapshots are automatically enabled for the root partition <code>/</code>.</p>
+<p>The default snapshot configuration should only be changed by experienced users but it is important to note some default behaviour for new users as well.</p>
+<ul>
+<li>
+<p>Snapshots are automatically enabled for the root <code>/</code> partition if it is larger than 16 Gigabytes. This is to ensure there is enough disk space for the snapshots and important system tasks to occure, which may include moving, writing or deleting files.</p>
+</li>
+<li>
+<p>If the root <code>/</code> partition is smaller than 16 Gigabytes a different kind of snapshot is used, known as "Timeline Snapshots". These snapshots are created every hour. By default only the first snapshot of the last ten days, months, and years are kept. This ensures there are some snapshots for system rollbacks while taking up very minimal disk space.</p>
+</li>
+<li>
+<p>The users <code>/home</code> directory is not included in snapshots and should not be relied on as a data backup for personal files. This prevents data loss if a system rollback is conducted. Changes to personal files would also be "undone".</p>
+</li>
+<li>
+<p>Directories <code>/opt</code> and <code>/usr/local</code>, where various software and third-party products are installed are not included in snapshots by default. This prevents uninstalling the software if a system rollback is conducted.    </p>
+</li>
+</ul>
 <h3 id="choosing-a-snapshot">Choosing a Snapshot<a class="headerlink" href="#choosing-a-snapshot" title="Permanent link">⚓︎</a></h3>
 <h4 id="snapshot-types">Snapshot Types<a class="headerlink" href="#snapshot-types" title="Permanent link">⚓︎</a></h4>
 <p><code>snapper</code> features 3 types of snapshots: <em>Timeline</em>, <em>Installation</em>, and <em>Administration</em>.</p>
 <ul>
-<li><strong>Timeline</strong> snapshots are single snapshots, created every hour and old snapshots are automatically deleted. Disabled by default, the only single snapshots present may be the ones created when openSUSE was installed.</li>
-<li><strong>Installation</strong> snapshots are created in pairs (<em>Pre</em> and <em>Post</em>) when packages are installed with <em>YaST</em> or <code>zypper</code>. Snapshot pairs are marked as <strong>important</strong> if an important system component, such as the kernel, has been installed. Enabled by default.</li>
-<li><strong>Administration</strong> snapshots are created in pairs (<em>Pre and Post</em>) when system administration is performed using <em>YaST</em>. The Pre snapshot is created when a <em>YaST</em> module is started and the Post snapshot is created when the module is closed. Enabled by default.</li>
+<li><strong>Timeline</strong> snapshots are single snapshots, created every hour and old snapshots are automatically deleted. By default, the first snapshot of the last ten days, months, and years are kept. Disabled by default on partitions larger than 16 Gigabytes. The only single snapshots present may be the ones created when openSUSE was installed.</li>
+<li><strong>Installation</strong> snapshots are created in pairs (<em>Pre</em> and <em>Post</em>) when packages are installed with YaST or Zypper. Snapshot pairs are marked as <strong>important</strong> if an important system component, such as the kernel, has been installed. Enabled by default.</li>
+<li><strong>Administration</strong> snapshots are created in pairs (<em>Pre and Post</em>) when system administration is performed using YaST. The Pre snapshot is created when a YaST module is started and the Post snapshot is created when the module is closed. Enabled by default.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The last ten important and the last ten regular snapshot pairs are kept. This total encompasses both the <em>Installation</em> and <em>Administration</em> snapshot types.</p>
+<p>The last ten important and the last ten regular snapshot pairs are kept. This total encompasses both Installation and Administration snapshot types. Snapshots are automatically deleted when they take up too much space on the disk, but four important and two regular snapshots are always kept.</p>
 </div>
 <h4 id="identifying-snapshots">Identifying Snapshots<a class="headerlink" href="#identifying-snapshots" title="Permanent link">⚓︎</a></h4>
 <p>There are two ways to identify which snapshot you may want to rollback to: 
@@ -1087,29 +1195,29 @@
 * with the <em>YaST</em> utility at <em>YaST</em> &gt; <em>Filesystem Snapshots</em></p>
 <p>Snapper command line:</p>
 <p><code>$ sudo snapper list</code></p>
-<details class="example"><summary>Snapper CLI Example</summary><div class="highlight"><pre><span></span><code>$ sudo snapper list
-[sudo] password for root: 
-  # | Type   | Pre # | Date                            | User | Cleanup | Description           | Userdata     
-----+--------+-------+---------------------------------+------+---------+-----------------------+--------------
- 0  | single |       |                                 | root |         | current               |              
- 1* | single |       | Thu 17 Dec 2020 10:59:10 PM MST | root |         | first root filesystem |              
- 2  | single |       | Fri 18 Dec 2020 12:02:05 AM MST | root | number  | after installation    | important=yes
-39  | pre    |       | Sat 19 Dec 2020 01:58:34 PM MST | root | number  | zypp(zypper)          | important=no 
-40  | post   |    39 | Sat 19 Dec 2020 01:58:54 PM MST | root | number  |                       | important=no 
-41  | pre    |       | Sat 19 Dec 2020 01:59:02 PM MST | root | number  | zypp(zypper)          | important=no 
-42  | post   |    41 | Sat 19 Dec 2020 01:59:59 PM MST | root | number  |                       | important=no 
-43  | pre    |       | Sun 20 Dec 2020 05:30:27 PM MST | root | number  | yast firewall         |              
-44  | pre    |       | Sun 20 Dec 2020 05:31:17 PM MST | root | number  | yast firewall         |              
-45  | post   |    43 | Sun 20 Dec 2020 05:31:17 PM MST | root | number  |                       |              
-46  | post   |    44 | Sun 20 Dec 2020 05:31:38 PM MST | root | number  |                       |              
-47  | pre    |       | Sun 20 Dec 2020 05:36:25 PM MST | root | number  | zypp(zypper)          | important=no 
-48  | post   |    47 | Sun 20 Dec 2020 05:37:00 PM MST | root | number  |                       | important=no 
-49  | pre    |       | Tue 22 Dec 2020 07:40:20 PM MST | root | number  | yast snapper          |              
-50  | pre    |       | Tue 22 Dec 2020 07:42:33 PM MST | root | number  | zypp(zypper)          | important=yes
-51  | post   |    50 | Tue 22 Dec 2020 07:46:28 PM MST | root | number  |                       | important=yes
+<p><strong>Snapper CLI Example</strong>
+<div class="highlight"><pre><span></span><code>    $ sudo snapper list
+    [sudo] password for root: 
+      # | Type   | Pre # | Date                            | User | Cleanup | Description           | Userdata     
+    ----+--------+-------+---------------------------------+------+---------+-----------------------+--------------
+     0  | single |       |                                 | root |         | current               |              
+     1* | single |       | Thu 17 Dec 2020 10:59:10 PM MST | root |         | first root filesystem |              
+     2  | single |       | Fri 18 Dec 2020 12:02:05 AM MST | root | number  | after installation    | important=yes
+    39  | pre    |       | Sat 19 Dec 2020 01:58:34 PM MST | root | number  | zypp(zypper)          | important=no 
+    40  | post   |    39 | Sat 19 Dec 2020 01:58:54 PM MST | root | number  |                       | important=no 
+    41  | pre    |       | Sat 19 Dec 2020 01:59:02 PM MST | root | number  | zypp(zypper)          | important=no 
+    42  | post   |    41 | Sat 19 Dec 2020 01:59:59 PM MST | root | number  |                       | important=no 
+    43  | pre    |       | Sun 20 Dec 2020 05:30:27 PM MST | root | number  | yast firewall         |              
+    44  | pre    |       | Sun 20 Dec 2020 05:31:17 PM MST | root | number  | yast firewall         |              
+    45  | post   |    43 | Sun 20 Dec 2020 05:31:17 PM MST | root | number  |                       |              
+    46  | post   |    44 | Sun 20 Dec 2020 05:31:38 PM MST | root | number  |                       |              
+    47  | pre    |       | Sun 20 Dec 2020 05:36:25 PM MST | root | number  | zypp(zypper)          | important=no 
+    48  | post   |    47 | Sun 20 Dec 2020 05:37:00 PM MST | root | number  |                       | important=no 
+    49  | pre    |       | Tue 22 Dec 2020 07:40:20 PM MST | root | number  | yast snapper          |              
+    50  | pre    |       | Tue 22 Dec 2020 07:42:33 PM MST | root | number  | zypp(zypper)          | important=yes
+    51  | post   |    50 | Tue 22 Dec 2020 07:46:28 PM MST | root | number  |                       | important=yes
 </code></pre></div>
-</details>
-<p><em>YaST</em> filesystem snapshots:</p>
+<strong>Snapper YaST interface example</strong></p>
 <p><img alt="YaST filesystem snapshots" src="../image/snapper_post_zypper.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1142,7 +1250,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-02-01
+      Last update: 2021-02-18
     
   </small>
 </div>
@@ -1165,7 +1273,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../microos_getting_started/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../zypper/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1174,7 +1282,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                microOS specials
+                Zypper
               </div>
             </div>
           </a>
@@ -1186,7 +1294,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                NVIDIA driver
+                Proprietary
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -1242,8 +1350,8 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

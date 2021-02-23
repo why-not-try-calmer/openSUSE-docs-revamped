@@ -10,11 +10,11 @@
       
       
       <link rel="shortcut icon" href="../image/geeko-color.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
-        <title>NVIDIA driver - openSUSE User Documentation Project - 0.3.1</title>
+        <title>Proprietary - openSUSE User Documentation Project - 0.3.1</title>
       
     
     
@@ -34,6 +34,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="../styles.css">
     
     
       
@@ -90,7 +92,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              NVIDIA driver
+              Proprietary
             
           </span>
         </div>
@@ -271,7 +273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../media_choice/" class="md-nav__link">
+      <a href="../image_choice/" class="md-nav__link">
         Preparing the installation media
       </a>
     </li>
@@ -443,6 +445,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../zypper/" class="md-nav__link">
+        Zypper
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../snapper/" class="md-nav__link">
         Snapper
       </a>
@@ -567,18 +581,42 @@
     
   
   
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-1-1" type="checkbox" id="nav-6-1-1" checked>
+      
+      <label class="md-nav__link" for="nav-6-1-1">
+        Graphic Drivers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Graphic Drivers" data-md-level="3">
+        <label class="md-nav__title" for="nav-6-1-1">
+          <span class="md-nav__icon md-icon"></span>
+          Graphic Drivers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          NVIDIA driver
+          Proprietary
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        NVIDIA driver
+        Proprietary
       </a>
       
         
@@ -612,11 +650,38 @@
     Setup the driver
   </a>
   
+    <nav class="md-nav" aria-label="Setup the driver">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-yast" class="md-nav__link">
+    With Yast
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#configure-cuda" class="md-nav__link">
-    Configure CUDA
+  <a href="#using-the-command-line" class="md-nav__link">
+    Using the command line
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuda" class="md-nav__link">
+    CUDA
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybrid-graphicsoptimus" class="md-nav__link">
+    Hybrid Graphics/Optimus
   </a>
   
 </li>
@@ -630,6 +695,24 @@
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid_graphics/" class="md-nav__link">
+        Hybrid GPUs
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -998,11 +1081,38 @@
     Setup the driver
   </a>
   
+    <nav class="md-nav" aria-label="Setup the driver">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-yast" class="md-nav__link">
+    With Yast
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#configure-cuda" class="md-nav__link">
-    Configure CUDA
+  <a href="#using-the-command-line" class="md-nav__link">
+    Using the command line
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuda" class="md-nav__link">
+    CUDA
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybrid-graphicsoptimus" class="md-nav__link">
+    Hybrid Graphics/Optimus
   </a>
   
 </li>
@@ -1025,17 +1135,18 @@
               
                 
                 
-                  <h1>NVIDIA driver</h1>
+                  <h1>Proprietary</h1>
                 
                 <h2 id="nvidia-proprietary-drivers">Nvidia proprietary drivers<a class="headerlink" href="#nvidia-proprietary-drivers" title="Permanent link">⚓︎</a></h2>
 <h3 id="determine-which-driver-is-required-by-your-gpu">Determine which driver is required by your GPU<a class="headerlink" href="#determine-which-driver-is-required-by-your-gpu" title="Permanent link">⚓︎</a></h3>
 <ol>
-<li>There are two Nvidia driver options available in the Nvidia repository - nvidia-glG05 and nvidia-glG04.</li>
-<li>The nvidia-glG05 package corresponds with the Nvidia 460 series driver.</li>
-<li>The nvidia-glG04 package corresponds with the Nvidia 390 series driver.</li>
+<li>There are two Nvidia driver options available in the Nvidia repository - <strong>nvidia-glG05</strong> and <strong>nvidia-glG04</strong>.</li>
+<li>The <strong>nvidia-glG05</strong> package corresponds with the Nvidia 460 series driver.</li>
+<li>The <strong>nvidia-glG04</strong> package corresponds with the Nvidia 390 series driver.</li>
 <li>Please refer to the Nvidia <a href="https://www.nvidia.com/en-us/drivers/unix/">website</a> to determine which driver best supports your GPU.</li>
 </ol>
 <h3 id="setup-the-driver">Setup the driver<a class="headerlink" href="#setup-the-driver" title="Permanent link">⚓︎</a></h3>
+<h4 id="with-yast">With Yast<a class="headerlink" href="#with-yast" title="Permanent link">⚓︎</a></h4>
 <ol>
 <li>Go to <em>YAsT2</em>.</li>
 <li>Then <em>Software Management</em>.</li>
@@ -1043,17 +1154,24 @@
 <li>Click <strong>Add</strong> &gt; <strong>Community Repositories</strong>.</li>
 <li>Select <strong>nVidia Graphics Drivers</strong> &gt; <strong>Accept</strong> &gt; <strong>Trust</strong>.</li>
 <li>On the <em>Configured Software Repositories</em> &gt; Click <strong>Ok</strong></li>
-<li>Back to <em>Software Management Windows</em>"_ &gt; <strong>View</strong> &gt; <strong>Repositories</strong> &gt; Select <strong>nVidia Graphics Drivers</strong>.</li>
-<li>Select <strong>Nvidia-ComputeG05</strong> &amp; <strong>x11-video-nvidiaG05</strong> &gt; <strong>Accept</strong> (Some graphic cards need <em>G04</em>)</li>
+<li>Back to <em>Software Management Windows</em>" &gt; <strong>View</strong> &gt; <strong>Repositories</strong> &gt; Select <strong>nVidia Graphics Drivers</strong>.</li>
+<li>Select <strong>x11-video-nvidiaG05</strong> &gt; <strong>Accept</strong> (Some graphic cards need <em>G04</em>, see the first section above)</li>
+<li>Reboot.</li>
 </ol>
-<h3 id="configure-cuda">Configure CUDA<a class="headerlink" href="#configure-cuda" title="Permanent link">⚓︎</a></h3>
+<h4 id="using-the-command-line">Using the command line<a class="headerlink" href="#using-the-command-line" title="Permanent link">⚓︎</a></h4>
 <ol>
-<li>On terminal run <code>nvidia-smi</code> and look for <em>CUDA Version</em>.</li>
-<li>Run <code>sudo zypper addrepo https://developer.download.nvidia.com/compute/cuda/repos/opensuse15/x86_64/cuda-opensuse15.repo</code></li>
-<li><code>sudo zypper ref -f</code></li>
-<li><code>sudo zypper se cuda-nvcc-"CUDA Version"</code></li>
-<li><code>export PATH=/usr/local/cuda-"version"/bin:${PATH:+${PATH}}</code>
-   <code>export LD_LIBRARY_PATH=/usr/local/cuda-"version"/lib64:${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}</code></li>
+<li>Add the Nvidia Repository. If using Tumbleweed for example, you would run <code>sudo zypper addrepo --refresh https://download.nvidia.com/opensuse/tumbleweed NVIDIA</code>. For Leap, you can run <code>sudo zypper addrepo --refresh 'https://download.nvidia.com/opensuse/leap/$releasever' NVIDIA</code>.</li>
+<li>Install the appropriate driver by running <code>sudo zypper in x11-video-nvidiaG05</code> or <code>sudo zypper in x11-video-nvidiaG04</code></li>
+<li>Reboot.</li>
+</ol>
+<h4 id="cuda">CUDA<a class="headerlink" href="#cuda" title="Permanent link">⚓︎</a></h4>
+<ol>
+<li>CUDA can be installed with the <strong>Nvidia-ComputeG05</strong> or <strong>Nvidia-ComputeG04</strong> package.</li>
+<li>See <a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html">Nvidia's documentation</a> for further information.</li>
+</ol>
+<h3 id="hybrid-graphicsoptimus">Hybrid Graphics/Optimus<a class="headerlink" href="#hybrid-graphicsoptimus" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>See <a href="/hybrid_graphics.md">Hybrid Graphics</a></li>
 </ol>
                 
                   
@@ -1063,7 +1181,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-01-09
+      Last update: 2021-02-03
     
   </small>
 </div>
@@ -1101,13 +1219,13 @@
           </a>
         
         
-          <a href="../bluetooth/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../hybrid_graphics/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Bluetooth
+                Hybrid GPUs
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -1163,8 +1281,8 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

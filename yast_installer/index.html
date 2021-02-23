@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../image/geeko-color.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
@@ -34,6 +34,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="../styles.css">
     
     
       
@@ -271,7 +273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../media_choice/" class="md-nav__link">
+      <a href="../image_choice/" class="md-nav__link">
         Preparing the installation media
       </a>
     </li>
@@ -460,6 +462,40 @@
   <a href="#expert-partitioner" class="md-nav__link">
     Expert Partitioner
   </a>
+  
+    <nav class="md-nav" aria-label="Expert Partitioner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#picking-a-partition-scheme" class="md-nav__link">
+    Picking a partition scheme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-leap-alongside-windows" class="md-nav__link">
+    Installing Leap alongside Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#picking-a-filesystem-for-data-partitions" class="md-nav__link">
+    Picking a filesystem for data partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luks-encryption" class="md-nav__link">
+    LUKS encryption
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -665,6 +701,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../zypper/" class="md-nav__link">
+        Zypper
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../snapper/" class="md-nav__link">
         Snapper
       </a>
@@ -783,10 +831,50 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-1-1" type="checkbox" id="nav-6-1-1" >
+      
+      <label class="md-nav__link" for="nav-6-1-1">
+        Graphic Drivers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Graphic Drivers" data-md-level="3">
+        <label class="md-nav__title" for="nav-6-1-1">
+          <span class="md-nav__icon md-icon"></span>
+          Graphic Drivers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
     <li class="md-nav__item">
       <a href="../install_proprietary/" class="md-nav__link">
-        NVIDIA driver
+        Proprietary
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid_graphics/" class="md-nav__link">
+        Hybrid GPUs
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1252,6 +1340,40 @@
     Expert Partitioner
   </a>
   
+    <nav class="md-nav" aria-label="Expert Partitioner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#picking-a-partition-scheme" class="md-nav__link">
+    Picking a partition scheme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-leap-alongside-windows" class="md-nav__link">
+    Installing Leap alongside Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#picking-a-filesystem-for-data-partitions" class="md-nav__link">
+    Picking a filesystem for data partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luks-encryption" class="md-nav__link">
+    LUKS encryption
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1415,6 +1537,86 @@ On the <code>Addresses</code> tab you will be able to configure the IP address o
 <p><img alt="Suggested Partitioning" src="../image/yast_suggested_partitioning.png" /> </p>
 <h3 id="guided-setup">Guided Setup<a class="headerlink" href="#guided-setup" title="Permanent link">⚓︎</a></h3>
 <h3 id="expert-partitioner">Expert Partitioner<a class="headerlink" href="#expert-partitioner" title="Permanent link">⚓︎</a></h3>
+<h4 id="picking-a-partition-scheme">Picking a partition scheme<a class="headerlink" href="#picking-a-partition-scheme" title="Permanent link">⚓︎</a></h4>
+<p>Most Linux distributions have the same minimal partition scheme, and <em>Leap</em> is no exception:</p>
+<ul>
+<li>a <em>bootloader partition</em>, hosting a small program called a <em>bootloader</em>, whose purpose is to take over from the UEFI/BIOS of your computer and set up the initial conditions for your operating system to get running </li>
+<li>a main <em>data partition</em> (or <em>OS partition</em>), which is where the operating system (i.e. <em>Leap</em>), optionnally along with your personal user data, will be installed)</li>
+</ul>
+<p>If you are not interested in keeping whatever data or operating system is installed on the target machine, you can simply proceed with this partition scheme. But chances are that you will want to install Leap on a machine with an already functional operating system (i.e. Windows, macOS, or another Linux distribution). Or you might simply want to take care of the future, and adopt a scheme that will make installing other operating system alongside <em>Leap</em> easier and more reliable.</p>
+<p>The recommended partition schemes for a scenario where multiple operating systems are considered depends on whether you are interested in keeping a previously installed operating system. Here we are considering both options, using Windows as an example.</p>
+<h4 id="installing-leap-alongside-windows">Installing Leap alongside Windows<a class="headerlink" href="#installing-leap-alongside-windows" title="Permanent link">⚓︎</a></h4>
+<p>If you have Windows installed already, you are likely to have the following partitions already:</p>
+<ul>
+<li>one 'recovery partition', about 500 MB large, usually using the <em>Ntfs</em> filesystem (we won't consider it further as it is not relevant to what comes next)</li>
+<li>one 'Windows data' partition, usually using the <em>Ntfs</em> filesystem, hosting both Windows and your user data (you want to leave it untouched)</li>
+<li>one 'Windows bootloader' partition, about 100 MB large, using the <em>Fat32</em> filesystem, hosting the Windows bootloader.</li>
+</ul>
+<p>To this we recommend adding the following partitions:</p>
+<ol>
+<li>one 'Leap bootloader' partition, about 200-500 MB large, using the <em>Btrfs</em> filesystem, that will be hosting the GRUB (version 2) bootloader for Leap</li>
+<li>one 'Leap data' partition, about 50 GB large, using the <em>Btrfs</em> filesystem, that will be hosting both the operating system and your user data.</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Scroll down to <a href="./#picking-a-file-system-for-data-partitions">pick a filesystem for data partitions</a> to for more details as to why we recommend <em>Btrfs</em>.</p>
+</div>
+<p>If you plan on installing other operating systems in the future, we recommend splitting the data strictly required by Leap from your 'user data', which means replacing (2) above with the following:</p>
+<ul>
+<li>one 'Leap operating system partition', at least 40 GB large, using the <em>Btrfs</em> filesystem, that will be hosting the operating system; and</li>
+<li>one 'user data' partition, at least 15 Gb large, using the <em>Btrfs</em> filesystem, that will be hosting your user data.</li>
+</ul>
+<p>Then you will simply have to repeat (1) for each subsequent operating system to install, so that every operating system uses its own bootloader partition.</p>
+<p><u>Step by step</u></p>
+<ol>
+<li>From the <em>Disk</em> view, select <em>Expert Partioner</em></li>
+<li>Click the <strong>Add Partition</strong> button (bottom left-hand side)</li>
+<li>Assign it at least 40 GBs, and set its filesystem to <em>Btrfs</em>, and the mount point to <code>/</code>. You could label this partition 'Leap data'.</li>
+<li>(optionnally) Create a new partition by repeating (2) and (3) but this time assign it at least 15 GBs using <code>/home</code> for mount point. You could label it 'Linux home' bearing in mind that, under this partition scheme, the partition will be accessible from other operating systems.</li>
+<li>Create a new partition by repeating (2), assigning it 500 MBs, and set its mount point to <code>/boot/efi</code>. You could label the partition 'Leap' or 'Leap bootloader'. </li>
+</ol>
+<p>Even though this makes no difference from the installer's point of view, we recommend assigning meaningful labels to each partition, to make them easier to identify across various contexts.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Technically it is possible to write <em>Leap</em>'s bootloader to the Windows bootloader partition, we do not recommend it as the disk space on the Windows bootloader partition may exhaust itself at some point. If for some reason you need to do this, simply set the flag of this partition to <code>/boot/efi/</code>.</p>
+</div>
+<h4 id="picking-a-filesystem-for-data-partitions">Picking a filesystem for data partitions<a class="headerlink" href="#picking-a-filesystem-for-data-partitions" title="Permanent link">⚓︎</a></h4>
+<p>The <em>Leap</em> installer allows you to pick among several filesystems for <em>data partitions</em>, which for the purpose of this section we define as any partition mounted as <code>/</code> (root) or having root on its path (i.e. <code>/home</code>). Among the supported filesystems for data partitions you will find:</p>
+<ul>
+<li><em>Btrfs</em></li>
+<li><em>Ext4</em></li>
+<li><em>Zfs</em></li>
+</ul>
+<p>However, <em>Btrfs</em> has been the preferred filesystem for all openSUSE distributions for several years. This filesystem boasts a powerful <em>copy-on-write</em> logic, which lies at the heart of openSUSE's approach to stability: <em>Btrfs</em> allows to conveniently create and use <em>snapshots</em>, aka 'restoration points' on Windows (see <a href="../snapper/">Introduction to snapper</a> for details). For this reason we highly recommend you to use it for all your data partitions when installing <em>Leap</em>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Snapshots take advantage of the <em>copy-on-write</em> logic of <em>Btrfs</em>. On a copy-on write filesystem, submitted changes do not overwrite the previous state; instead, changes are 'moved' to a different location on the disk, so that the location of origin is left unchanged. Together with 'deduplication' rules aimed at minimizing redundancies between file changes, this logic allows for the layering of several versions of an entire filesystem, with each layer representing different sets of changes. These sets of changes thus correspond to meaningful actions from the end user's perspective, such as 'before installing package X', 'before creating subvolume Y', etc.
+Renouncing <em>Brtfs</em> thus means renouncing this feature. Given that <em>Tumbleweed</em> was designed around this feature, it will not work as intended unless you pick this filesystem.</p>
+</div>
+<h4 id="luks-encryption">LUKS encryption<a class="headerlink" href="#luks-encryption" title="Permanent link">⚓︎</a></h4>
+<p>If you are installing <em>Leap</em> on a laptop, or generally on any machine accessible to untrusted individuals, we highly recommend protecting your data with a <em>full disk encryption</em>. The price to pay is that doing so will entirely wipe out your drive. The obvious advantage, however, is that this will protect your data with a sound security model. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Full disk encryption contrasts with <em>partition encryption</em> in that it protects your entire physical drive using cryptographic techniques. For reasons that go beyond the scope of this document, partition encryption is significantly less secure than full disk encryption. In pictures, partition encryption is like locking your house with an old fashioned padlock and hiding the key in a flowerpot lying on the terrace, while full disk encryption is like locking your house with a digital padlock and keeping the code only in your mind.</p>
+</div>
+<p>To apply full disk encryption while installing, you can either use the <em>Guided Setup</em> feature or manually create the partition scheme first and then apply encryption. If you do the latter, you can simply reproduce the steps listed below:</p>
+<p><u>Step by step (Guided Setup)</u></p>
+<ol>
+<li>Select <em>Guided Setup</em>'<em> from the _Disk</em> screen</li>
+<li>Check <em>Enable LVM</em>'<em> and _Enable Disk Encryption</em>, and enter a strong password in both text fields</li>
+<li>Then, on the <em>Filesystem Options</em> screen:<ul>
+<li>Select <em>Btrfs</em>.</li>
+<li>Tick the <em>Enable Snapshots</em> checkbox (<a href="./#picking-a-file-system-for-data-partitions">scroll up</a> or see <a href="../snapper/">this document</a> to understand the reason why we recommend this).</li>
+<li>Tick the <em>Propose Separate Home LVM Logical Volume</em> checkbox.</li>
+<li>Select <em>Btfs</em> again as <em>File System Type</em> for your <code>/home</code> directory.</li>
+<li>Tick the <em>Propose Separate Swap LVM Logical Volume</em>.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The recommended setup mentioned here makes use of the <a href="https://gitlab.com/cryptsetup/cryptsetup/blob/master/README.md">cryptsetup</a> utility in conjunction with an LVM partition. <code>cryptsetup</code> is a popular and trusted tool in the Linux community implementing the LUKS Linux kernel standard, while LVM is a tool allowing your machine to see multiple physical disks as one single (logical) partition, or vice-versa, to one unique physical disk as multiple (logical) partitions. LVM &amp; LUKS work well together as it considerably simplifies the encryption - decryption operations. </p>
+</div>
 <h2 id="time-zone">Time Zone<a class="headerlink" href="#time-zone" title="Permanent link">⚓︎</a></h2>
 <h3 id="clock-and-time-zone">Clock and Time Zone<a class="headerlink" href="#clock-and-time-zone" title="Permanent link">⚓︎</a></h3>
 <p>Select your region and the time zone that you want to use for the system. The hardware clock is by default set to UTC. Select <em>Other Settings</em> for other time settings:</p>
@@ -1450,7 +1652,7 @@ You need to fill out the empty fields in order to create a first user:</p>
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-02-03
+      Last update: 2021-02-23
     
   </small>
 </div>
@@ -1473,7 +1675,7 @@ You need to fill out the empty fields in order to create a first user:</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../media_choice/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../image_choice/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1550,8 +1752,8 @@ You need to fill out the empty fields in order to create a first user:</p>
       
     </div>
     
-      <script src="../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

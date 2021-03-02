@@ -467,15 +467,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#picking-a-partition-scheme" class="md-nav__link">
-    Picking a partition scheme
+  <a href="#about-partition-schemes" class="md-nav__link">
+    About partition schemes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#installing-leap-alongside-windows" class="md-nav__link">
-    Installing Leap alongside Windows
+  <a href="#installing-leap-alongside-preexistent-windows-partitions" class="md-nav__link">
+    Installing Leap alongside preexistent Windows partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-leap-alongside-preexistent-linux-partitions" class="md-nav__link">
+    Installing Leap alongside preexistent Linux partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-leap-alongside-preexistent-linux-partitions_1" class="md-nav__link">
+    Installing Leap alongside preexistent Linux partitions
   </a>
   
 </li>
@@ -1344,15 +1358,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#picking-a-partition-scheme" class="md-nav__link">
-    Picking a partition scheme
+  <a href="#about-partition-schemes" class="md-nav__link">
+    About partition schemes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#installing-leap-alongside-windows" class="md-nav__link">
-    Installing Leap alongside Windows
+  <a href="#installing-leap-alongside-preexistent-windows-partitions" class="md-nav__link">
+    Installing Leap alongside preexistent Windows partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-leap-alongside-preexistent-linux-partitions" class="md-nav__link">
+    Installing Leap alongside preexistent Linux partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-leap-alongside-preexistent-linux-partitions_1" class="md-nav__link">
+    Installing Leap alongside preexistent Linux partitions
   </a>
   
 </li>
@@ -1472,7 +1500,7 @@
 <ul>
 <li>Any AMD64/Intel* EM64T processor (32-bit processors are not supported).</li>
 <li>1 GB physical RAM (4 GB or more strongly recommended).</li>
-<li>10 GB available disk space for a minimal installation, 16 GB for a graphical desktop (more is recommended). In case you plan to use Btrfs snapshots a minimum of 40 GB for the root partition is recommended.</li>
+<li>10 GB available disk space for a minimal installation, 16 GB for a graphical desktop (more is recommended). In case you plan to use <em>Btrfs</em> snapshots, a minimum of 40 GB for the root partition is recommended.</li>
 <li>Supports most modern sound and graphics cards, 1024 x 768 display resolution (higher recommended).</li>
 </ul>
 <h3 id="precautions">Precautions<a class="headerlink" href="#precautions" title="Permanent link">⚓︎</a></h3>
@@ -1537,49 +1565,51 @@ On the <code>Addresses</code> tab you will be able to configure the IP address o
 <p><img alt="Suggested Partitioning" src="../image/yast_suggested_partitioning.png" /> </p>
 <h3 id="guided-setup">Guided Setup<a class="headerlink" href="#guided-setup" title="Permanent link">⚓︎</a></h3>
 <h3 id="expert-partitioner">Expert Partitioner<a class="headerlink" href="#expert-partitioner" title="Permanent link">⚓︎</a></h3>
-<h4 id="picking-a-partition-scheme">Picking a partition scheme<a class="headerlink" href="#picking-a-partition-scheme" title="Permanent link">⚓︎</a></h4>
-<p>Most Linux distributions have the same minimal partition scheme, and <em>Leap</em> is no exception:</p>
+<h4 id="about-partition-schemes">About partition schemes<a class="headerlink" href="#about-partition-schemes" title="Permanent link">⚓︎</a></h4>
+<p>All Linux distributions use the same "base" partition scheme:</p>
 <ul>
 <li>a <em>bootloader partition</em>, hosting a small program called a <em>bootloader</em>, whose purpose is to take over from the UEFI/BIOS of your computer and set up the initial conditions for your operating system to get running </li>
 <li>a main <em>data partition</em> (or <em>OS partition</em>), which is where the operating system (i.e. <em>Leap</em>), optionnally along with your personal user data, will be installed)</li>
 </ul>
-<p>If you are not interested in keeping whatever data or operating system is installed on the target machine, you can simply proceed with this partition scheme. But chances are that you will want to install Leap on a machine with an already functional operating system (i.e. Windows, macOS, or another Linux distribution). Or you might simply want to take care of the future, and adopt a scheme that will make installing other operating system alongside <em>Leap</em> easier and more reliable.</p>
-<p>The recommended partition schemes for a scenario where multiple operating systems are considered depends on whether you are interested in keeping a previously installed operating system. Here we are considering both options, using Windows as an example.</p>
-<h4 id="installing-leap-alongside-windows">Installing Leap alongside Windows<a class="headerlink" href="#installing-leap-alongside-windows" title="Permanent link">⚓︎</a></h4>
-<p>If you have Windows installed already, you are likely to have the following partitions already:</p>
+<p>If you are not interested in keeping whatever data or operating system is installed on the target machine, you can simply proceed with the base partition scheme. In that cases, simply run the installer and, on the <em>Disk</em> screen, pick the <em>Suggested Partitioning</em> option, and accept all recommendations there. </p>
+<p>Chances are, however, that you will want to install Leap on a disk with an already functional operating system (i.e. Windows, macOS, or another Linux distribution). Or that you will want to install more operating systems alongside <em>Leap</em> easily and reliably in the future. These  families of scenarios require some extra steps with respect ot to the "base" partition scheme above.</p>
+<h4 id="installing-leap-alongside-preexistent-windows-partitions">Installing Leap alongside preexistent Windows partitions<a class="headerlink" href="#installing-leap-alongside-preexistent-windows-partitions" title="Permanent link">⚓︎</a></h4>
+<p>If you have Windows installed already, you are likely to have the following (physical) partitions already:</p>
 <ul>
-<li>one 'recovery partition', about 500 MB large, usually using the <em>Ntfs</em> filesystem (we won't consider it further as it is not relevant to what comes next)</li>
-<li>one 'Windows data' partition, usually using the <em>Ntfs</em> filesystem, hosting both Windows and your user data (you want to leave it untouched)</li>
+<li>one 'recovery partition', about 500 MB large, usually using the <em>Fat32</em> filesystem (we won't consider it further as it is not relevant to what comes next)</li>
+<li>one 'Windows data' partition, usually using the <em>Fat32</em> filesystem, hosting both Windows and your user data (you want to leave it untouched)</li>
 <li>one 'Windows bootloader' partition, about 100 MB large, using the <em>Fat32</em> filesystem, hosting the Windows bootloader.</li>
 </ul>
-<p>To this we recommend adding the following partitions:</p>
-<ol>
-<li>one 'Leap bootloader' partition, about 200-500 MB large, using the <em>Btrfs</em> filesystem, that will be hosting the GRUB (version 2) bootloader for Leap</li>
-<li>one 'Leap data' partition, about 50 GB large, using the <em>Btrfs</em> filesystem, that will be hosting both the operating system and your user data.</li>
-</ol>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Scroll down to <a href="./#picking-a-file-system-for-data-partitions">pick a filesystem for data partitions</a> to for more details as to why we recommend <em>Btrfs</em>.</p>
-</div>
-<p>If you plan on installing other operating systems in the future, we recommend splitting the data strictly required by Leap from your 'user data', which means replacing (2) above with the following:</p>
-<ul>
-<li>one 'Leap operating system partition', at least 40 GB large, using the <em>Btrfs</em> filesystem, that will be hosting the operating system; and</li>
-<li>one 'user data' partition, at least 15 Gb large, using the <em>Btrfs</em> filesystem, that will be hosting your user data.</li>
-</ul>
-<p>Then you will simply have to repeat (1) for each subsequent operating system to install, so that every operating system uses its own bootloader partition.</p>
-<p><u>Step by step</u></p>
+<p>We recommend adding to these physical partitions a single 'Leap OS' partition, at least 40 GB large, using the <em>Btrfs</em> filesystem. Please scroll down to <a href="./#picking-a-file-system-for-data-partitions">pick a filesystem for data partitions</a> to for more details as to why we recommend <em>Btrfs</em>.</p>
+<details class="info"><summary>Info</summary><p>The 'Leap OS' partition will host the Leap bootloader under the <code>/boot</code> subvolume, the operating system directly under <code>/</code> and your user data under the <code>/home</code> subvolume. Do note that, by default, a <code>/home</code> directory will be installed to store your user data. Also by default, this directory will be excluded from the snapshotting system, which means that there will be no <em>Btrfs</em> backups for your user data. This permits rollbacks between snapshots to proceed smoothly, leaving your user data in no incoherent state. This also means that you will need to manually manage your user data <a href="backing_up.md">back ups</a>.</p>
+</details>
+<p>Alternatively, you might want to install your user data under a separate partition, also mounted as <code>/home</code>, using any file system of your liking. This might come in handy if you plan on using multiple operating systems reading from, and writing to, a single user data partition.</p>
+<p>Whichever option you choose, you can refer to the following instructions:</p>
+<p><u>Step by step: Expert partitioning for Windows</u></p>
 <ol>
 <li>From the <em>Disk</em> view, select <em>Expert Partioner</em></li>
 <li>Click the <strong>Add Partition</strong> button (bottom left-hand side)</li>
-<li>Assign it at least 40 GBs, and set its filesystem to <em>Btrfs</em>, and the mount point to <code>/</code>. You could label this partition 'Leap data'.</li>
-<li>(optionnally) Create a new partition by repeating (2) and (3) but this time assign it at least 15 GBs using <code>/home</code> for mount point. You could label it 'Linux home' bearing in mind that, under this partition scheme, the partition will be accessible from other operating systems.</li>
-<li>Create a new partition by repeating (2), assigning it 500 MBs, and set its mount point to <code>/boot/efi</code>. You could label the partition 'Leap' or 'Leap bootloader'. </li>
+<li>Assign it at least 40 GBs, and set its filesystem to <em>Btrfs</em>, and the mount point to <code>/</code>. You could label this partition 'Leap OS'.</li>
+<li>(optionnally) Create a new partition by repeating (2) and (3), using <code>/home</code> for mount point. You could label it 'Linux home'. The partition will be accessible to other operating systems.</li>
+<li>(optionnally, if 4) Make sure there is no <code>/home</code> subvolume created inside the partition assigned to <code>/</code>. Remove if you find it.</li>
+<li>If it is not set already, set the <code>/boot/efi</code> flag your 'Windows bootloader' partition (the ~100MB partition probably using the <em>Fat32</em> filesystem)</li>
 </ol>
-<p>Even though this makes no difference from the installer's point of view, we recommend assigning meaningful labels to each partition, to make them easier to identify across various contexts.</p>
+<details class="info"><summary>Info</summary><p>Even though this makes no difference from the installer's point of view, we recommend assigning meaningful labels to each partition, to make them easier to reidentify them.</p>
+</details>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Technically it is possible to write <em>Leap</em>'s bootloader to the Windows bootloader partition, we do not recommend it as the disk space on the Windows bootloader partition may exhaust itself at some point. If for some reason you need to do this, simply set the flag of this partition to <code>/boot/efi/</code>.</p>
+<p>Because you are installing the Leap bootloader on a non-btrfs partition, the bootloader will be outside of the scope of the snapshotting system. This means that you won't be able to rollback from a misconfigured bootloader settings, and that in general rolling back won't suffice to fix issues with your bootloader configuration. See <a href="../snapper/">Introduction to snapper</a> for details. Consider also <a href="https://doc.opensuse.org/documentation/leap/reference/html/book.opensuse.reference/cha-snapper.html#sec-snapper-snapshot-boot">the official documentation</a> on snapper rollbacks.</p>
 </div>
+<h4 id="installing-leap-alongside-preexistent-linux-partitions">Installing Leap alongside preexistent Linux partitions<a class="headerlink" href="#installing-leap-alongside-preexistent-linux-partitions" title="Permanent link">⚓︎</a></h4>
+<p>You can follow the <em>Step by Step</em> from the previous section, making sure that:</p>
+<ul>
+<li>you flag your already existent bootloader partition as <code>/boot/efi</code></li>
+<li>(if it already exists on the disk before installing <em>Leap</em>) you flag your user data partition as <code>/home</code>, or alternatively, that you apply steps (4 &amp; 5) if you need to have a <code>/home</code> partition outside of <code>/</code>.</li>
+</ul>
+<details class="warning"><summary>Warning</summary><p>Make sure there is enough space (&gt;100 MB is fine) on whatever partition you're installing your bootloader(s) to. Resize it if necessary.</p>
+</details>
+<h4 id="installing-leap-alongside-preexistent-linux-partitions_1">Installing Leap alongside preexistent Linux partitions<a class="headerlink" href="#installing-leap-alongside-preexistent-linux-partitions_1" title="Permanent link">⚓︎</a></h4>
+<p>...</p>
 <h4 id="picking-a-filesystem-for-data-partitions">Picking a filesystem for data partitions<a class="headerlink" href="#picking-a-filesystem-for-data-partitions" title="Permanent link">⚓︎</a></h4>
 <p>The <em>Leap</em> installer allows you to pick among several filesystems for <em>data partitions</em>, which for the purpose of this section we define as any partition mounted as <code>/</code> (root) or having root on its path (i.e. <code>/home</code>). Among the supported filesystems for data partitions you will find:</p>
 <ul>
@@ -1600,22 +1630,38 @@ Renouncing <em>Brtfs</em> thus means renouncing this feature. Given that <em>Tum
 <p>Full disk encryption contrasts with <em>partition encryption</em> in that it protects your entire physical drive using cryptographic techniques. For reasons that go beyond the scope of this document, partition encryption is significantly less secure than full disk encryption. In pictures, partition encryption is like locking your house with an old fashioned padlock and hiding the key in a flowerpot lying on the terrace, while full disk encryption is like locking your house with a digital padlock and keeping the code only in your mind.</p>
 </div>
 <p>To apply full disk encryption while installing, you can either use the <em>Guided Setup</em> feature or manually create the partition scheme first and then apply encryption. If you do the latter, you can simply reproduce the steps listed below:</p>
-<p><u>Step by step (Guided Setup)</u></p>
+<p><u>Step by step: Guided partitioning for LUKS on Btrfs</u></p>
+<ol>
+<li>Select <em>Guided Setup</em> from the <em>Disk</em> screen</li>
+<li>Check <em>Enable Disk Encryption</em>, and enter a strong password in both text fields</li>
+<li>Then, on the <em>Filesystem Options</em> screen:<ul>
+<li>Select <em>Btrfs</em>.</li>
+<li>Tick the <em>Enable Snapshots</em> checkbox (<a href="./#picking-a-file-system-for-data-partitions">scroll up</a> or see <a href="../snapper/">this document</a> to understand the reason why we recommend this).</li>
+<li>Select <em>Btfs</em> again as <em>File System Type</em> for your any mount point / partition presented to you by the installer.</li>
+</ul>
+</li>
+</ol>
+<p>Alternatively, if you prefer to turn to a different filesystem than <em>Btrfs</em> (typically <em>Ext4</em>) follow the following steps:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using <em>Ext4</em> on either <code>/</code> or <code>/boot</code> will prevent you from using <code>snapper</code> snapshots.</p>
+</div>
+<p><u>Step by step (Guided Setup: LUKS + LVM + Ext4)</u></p>
 <ol>
 <li>Select <em>Guided Setup</em>'<em> from the _Disk</em> screen</li>
 <li>Check <em>Enable LVM</em>'<em> and _Enable Disk Encryption</em>, and enter a strong password in both text fields</li>
 <li>Then, on the <em>Filesystem Options</em> screen:<ul>
-<li>Select <em>Btrfs</em>.</li>
+<li>Select <em>Ext4</em>.</li>
 <li>Tick the <em>Enable Snapshots</em> checkbox (<a href="./#picking-a-file-system-for-data-partitions">scroll up</a> or see <a href="../snapper/">this document</a> to understand the reason why we recommend this).</li>
 <li>Tick the <em>Propose Separate Home LVM Logical Volume</em> checkbox.</li>
-<li>Select <em>Btfs</em> again as <em>File System Type</em> for your <code>/home</code> directory.</li>
+<li>Select <em>Ext4</em> again as <em>File System Type</em> for your <code>/home</code> directory.</li>
 <li>Tick the <em>Propose Separate Swap LVM Logical Volume</em>.</li>
 </ul>
 </li>
 </ol>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The recommended setup mentioned here makes use of the <a href="https://gitlab.com/cryptsetup/cryptsetup/blob/master/README.md">cryptsetup</a> utility in conjunction with an LVM partition. <code>cryptsetup</code> is a popular and trusted tool in the Linux community implementing the LUKS Linux kernel standard, while LVM is a tool allowing your machine to see multiple physical disks as one single (logical) partition, or vice-versa, to one unique physical disk as multiple (logical) partitions. LVM &amp; LUKS work well together as it considerably simplifies the encryption - decryption operations. </p>
+<p>The recommended setup mentioned here makes use of the <a href="https://gitlab.com/cryptsetup/cryptsetup/blob/master/README.md">cryptsetup</a> utility in conjunction with an LVM partition. <code>cryptsetup</code> is a popular and trusted tool in the Linux community implementing the LUKS Linux kernel standard, using the <code>aes-xts-plain64</code> encryption standard. As for LVM, it is a partitioning scheme that allows your machine to see multiple physical disks as one single (logical) partition, or vice-versa, to see one unique physical disk as multiple (logical) partitions. LVM &amp; LUKS work well together, with LVM considerably simplifying encryption - decryption operations.</p>
 </div>
 <h2 id="time-zone">Time Zone<a class="headerlink" href="#time-zone" title="Permanent link">⚓︎</a></h2>
 <h3 id="clock-and-time-zone">Clock and Time Zone<a class="headerlink" href="#clock-and-time-zone" title="Permanent link">⚓︎</a></h3>
@@ -1652,7 +1698,7 @@ You need to fill out the empty fields in order to create a first user:</p>
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-02-23
+      Last update: 2021-03-02
     
   </small>
 </div>

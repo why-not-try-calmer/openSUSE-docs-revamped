@@ -1491,7 +1491,7 @@
                 
                 <h1 id="step-by-step-guide-for-opensuse-leap">Step by step guide for openSUSE Leap<a class="headerlink" href="#step-by-step-guide-for-opensuse-leap" title="Permanent link">⚓︎</a></h1>
 <h2 id="before-you-continue">Before you continue<a class="headerlink" href="#before-you-continue" title="Permanent link">⚓︎</a></h2>
-<p>This guide targets <strong>openSUSE Leap</strong>; however the differences between the installers for the openSUSE variants -- like Tumbleweed, MicroOS and Kubic -- are minuscule and most parts of the installer will be identical. This guide also assumes that you will have no other Linux, Windows or MacOS operating systems alongside openSUSE after you are done installing.</p>
+<p>This guide targets <strong>openSUSE Leap</strong>; however the differences between the installers for the openSUSE variants -- like Tumbleweed, MicroOS and Kubic -- are minor and most parts of the installer will be identical. This guide also assumes that you will have no other Linux, Windows or MacOS operating systems alongside openSUSE after you are done installing.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Expect slight differences in <em>System Role</em> and <em>Installation Settings</em>.</p>
@@ -1510,26 +1510,26 @@
 <li>In case you are using a Network image (Netiso) make sure that you have a strong internet connection. A wired connection is always more reliable than a wifi signal.</li>
 <li>If installing on a laptop, it is considered good practice to plug in the AC charger.</li>
 </ul>
-<p>You are now ready to boot the USB drive prepared as explained above and turn on your computer. Boot from the USB drive and select installation from the boot menu.</p>
+<p>You are now ready to boot the USB drive, which you have previously prepared as explained above and turn on your computer. Boot from the USB drive and select installation from the boot menu.</p>
 <p>If you want to see the details of the installation while the installer is booting you can press the <code>ESC</code> key.</p>
-<details class="info"><summary>Info</summary><p>On the left you will see a list of items where you can follow the steps you will take next or took already. You can always press <code>Back</code> in case you want to change something you configured earlier.</p>
+<details class="info"><summary>Info</summary><p>On the left you will see a list of items where you can follow the steps you will take next or have already taken. You can always press <code>Back</code> in case you want to change something you configured earlier.</p>
 </details>
 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">⚓︎</a></h2>
 <h2 id="welcome">Welcome<a class="headerlink" href="#welcome" title="Permanent link">⚓︎</a></h2>
 <h3 id="language-keyboard-and-license-agreement">Language, keyboard and license agreement<a class="headerlink" href="#language-keyboard-and-license-agreement" title="Permanent link">⚓︎</a></h3>
 <p><em>Welcome to the YaST installer!</em></p>
-<p>Here can change the language under <code>Language</code> (Alt+L), change the keyboard layout under <code>Keyboard Layout</code> (Alt+K) and you have a chance to test your selected keyboard layout in the field under <code>Keyboard Test</code> (Alt+y).</p>
+<p>Here you can change the language under <code>Language</code> (Alt+L), change the keyboard layout under <code>Keyboard Layout</code> (Alt+K) and you have a chance to test your selected keyboard layout in the field under <code>Keyboard Test</code> (Alt+y).</p>
 <p>The <code>License Agreement</code> informs you on roles, responsibilities and potential limitations.</p>
 <div class="admonition note">
 <p class="admonition-title">Online repositories</p>
-<p>If you have an active internet conenction over an ethernet cable connected to your computer, right after you pass the <em>"Language, Keyboard and License Agreement"</em> section you will be prompted with a question if you want to <em>"Activate online repositories now?"</em>.It is recommended to select <em>Yes</em> which will provide with a list repositories, pre-selecting the main ones in advance. </p>
+<p>If you have an active internet conenction over an ethernet cable connected to your computer, right after you pass the <em>"Language, Keyboard and License Agreement"</em> section you will be prompted, asking if you want to <em>"Activate online repositories now?"</em>.It is recommended to select <em>Yes</em> which will provide you with a list of repositories, pre-selecting the main ones in advance. </p>
 </div>
 <h3 id="network-settings">Network settings<a class="headerlink" href="#network-settings" title="Permanent link">⚓︎</a></h3>
 <p>You can skip this part if:
 * you have an active wired internet connection which can be automatically configured by the system; or
 * you're not planning to use online repositories during the installation process and rely on the packages provided by the DVD installer.   </p>
 <p>If you don't have a network connection -- because you have don't have an ethernet port or you're using wireless connections only -- you will be prompted to configure your network settings. By default the YaST system installer is using <em>Wicked</em> as the network controller. Keep in mind that if you choose to use <em>Network Manager</em> (NM) instead of <em>Wicked</em>, your network configuration will not be transferred from <em>Wicked</em> to <em>Network Manager</em>.</p>
-<p>You will see a list of available network adapters in a list from which you can select the one that you wish to configure and press <code>Edit</code>. In case of configuring a wireless adapter you will see the <code>Wireless Specific</code> tab open. Here you can <code>Scan Network</code>, select the name of you wireless network (SSID), select the authentication mode -- which is in most cases will be WPA-PSK "home" -- and input your password. 
+<p>You will see a list of available network adapters in a list from which you can select the one that you wish to configure and press <code>Edit</code>. In case of configuring a wireless adapter you will see the <code>Wireless Specific</code> tab open. Here you can <code>Scan Network</code>, select the name of your wireless network (SSID), select the authentication mode -- which in most cases will be WPA-PSK "home" -- and input your password. 
 On the <code>Addresses</code> tab you will be able to configure the IP address of your adapter. You can select <code>Dynamic Address</code> in which case you will receive an address from your router/other dhcp server on your network or <code>Statically Assigned IP Address</code> in which case you need to type an ip address, a subnet mask and a hostname. Click <code>Next</code> when finished.  <br />
 <img alt="Wireless configuration" src="../image/yast_wireless_specific.png" /></p>
 <p><strong>If</strong> you configured a statically assigned IP address:
@@ -1646,6 +1646,10 @@ On the <code>Addresses</code> tab you will be able to configure the IP address o
 <li>(new) <code>/</code>, <em>Btrfs</em>, &gt; 40 GB</li>
 </ul>
 <p>Optionnally, you could create a new partition for your user data under <code>/home</code>. This partition would then be easily accessible to other operating systems installed on your machine. If you do so, make sure there is no <code>/home</code> subvolume created inside the partition assigned to <code>/</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Some recent Macs have been reported to ship with firmware lock enabled by default. Refer to <a href="https://support.apple.com/en-gb/HT204455">this guide</a> to disable it.</p>
+</div>
 <details class="info"><summary>Info</summary><p>After the installation you will want to switch between Leap and macOS. Simply hold the <code>alt</code> (option) key immediately after restarting and select Leap or macOS.</p>
 </details>
 <h4 id="picking-a-filesystem-for-data-partitions">Picking a filesystem for data partitions<a class="headerlink" href="#picking-a-filesystem-for-data-partitions" title="Permanent link">⚓︎</a></h4>
@@ -1712,7 +1716,7 @@ Renouncing <em>Brtfs</em> thus means renouncing this feature. Given that <em>Tum
 </ul>
 <h2 id="user-settings">User Settings<a class="headerlink" href="#user-settings" title="Permanent link">⚓︎</a></h2>
 <h3 id="local-user">Local User<a class="headerlink" href="#local-user" title="Permanent link">⚓︎</a></h3>
-<p>At this point you can create a local user or skipping that by selecting <em>Skip User Creation</em> you can set up a password for <code>root</code>. 
+<p>At this point you can create a local user or skip that by selecting <em>Skip User Creation</em> you can set up a password for <code>root</code>. 
 You need to fill out the empty fields in order to create a first user:</p>
 <ul>
 <li><em>User's Full Name</em>: A human-friendly version of your username, which will be shown in login windows for example.</li>
@@ -1736,7 +1740,7 @@ You need to fill out the empty fields in order to create a first user:</p>
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-03-02
+      Last update: 2021-03-03
     
   </small>
 </div>

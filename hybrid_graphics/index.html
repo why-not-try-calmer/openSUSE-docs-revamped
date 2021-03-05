@@ -1167,7 +1167,7 @@
 <h3 id="intel-and-nvidia">Intel and Nvidia<a class="headerlink" href="#intel-and-nvidia" title="Permanent link">⚓︎</a></h3>
 <h4 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">⚓︎</a></h4>
 <ol>
-<li><a href="/install_proprietary.md">Install the correct Nvidia driver.</a> If using xorg 1.20.6 or greater, this is all that is required if you want to use the Intel GPU as your primary and have the ability to offload specific applications to the GPU. If that's the case, you can skip to the offloading section below. If you are using a release that includes an older version of xorg, such as Leap 15.2, or you wish to exclusively use the Intel or Nvidia card, continue to the next section.</li>
+<li><a href="../install_proprietary/">Install the correct Nvidia driver.</a> If using xorg 1.20.6 or greater, this is all that is required if you want to use the Intel GPU as your primary and have the ability to offload specific applications to the GPU. If that's the case, you can skip to the offloading section below. If you are using a release that includes an older version of xorg, such as Leap 15.2, or you wish to exclusively use the Intel or Nvidia card, continue to the next section.</li>
 </ol>
 <h4 id="set-the-nvidia-card-as-your-active-gpu">Set the Nvidia card as your active GPU<a class="headerlink" href="#set-the-nvidia-card-as-your-active-gpu" title="Permanent link">⚓︎</a></h4>
 <ol>
@@ -1178,7 +1178,7 @@
 <h3 id="recent-amd-apus-and-nvidia">Recent AMD APUs and Nvidia<a class="headerlink" href="#recent-amd-apus-and-nvidia" title="Permanent link">⚓︎</a></h3>
 <h4 id="installation_1">Installation<a class="headerlink" href="#installation_1" title="Permanent link">⚓︎</a></h4>
 <ol>
-<li><a href="/install_proprietary.md">Install the correct Nvidia driver.</a> If using xorg 1.20.6 or greater, this is all that is required if you want to use the AMD GPU as your primary and have the ability to offload specific applications to the GPU. If that's the case, you can skip to the offloading section below. If you are using a release that includes an older version of xorg, such as Leap 15.2, or you wish to exclusively use the Intel or Nvidia card, continue to the next section.</li>
+<li><a href="../install_proprietary/">Install the correct Nvidia driver.</a> If using xorg 1.20.6 or greater, this is all that is required if you want to use the AMD GPU as your primary and have the ability to offload specific applications to the GPU. If that's the case, you can skip to the offloading section below. If you are using a release that includes an older version of xorg, such as Leap 15.2, or you wish to exclusively use the Intel or Nvidia card, continue to the next section.</li>
 </ol>
 <h4 id="set-the-nvidia-card-as-your-active-gpu_1">Set the Nvidia card as your active GPU<a class="headerlink" href="#set-the-nvidia-card-as-your-active-gpu_1" title="Permanent link">⚓︎</a></h4>
 <ol>
@@ -1189,8 +1189,28 @@
 <h3 id="offloading-specific-applications-to-the-nvidia-gpu">Offloading specific applications to the Nvidia GPU<a class="headerlink" href="#offloading-specific-applications-to-the-nvidia-gpu" title="Permanent link">⚓︎</a></h3>
 <ol>
 <li>With the onboard Intel or AMD GPU set as your active GPU, you can also offload specific applications using an envoronment variable.</li>
-<li>For example, to run <strong>supertuxkart</strong> using the the Nvidia driver, you can run <code>__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia supertuxkart</code>.</li>
-<li>To launch a game from Steam using the Nvidia driver, you can modify properties of the game, choose <strong>Set Launch Options</strong> and add <code>__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia %command%</code>.</li>
+<li>For example, to run <strong>supertuxkart</strong> using the the Nvidia driver, you can run <code>__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only supertuxkart</code>.</li>
+<li>To launch a game from Steam using the Nvidia driver, you can modify properties of the game, by choosing <strong>Set Launch Options</strong> and adding <code>__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only %command%</code>.</li>
+<li>Additionally, to launch some programs (e.g. Minecraft or Steam) using the dGPU, you need to add the following lines to <code>/etc/X11/xorg.conf</code> (create the file if it does not exist). Note that this only applies to X.Org sessions.
+<div class="highlight"><pre><span></span><code>Section &quot;Device&quot;
+  Identifier &quot;iGPU&quot;
+  Driver &quot;modesetting&quot;
+EndSection
+
+Section &quot;Screen&quot;
+  Identifier &quot;iGPU&quot;
+  Device &quot;iGPU&quot;
+EndSection
+
+Section &quot;Device&quot;
+  Identifier &quot;dGPU&quot;
+  Driver &quot;nvidia&quot;
+EndSection
+</code></pre></div>
+This allows the creation of Nvidia GPU <em>screens</em>, and after the fact, a new entry should be added to the output of <code>xrandr --listproviders</code>, in a way that your output should show an entry like this:
+<div class="highlight"><pre><span></span><code>Provider 1: id: 0x240; cap: 0x2 (Sink Output); crtcs: 4; outputs: 1; associated providers: 1; name: NVIDIA-G0
+    output HDMI-1-0
+</code></pre></div></li>
 </ol>
                 
                   
@@ -1200,7 +1220,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-02-03
+      Last update: 2021-03-04
     
   </small>
 </div>

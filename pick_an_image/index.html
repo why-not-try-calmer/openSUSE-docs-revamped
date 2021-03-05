@@ -1350,31 +1350,34 @@
 </ul>
 <h3 id="tumbleweed">Tumbleweed<a class="headerlink" href="#tumbleweed" title="Permanent link">⚓︎</a></h3>
 <p>Tumbleweed is a <em>rolling-release</em> distribution: instead of having fixed points where you will be offered to perform a system upgrade (think of Windows, Ubuntu, or macOS, where each numbered version leads to the next), you will be frequently offered to upgrade multiple components of your system.</p>
-<details class="info"><summary>Info</summary><p>Those components are called <em>packages</em>, because they "pack" the programs and resources making up most of your system, along with tools to install them). "Upgrading" means "Upgrading packages" (i.e. those that constitute you Linux distribution).</p>
+<details class="info"><summary>Info</summary><p>Those components are called <em>packages</em>, because they "pack" the programs and resources making up most of your system, along with tools to install them). "Upgrading" means "Upgrading packages" (such as those that constitute your Linux distribution).</p>
 </details>
-<p>Even though Tumbleweed uses a rolling-release model, it is very stable: the packages are thoroughly tested and tried, and you can always revert back to the previous state of Tumbleweed (in jargon: "switching to the previous snapshot". Snapshots are explained <a href="">here</a>).</p>
+<p>Even though Tumbleweed uses a rolling-release model, it is very stable: openSUSE thoroughly tests every package before going into an update, ensuring the stability of your system. Moreover you can always revert back to the previous state of Tumbleweed (in jargon: "switch to the previous snapshot". Snapshots are explained <a href="../snapper/">here</a>).</p>
 <p>What you have to bear in mind, however, is that Tumbleweed requires a reliable internet connection and a healthy hard drive to work as designed. It also requires that you sometimes take interest in the updating process.</p>
 <h3 id="leap">Leap<a class="headerlink" href="#leap" title="Permanent link">⚓︎</a></h3>
-<p>Leap is a more traditional distribution: it uses a fixed-points release model, just like Windows, Ubuntu, or macOS. Leap is a very battle-hardened operating system, mostly made up of packages brought over from SUSE Linux Entreprise, a commercial Linux operating system for servers, and of packages from Tumbleweed after they were tested, tried and used by the community.</p>
+<p>Leap is a more traditional distribution: it uses a fixed-points release model, just like Windows, Ubuntu, or macOS. Leap is a very battle-hardened operating system, mostly made up of packages brought over from SUSE Linux Enterprise, a commercial Linux operating system for servers, and of packages from Tumbleweed after they were tested, tried and used by the community.</p>
 <p>It is worth noting that Leap provides a Linux kernel that is several years behind the version offered by Tumbleweed. </p>
-<details class="info"><summary>Info</summary><p>The kernel is the heart of any Linux operating system. It is key for a smooth user experience with recent machines, especially laptops and computers heavily relying on peripherals.</p>
+<details class="info"><summary>Info</summary><p>The kernel is the heart of any Linux operating system. It translates your keystrokes and mouse clicks into the ones and zeros the computer understands, and is updated regularly so that the computer can respond to new hardware added to the system." </p>
 </details>
+<p>.</p>
 <p>This means that you might be better served by Tumbleweed if you have a recent computer or rely extensively on "exotic" hardware.</p>
 <h3 id="our-recommendation">Our recommendation<a class="headerlink" href="#our-recommendation" title="Permanent link">⚓︎</a></h3>
-<p>Pick Tumbleweed if you intend to use your machine as a desktop machine, unless you are concerned with any of these blockers:</p>
+<p>Pick Tumbleweed if you intend to use your machine as a desktop machine unless:</p>
 <ul>
-<li>You don't want or you cannot update frequently over the network, because you have a very limited bandwidth or unreliable internet access.</li>
+<li>You have a very limited bandwidth or an unreliable access to the Internet.</li>
+<li>You have an old (7+ years old mechanical hard drive that will struggle with frequent, numerous updates.</li>
 <li>You cannot afford to reboot your computer frequently to install updates.</li>
-<li>You don't want to use, or for some reason cannot afford to switch between, different snapshots.</li>
-<li>You have an old computer (more than 7-year old) which cannot take advantage of recent kernels.</li>
-<li>You have a fixed set of packages you know you are going to install once and forget about, and usually you never want to have anything to do with command line utilities.</li>
+<li>You don't want to use, or switch between, different snapshots.</li>
+<li>Your rely on specific versions of important packages, including hardware drivers, and generally speaking you don't want or cannot take advantage of recent packages, including recent kernels.</li>
+<li>You would rather not do package management manually and more generally, you would rather avoid using the command line.</li>
 </ul>
-<details class="info"><summary>Info</summary><p>It is not recommended for new users, however, it is possible to use microOS on a desktop computer, taking advantage of transactional updates. This might be appealing to advanced users who want to provide friends or relatives with an operating system that will require no maintenance from them, and very little from you. You might be interested in <a href="">this page</a> for more about this use case.</p>
+<p>The more conditions apply to your use case, the stronger we recommend you to install Leap instead of Tumbleweed.</p>
+<details class="info"><summary>Info</summary><p>It is not recommended for new users, however, it is possible to use microOS on a desktop computer, taking advantage of transactional updates. This might appeal to advanced users who want to provide friends or relatives with an operating system that will require little to no maintenance. You might be interested in <a href="../microos_getting_started/">our microOS documentation</a> for more about this use case.</p>
 </details>
 <h2 id="desktop-environments">Desktop Environments<a class="headerlink" href="#desktop-environments" title="Permanent link">⚓︎</a></h2>
 <p>Leap offers the <strong>GNOME</strong> and <strong>KDE Plasma</strong> desktop environments by default. Tumbleweed offers <strong>GNOME</strong>, <strong>KDE Plasma</strong>, and <strong>XFCE</strong>. These options are chosen during the <strong>System Role</strong> section of the installation. Additional options are available in the <strong>Software</strong> selection of the installer. These desktop environment patterns may also be viewed and modified with the <a href="/yast/">YaST</a> <strong>Software Management</strong> module.</p>
 <p>Modern desktop environments have evolved into highly consistent and productive computing experiences. Choosing the right desktop environment for you can be a deeply personal experience; many people feel as passionately about their desktop environment as they do their distribution. </p>
-<p>One of the distinguishing options of openSUSE, during the installation, is the ability to choose a desktop environment. This provides a certain level of assurance that you will have a well-supported desktop experience for that respective desktop environment, no derivatives or spin-offs needed.</p>
+<p>One of the distinguishing options of openSUSE, during the installation, is the ability to choose a desktop environment. This provides a certain level of assurance that you will have a well-supported desktop experience for that desktop environment, no derivatives or spin-offs needed.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">⚓︎</a></h2>
 <p>During <strong>openSUSE Installation</strong>, there is a section titled <strong>System Role</strong>, which applies patterns to the software selected for the respective installation. This is the primary means to select a desktop environment. There is an additional option titled <strong>Generic Desktop</strong>. If you wish to install a desktop environment available in the installer, but not in the <strong>System Role</strong>, you can select <strong>Generic Desktop</strong> and customize the Software selection later within the installer.</p>
 <p>The descriptions below are as provided by the respective projects.</p>
@@ -1424,7 +1427,7 @@
 <p>Another option for a <strong>System Role</strong> is the <strong>Generic Desktop</strong> environment. This option enables <strong>IceWM</strong>, but also allows selection of one of the optional desktop environments later, during the <strong>Software</strong> selection of the installation. If you intend to choose one of the other desktop environments, choose <strong>Yes</strong>, when asked "Activate online repositories now?" and ensure <strong>Main Repository (OSS)</strong> is enabled on the <strong>Online Repositories</strong> step.</p>
 <h4 id="icewm">IceWM<a class="headerlink" href="#icewm" title="Permanent link">⚓︎</a></h4>
 <blockquote>
-<p>IceWM is a window manager for the X Window System. The goal of IceWM is speed, simplicity, and not getting in the user’s way. It comes with a taskbar with pager, global and per-window keybindings and a dynamic menu system. Application windows can be managed by keyboard and mouse. Windows can be iconified to the taskbar, to the tray, to the desktop or be made hidden. They are controllable by a quick switch window (Alt+Tab) and in a window list.</p>
+<p>IceWM is a window manager for the X Window System. The goal of IceWM is speed, simplicity, and not getting in the user’s way. It comes with a taskbar with pager, global and per-window keybindings and a dynamic menu system. Application windows can be managed by the keyboard and mouse. Windows can be iconified to the taskbar, to the tray, to the desktop or be hidden. They are controllable by a quick switch window (Alt+Tab) and in a window list.</p>
 <p><a href="https://ice-wm.org/">Ice-WM.org</a></p>
 </blockquote>
 <details class="info"><summary>Install IceWM</summary><p><strong>Installer</strong> &gt; <strong>System Role</strong>: Select <strong>Generic Desktop</strong></p>
@@ -1566,7 +1569,7 @@ Historically, LXQt is the product of the merge between LXDE-Qt, an initial Qt fl
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-02-02
+      Last update: 2021-03-05
     
   </small>
 </div>

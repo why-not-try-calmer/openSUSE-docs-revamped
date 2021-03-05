@@ -1357,7 +1357,7 @@
                 
                 <h2 id="setting-up-microos-as-a-desktop-os">Setting up MicroOS as a desktop OS<a class="headerlink" href="#setting-up-microos-as-a-desktop-os" title="Permanent link">⚓︎</a></h2>
 <h3 id="audience-and-context">Audience and context<a class="headerlink" href="#audience-and-context" title="Permanent link">⚓︎</a></h3>
-<p>This document is meant for users interested in using the openSUSE MicroOS as a desktop. Although this operating system is offered in two flavours (one based on Leap, the other on Tumbleweed), we will be only concerned with the Tumbleweed base, as the Leap base does not provide the required patterns for desktop usage.</p>
+<p>This document is meant for users interested in using the openSUSE MicroOS as a desktop. Although this operating system is offered in two flavours (one based on Leap, the other on Tumbleweed), we will only be concerned with the Tumbleweed base, as the Leap base does not provide the required patterns for desktop usage.</p>
 <h3 id="pre-installation">Pre-installation<a class="headerlink" href="#pre-installation" title="Permanent link">⚓︎</a></h3>
 <ol>
 <li>Download the Tumbleweed base ISO image from <a href="https://en.opensuse.org/Portal:MicroOS/Downloads">https://en.opensuse.org/Portal:MicroOS/Downloads</a></li>
@@ -1415,7 +1415,7 @@ Configure <code>dracut</code> to add the key file to the initrd:
 $ sudo reboot
 </code></pre></div></p>
 <h3 id="installation-gnome">Installation: GNOME<a class="headerlink" href="#installation-gnome" title="Permanent link">⚓︎</a></h3>
-<p>Make sure to install a browser via transactional-updates if you want to use GNOME extensions. The easiest way to install GNOME extensions is via the website provided by the <a href="https://extensions.gnome.org/">GNOME project</a>. For this to work however, you will need a browser installed on the system via transactional-update, as it will not work inside a containerized environment (like flatpaks, snaps, AppImages or in a toolbox). The browser will need have the plugin mentioned on the top of the page when you first open it. </p>
+<p>Make sure to install a browser via transactional-updates if you want to use GNOME extensions. The easiest way to install GNOME extensions is via the website provided by the <a href="https://extensions.gnome.org/">GNOME project</a>. For this to work however, you will need a browser installed on the system via transactional-update, as it will not work inside a containerized environment (like flatpaks, snaps, AppImages or in a toolbox). The browser will need to have the plugin mentioned on the top of the page when you first open it. </p>
 <p>After installation of the plugin, you can reload the page and choose the GNOME Extensions you want to install.</p>
 <p>To get GNOME extensions running, you need the following command to install Chromium directly:
 <div class="highlight"><pre><span></span><code>$ sudo transactional-update pkg install chromium
@@ -1423,7 +1423,7 @@ $ sudo reboot
 </code></pre></div></p>
 <ul>
 <li>
-<p>You can also install some other useful packages trough transactional-update and then reboot:
+<p>You can also install some other useful packages through transactional-update and then reboot:
 <div class="highlight"><pre><span></span><code>$ sudo transactional-update pkg install gnome-remote-desktop gnome-shell-search-provider-nautilus gnome-color-manager
 $ sudo reboot
 </code></pre></div></p>
@@ -1541,7 +1541,7 @@ $ sudo reboot
 $ sudo reboot
 </code></pre></div></p>
 <h3 id="adding-software-from-obs">Adding software from OBS<a class="headerlink" href="#adding-software-from-obs" title="Permanent link">⚓︎</a></h3>
-<p>Find what you need on <a href="https://software.opensuse.org">https://software.opensuse.org</a>. Then choose the openSUSE Tumbleweed repository, as MicroOS desktop is build from the same base as Tumbleweed. Everything that runs on Tumbleweed should in theory run reliably on MicroOS Desktop.</p>
+<p>Find what you need on <a href="https://software.opensuse.org">https://software.opensuse.org</a>. Then choose the openSUSE Tumbleweed repository, as MicroOS desktop is built from the same base as Tumbleweed. Everything that runs on Tumbleweed should in theory run reliably on MicroOS Desktop.</p>
 <p>You can't use the 1-click install as there is no YaST and the 1-click installer has no access to a transactional-update. So for example if you install <code>zerotier</code>:
 1. Pick a <em>TumbleWeed</em> repository.
 2. Click on <em>Expert Download</em>.
@@ -1624,7 +1624,7 @@ You can then open the application <em>Get Extensions</em> that is available from
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-02-10
+      Last update: 2021-03-02
     
   </small>
 </div>

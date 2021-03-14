@@ -674,7 +674,7 @@
         
           <li class="md-nav__item">
   <a href="#amd-apu-and-nvidia" class="md-nav__link">
-    AMD APU and Nvidia
+    AMD APU and NVIDIA
   </a>
   
 </li>
@@ -687,8 +687,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dedicated-amd-gpu" class="md-nav__link">
-    Dedicated AMD GPU
+  <a href="#dedicated-amd-gpu-or-nouveau" class="md-nav__link">
+    Dedicated AMD GPU or nouveau
   </a>
   
 </li>
@@ -1089,7 +1089,7 @@
         
           <li class="md-nav__item">
   <a href="#amd-apu-and-nvidia" class="md-nav__link">
-    AMD APU and Nvidia
+    AMD APU and NVIDIA
   </a>
   
 </li>
@@ -1102,8 +1102,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dedicated-amd-gpu" class="md-nav__link">
-    Dedicated AMD GPU
+  <a href="#dedicated-amd-gpu-or-nouveau" class="md-nav__link">
+    Dedicated AMD GPU or nouveau
   </a>
   
 </li>
@@ -1129,14 +1129,20 @@
                   <h1>Hybrid GPUs</h1>
                 
                 <h2 id="enabling-hybrid-graphics">Enabling Hybrid Graphics<a class="headerlink" href="#enabling-hybrid-graphics" title="Permanent link">⚓︎</a></h2>
-<p>[ here goes an interesting introduction and a brief explanation of what this section is about, e.g. why this is needed and who is it for. ]</p>
+<p>This section is meant for users with dual 'graphic cards' (GPUs), often present in high-end laptops and essential to a pleasant video intensive experience (gaming, streaming, video editing, etc.)</p>
+<p>On these hardware configurations, there is a software switch that picks the <em>integrated</em> graphics processor for rendering most desktop applications, switching to the <em>dedicated</em> GPU for more demanding tasks. The switch can be more or less fine-grained. Fine-grained switches, such as the ones used in <em>Kdenlive</em> and <em>OBS Studio</em>, are able to use VAAPI and NVENC to offload specific processes to the dedicated GPU (i.e. those doing video encoding/decoding), while a coarse-grained switch would have to offload an entire program instead.</p>
+<p>Some hardware configurations have a multiplexer (<em>mux</em>), a hardware component that behaves like a switch, and can be configured from the machine's UEFI to select the main graphics processor. Multiplexers are preferred if your hardware has one, as it performs better since there is no render offloading involved. This matters especially for users without external monitors, as the HDMI and DisplayPort outputs are usually connected directly to the dedicated GPU. A muliplexer would thus offer these configurations the best performance.</p>
+<p>Update your system before proceeding to the next steps:
+<div class="highlight"><pre><span></span><code>sudo zypper dup
+</code></pre></div></p>
 <h3 id="dedicated-nvidia-gpu">Dedicated NVIDIA GPU<a class="headerlink" href="#dedicated-nvidia-gpu" title="Permanent link">⚓︎</a></h3>
+<p>To use an external monitor or be able to offload rendering to the NVIDIA GPU, you'll need to follow the next steps. The external monitor will work when you switch to the NVIDIA GPU. This section applies to users interested in the propietary NVIDIA driver.</p>
 <h4 id="getting-the-necessary-software">Getting the necessary software<a class="headerlink" href="#getting-the-necessary-software" title="Permanent link">⚓︎</a></h4>
 <ol>
 <li><a href="../install_proprietary/">Install the correct Nvidia driver</a>.</li>
 <li>
 <dl>
-<dt>Install the the <strong>suse-prime</strong> package using zypper or YaST.  If you want to install via zypper run the following command in a terminal session: <code>sudo zypper in suse-prime</code>. Users on NVIDIA graphic cards released before GeForce 600 series should instead install <strong>suse-prime-bbswitch</strong>.</dt>
+<dt>Install the <strong>suse-prime</strong> package using zypper or YaST. If you want to install via zypper run the following command in a terminal session: <code>sudo zypper in suse-prime</code>. Users on NVIDIA graphic cards released before GeForce 600 series should instead install <strong>suse-prime-bbswitch</strong>.</dt>
 <dd>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -1144,14 +1150,14 @@ In case you are using KDE, a widget called <em>SUSE Prime Selector</em> can be a
 </dd>
 </dl>
 </li>
-<li>To offload rendering to the dedicated GPU (NVIDIA Optimus) please see <a href="./#Offloading specific applications to the Nvidia GPU">Offloading specific applications to the Nvidia GPU</a>. This allows you to use both graphical units simultaneously.</li>
+<li>To offload rendering to the dedicated GPU (NVIDIA Optimus) please see <a href="./#offloading-specific-applications-to-the-nvidia-gpu">Offloading specific applications to the Nvidia GPU</a>. This allows you to use both graphical units simultaneously.</li>
 </ol>
 <h3 id="intel-and-nvidia">Intel and NVIDIA<a class="headerlink" href="#intel-and-nvidia" title="Permanent link">⚓︎</a></h3>
 <ul>
 <li>From the a terminal session, you can switch your main GPU too: for the NVIDIA GPU run <code>sudo prime-select nvidia</code>; conversely, for the Intel GPU run <code>sudo prime-select intel</code>. After executing either command, log out and back on to apply the changes.</li>
 <li>If you want to use the KDE widget, just click it and select <em>Switch to NVidia</em>. Then log out and back in and you should be set.</li>
 </ul>
-<h3 id="amd-apu-and-nvidia">AMD APU and Nvidia<a class="headerlink" href="#amd-apu-and-nvidia" title="Permanent link">⚓︎</a></h3>
+<h3 id="amd-apu-and-nvidia">AMD APU and NVIDIA<a class="headerlink" href="#amd-apu-and-nvidia" title="Permanent link">⚓︎</a></h3>
 <p>When using XOrg 1.20.6 or higher: to make the APU the primary GPU and have the ability to offload specific applications to the GPU, you can skip to the offloading section below.</p>
 <p>If you are using an older release of XOrg, such as the case for Leap 15.2, or you wish to exclusively use the NVIDIA card, pick between the following steps:</p>
 <ul>
@@ -1160,6 +1166,13 @@ In case you are using KDE, a widget called <em>SUSE Prime Selector</em> can be a
 </ul>
 <p>After executing either command, log out and back on to apply the changes.</p>
 <h3 id="offloading-specific-applications-to-the-nvidia-gpu">Offloading specific applications to the Nvidia GPU<a class="headerlink" href="#offloading-specific-applications-to-the-nvidia-gpu" title="Permanent link">⚓︎</a></h3>
+<dl>
+<dd>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+This section only applies to users with the propietary driver and NVIDIA GeForce 600 series or higher.</div>
+</dd>
+</dl>
 <p>With the integrated Intel GPU or AMD APU set as your main GPU, you can also offload specific applications using an envoronment variable. For example, to run <strong>supertuxkart</strong> using the the NVIDIA driver, you can launch it from a terminal session as follows:</p>
 <pre><code>__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only supertuxkart
 </code></pre>
@@ -1171,10 +1184,11 @@ In case you are using KDE, a widget called <em>SUSE Prime Selector</em> can be a
 <pre><code>Exec=__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only /usr/bin/octave --gui %f
 </code></pre>
 <p>This makes the desired program offload to the dedicated GPU everytime you launch it from the shortcut.</p>
-<h3 id="dedicated-amd-gpu">Dedicated AMD GPU<a class="headerlink" href="#dedicated-amd-gpu" title="Permanent link">⚓︎</a></h3>
+<h3 id="dedicated-amd-gpu-or-nouveau">Dedicated AMD GPU or nouveau<a class="headerlink" href="#dedicated-amd-gpu-or-nouveau" title="Permanent link">⚓︎</a></h3>
 <p>To offload anything to the AMD GPU simply use the special enviroment variable to launch the desired program, as per the following example:</p>
 <pre><code>DRI_PRIME=1 supertuxkart
 </code></pre>
+<p>The same applies to users with the open source <em>nouveau</em> driver for NVIDIA cards.</p>
                 
                   
                     
@@ -1183,7 +1197,7 @@ In case you are using KDE, a widget called <em>SUSE Prime Selector</em> can be a
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-03-11
+      Last update: 2021-03-12
     
   </small>
 </div>

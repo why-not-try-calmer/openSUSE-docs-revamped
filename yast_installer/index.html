@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../image/geeko-color.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2c0c5eaf.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
         
           
           
@@ -50,10 +50,9 @@
     
     
     <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="green" data-md-color-accent="red">
-      
-        <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
-      
   
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -96,9 +95,8 @@
         </div>
       </div>
     </div>
-    <div class="md-header__options">
-      
-    </div>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -114,7 +112,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
       <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
@@ -909,6 +907,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install_podman/" class="md-nav__link">
+        Setting up a containerized environment
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1548,7 +1558,7 @@
 <h2 id="network-activation">Network activation<a class="headerlink" href="#network-activation" title="Permanent link">⚓︎</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Online repositories</p>
-<p>If you have an active internet conenction over an ethernet cable connected to your computer, right after you pass the <em>"Language, Keyboard and License Agreement"</em> section you will be prompted, asking if you want to <em>"Activate online repositories now?"</em>.It is recommended to select <em>Yes</em> which will provide you with a list of repositories, pre-selecting the main ones in advance and will download updated packages from the online repositiory during the installation. If you're on a metered connection you press "No". </p>
+<p>If you have an active internet conenction over an ethernet cable connected to your computer, right after you pass the <em>"Language, Keyboard and License Agreement"</em> section you will be prompted, asking if you want to <em>"Activate online repositories now?"</em>.It is recommended to select <em>Yes</em> which will provide you with a list of repositories, pre-selecting the main ones in advance and will download updated packages from the online repository during the installation. If you're on a metered connection you press "No". </p>
 </div>
 <h3 id="network-settings">Network settings<a class="headerlink" href="#network-settings" title="Permanent link">⚓︎</a></h3>
 <p>You can skip this part if:
@@ -1558,7 +1568,7 @@
 <p>You will see a list of available network adapters in a list from which you can select the one that you wish to configure and press <code>Edit</code>. In case of configuring a wireless adapter you will see the <code>Wireless Specific</code> tab open. Here you can <code>Scan Network</code>, select the name of your wireless network (SSID), select the authentication mode -- which in most cases will be WPA-PSK "home" -- and input your password. 
 On the <code>Addresses</code> tab you will be able to configure the IP address of your adapter. You can select <code>Dynamic Address</code> in which case you will receive an address from your router/other dhcp server on your network or <code>Statically Assigned IP Address</code> in which case you need to type an ip address, a subnet mask and a hostname. Click <code>Next</code> when finished.  <br />
 <img alt="Wireless configuration" src="../image/yast_wireless_specific.png" /></p>
-<details class="info"><summary>Info</summary><p>Wireless networks configured here will be transferred to the finalized system as well, regardless the soluion you are choosing to use to manage your connections.</p>
+<details class="info"><summary>Info</summary><p>Wireless networks configured here will be transferred to the finalized system as well, regardless the solution you are choosing to use to manage your connections.</p>
 </details>
 <p><strong>If</strong> you configured a statically assigned IP address:
 1. Switch to the <code>Routing</code> tab.
@@ -1580,7 +1590,7 @@ On the <code>Addresses</code> tab you will be able to configure the IP address o
 <details class="info"><summary>Info</summary><p>Keep in mind that if you're on a metered network and you choose to add the online repos, the installer will download packages with newer versions. </p>
 </details>
 <h3 id="system-role">System role<a class="headerlink" href="#system-role" title="Permanent link">⚓︎</a></h3>
-<p>At this section of the preparation you can select from a list of predefined use cases which will tailor the system for the selected scenario. It is recommended to take a look at the <a href="../pick_an_image/">Choosing the right image</a> page prior to continuing as it provides a brief explanation of desktop environments. Do note if you're using a DVD installer without an active internet connection, some of the listed desktop envirnments will not be available.</p>
+<p>At this section of the preparation you can select from a list of predefined use cases which will tailor the system for the selected scenario. It is recommended to take a look at the <a href="../pick_an_image/">Choosing the right image</a> page prior to continuing as it provides a brief explanation of desktop environments. Do note if you're using a DVD installer without an active internet connection, some of the listed desktop environments will not be available.</p>
 <ul>
 <li><em>Desktop with KDE Plasma</em>: the Plasma desktop with KDE applications.</li>
 <li><em>Desktop with GNOME</em>: the GNOME desktop with GNOME applications.</li>
@@ -1598,7 +1608,7 @@ On the <code>Addresses</code> tab you will be able to configure the IP address o
 <p>Most Linux distributions use the same "base" partition scheme:</p>
 <ul>
 <li>a <em>bootloader partition</em>, hosting a small program called a <em>bootloader</em>, whose purpose is to take over from the UEFI/BIOS of your computer and set up the initial conditions for your operating system to get running </li>
-<li>a main <em>data partition</em> (or <em>OS partition</em>), which is where the operating system (i.e. <em>Leap</em>) is installed, optionnally along with your personal user data.</li>
+<li>a main <em>data partition</em> (or <em>OS partition</em>), which is where the operating system (i.e. <em>Leap</em>) is installed, optionally along with your personal user data.</li>
 <li>(recommended but not necessary) a swap partition of the size of your machine's RAM, + 1 GB</li>
 </ul>
 <p>If you are not interested in keeping whatever data or operating system is installed on the target machine, you can simply proceed with the base partition scheme. In that cases, simply run the installer and, on the <em>Disk</em> screen, pick the <em>Suggested Partitioning</em> option, and accept all recommendations there. </p>
@@ -1617,7 +1627,7 @@ On the <code>Addresses</code> tab you will be able to configure the IP address o
 <p>Whichever option you choose, you can refer to the following instructions:</p>
 <p><u>Step by step: Expert partitioning for Windows</u></p>
 <ol>
-<li>From the <em>Disk</em> view, select <em>Expert Partioner</em></li>
+<li>From the <em>Disk</em> view, select <em>Expert Partitioner</em></li>
 <li>Click the <strong>Add Partition</strong> button (bottom left-hand side)</li>
 <li>Assign it at least 40 GBs, and set its filesystem to <em>Btrfs</em>, and the mount point to <code>/</code>. You could label this partition 'Leap OS'.</li>
 <li>If it is not set already, set the <code>/boot/efi</code> flag your 'Windows bootloader' partition (the ~100MB partition probably using the <em>Fat32</em> filesystem)</li>
@@ -1636,7 +1646,7 @@ On the <code>Addresses</code> tab you will be able to configure the IP address o
 <p class="admonition-title">Warning</p>
 <p>Because you are installing the Leap bootloader on a non-btrfs partition, the bootloader will be outside of the scope of the snapshotting system. This means that you won't be able to rollback from a misconfigured bootloader settings, and that in general rolling back won't suffice to fix issues with your bootloader configuration. See <a href="../snapper/">Introduction to snapper</a> for details. Consider also <a href="https://doc.opensuse.org/documentation/leap/reference/html/book.opensuse.reference/cha-snapper.html#sec-snapper-snapshot-boot">the official documentation</a> on snapper rollbacks.</p>
 </div>
-<p>Optionnally, you could create a new partition for your user data under <code>/home</code>. This partition would then be easily accessible to other operating systems installed on your machine. If you do so, make sure there is no <code>/home</code> subvolume created inside the partition assigned to <code>/</code>.</p>
+<p>Optionally, you could create a new partition for your user data under <code>/home</code>. This partition would then be easily accessible to other operating systems installed on your machine. If you do so, make sure there is no <code>/home</code> subvolume created inside the partition assigned to <code>/</code>.</p>
 <details class="info"><summary>Info</summary><p>After the installation you will want to switch between Leap and Windows. Use <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode">these instructions</a> to learn how to reboot to your UEFI. From there you will be able to select Windows or Leap as boot destination.</p>
 </details>
 <h4 id="installing-leap-alongside-preexistent-linux-partitions">Installing Leap alongside preexistent Linux partitions<a class="headerlink" href="#installing-leap-alongside-preexistent-linux-partitions" title="Permanent link">⚓︎</a></h4>
@@ -1655,14 +1665,14 @@ On the <code>Addresses</code> tab you will be able to configure the IP address o
 <li>(old) <code>/boot/efi</code>, preferably <em>Btrfs</em>, &gt; 100 MB</li>
 <li>(new) <code>/</code>, <em>Btrfs</em>, &gt; 40 GB</li>
 </ul>
-<p>Optionnally, you could create a new partition for your user data under <code>/home</code>. This partition would then be easily accessible to other operating systems installed on your machine. If you do so, make sure there is no <code>/home</code> subvolume created inside the partition assigned to <code>/</code>.</p>
+<p>Optionally, you could create a new partition for your user data under <code>/home</code>. This partition would then be easily accessible to other operating systems installed on your machine. If you do so, make sure there is no <code>/home</code> subvolume created inside the partition assigned to <code>/</code>.</p>
 <details class="info"><summary>Info</summary><p>After the installation you will want to switch between Leap and whichever operating system you're using. Refer to your machine's manufacturer for instructions. If your machine had Windows preinstalled, use <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode">these instructions</a> to learn how to reboot to your UEFI. From there you will be able to select the desired boot destination.</p>
 </details>
 <h4 id="installing-leap-alongside-preexistent-macos-partitions">Installing Leap alongside preexistent macOS partitions<a class="headerlink" href="#installing-leap-alongside-preexistent-macos-partitions" title="Permanent link">⚓︎</a></h4>
 <p>The installation process for Mac users interested in dual-booting Leap alongside their mac OS partitions is simple:</p>
 <p><u>Step by step: Expert partitioning for Mac</u></p>
 <ol>
-<li>From the <em>Disk</em> view, select <em>Expert Partioner</em></li>
+<li>From the <em>Disk</em> view, select <em>Expert Partitioner</em></li>
 <li>Click the <strong>Add Partition</strong> button (bottom left-hand side)</li>
 <li>Create a new <em>Btrfs</em> partition of at least 100 MB for the Leap bootloader. Set it the <code>/boot/efi</code> mount point. You could label this partition 'Leap bootloader'.</li>
 <li>Create a new <em>Btrfs</em> partition of at least 40 GBs by repeating (2). Set it the <code>/</code> mount point. You could label this partition 'Leap OS'.</li>
@@ -1674,7 +1684,7 @@ On the <code>Addresses</code> tab you will be able to configure the IP address o
 <li>(new) <code>/boot/efi</code>, <em>Btrfs</em>, &gt; 100 MB</li>
 <li>(new) <code>/</code>, <em>Btrfs</em>, &gt; 40 GB</li>
 </ul>
-<p>Optionnally, you could create a new partition for your user data under <code>/home</code>. This partition would then be easily accessible to other operating systems installed on your machine. If you do so, make sure there is no <code>/home</code> subvolume created inside the partition assigned to <code>/</code>.</p>
+<p>Optionally, you could create a new partition for your user data under <code>/home</code>. This partition would then be easily accessible to other operating systems installed on your machine. If you do so, make sure there is no <code>/home</code> subvolume created inside the partition assigned to <code>/</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Some recent Macs have been reported to ship with firmware lock enabled by default. Refer to <a href="https://support.apple.com/en-gb/HT204455">this guide</a> to disable it.</p>
@@ -1692,7 +1702,7 @@ On the <code>Addresses</code> tab you will be able to configure the IP address o
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Snapshots take advantage of the <em>copy-on-write</em> logic of <em>Btrfs</em>. On a copy-on write filesystem, submitted changes do not overwrite the previous state; instead, changes are 'moved' to a different location on the disk, so that the location of origin is left unchanged. Together with 'deduplication' rules aimed at minimizing redundancies between file changes, this logic allows for the layering of several versions of an entire filesystem, with each layer representing different sets of changes. These sets of changes thus correspond to meaningful actions from the end user's perspective, such as 'before installing package X', 'before creating subvolume Y', etc.
-Renouncing <em>Brtfs</em> thus means renouncing this feature. Given that <em>Tumbleweed</em> was designed around this feature, it will not work as intended unless you pick this filesystem.</p>
+Renouncing <em>Btrfs</em> thus means renouncing this feature. Given that <em>Tumbleweed</em> was designed around this feature, it will not work as intended unless you pick this filesystem.</p>
 </div>
 <h4 id="luks-encryption">LUKS encryption<a class="headerlink" href="#luks-encryption" title="Permanent link">⚓︎</a></h4>
 <p>If you are installing <em>Leap</em> on a laptop, or generally on any machine accessible to untrusted individuals, we highly recommend protecting your data with a <em>full disk encryption</em>. The price to pay is that doing so will entirely wipe out your drive. The obvious advantage, however, is that this will protect your data with a sound security model. </p>
@@ -1708,7 +1718,7 @@ Renouncing <em>Brtfs</em> thus means renouncing this feature. Given that <em>Tum
 <li>Then, on the <em>Filesystem Options</em> screen:<ul>
 <li>Select <em>Btrfs</em>.</li>
 <li>Tick the <em>Enable Snapshots</em> checkbox (<a href="./#picking-a-file-system-for-data-partitions">scroll up</a> or see <a href="../snapper/">this document</a> to understand the reason why we recommend this).</li>
-<li>Select <em>Btfs</em> again as <em>File System Type</em> for your any mount point / partition presented to you by the installer.</li>
+<li>Select <em>Btrfs</em> again as <em>File System Type</em> for your any mount point / partition presented to you by the installer.</li>
 </ul>
 </li>
 </ol>
@@ -1760,7 +1770,7 @@ You need to fill out the empty fields in order to create a first user:</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">⚓︎</a></h2>
 <h2 id="installation-overview">Installation Overview<a class="headerlink" href="#installation-overview" title="Permanent link">⚓︎</a></h2>
 <h3 id="installation-settings">Installation Settings<a class="headerlink" href="#installation-settings" title="Permanent link">⚓︎</a></h3>
-<p>This is the final and probably the an important section of the installer, <strong>don't skip it</strong>! You can and should review your settings, fine tune your installation if you need to and can even gain access to the <em>YaST Software Installer</em> wich can be used to install additional packages or patterns. To change any of the settings just click the <em>headlines</em> (like "Software" or "Security").
+<p>This is the final and probably the an important section of the installer, <strong>don't skip it</strong>! You can and should review your settings, fine tune your installation if you need to and can even gain access to the <em>YaST Software Installer</em> which can be used to install additional packages or patterns. To change any of the settings just click the <em>headlines</em> (like "Software" or "Security").
 After you reviewed the settings you can move on with the installation which will finalize your openSUSE deployment based on your provided informations.</p>
 <details class="info"><summary>Info</summary><p>Patterns are a group of packages that allows the user to easily install otherwise complex packages and configurations - like KDE Plasma or Gnome -.</p>
 </details>
@@ -1772,7 +1782,7 @@ After you reviewed the settings you can move on with the installation which will
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-03-22
+      Last update: 2021-04-12
     
   </small>
 </div>
@@ -1787,6 +1797,7 @@ After you reviewed the settings you can move on with the installation which will
             </article>
           </div>
         </div>
+        
       </main>
       
         
@@ -1874,10 +1885,10 @@ After you reviewed the settings you can move on with the installation which will
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.a1c7c35e.min.js"></script>
+      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
       
     
   </body>

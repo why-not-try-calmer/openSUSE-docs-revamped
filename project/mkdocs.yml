@@ -86,7 +86,8 @@ nav:
         - Power management: ""
         - Pairing, syncing, sharing:
             - Bluetooth: bluetooth.md
-        - Advanced fine-tunings: ""
+        - Advanced fine-tunings:
+            - File-system: advanced_fs.md
         - More partitioning: ""
         - Recommended setups: ""
     - Giving back to the community:

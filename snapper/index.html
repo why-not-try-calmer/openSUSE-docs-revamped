@@ -14,7 +14,7 @@
     
     
       
-        <title>Snapper - openSUSE User Documentation Project - 0.3.1</title>
+        <title>Snapper and Btrfs - openSUSE User Documentation Project - 0.3.1</title>
       
     
     
@@ -89,7 +89,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Snapper
+              Snapper and Btrfs
             
           </span>
         </div>
@@ -247,18 +247,6 @@
     <li class="md-nav__item">
       <a href="../pick_an_image/" class="md-nav__link">
         Choosing a distribution
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        Installation setups
       </a>
     </li>
   
@@ -451,6 +439,30 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        YaST2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Updating, upgrading, snapshots best practices
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -460,12 +472,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Snapper
+          Snapper and Btrfs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Snapper
+        Snapper and Btrfs
       </a>
       
         
@@ -502,14 +514,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#choosing-a-snapshot" class="md-nav__link">
-    Choosing a Snapshot
-  </a>
-  
-    <nav class="md-nav" aria-label="Choosing a Snapshot">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#snapshot-types" class="md-nav__link">
     Snapshot Types
   </a>
@@ -517,8 +521,37 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#configuring-snapper" class="md-nav__link">
+    Configuring Snapper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rolling-back" class="md-nav__link">
+    Rolling back
+  </a>
+  
+    <nav class="md-nav" aria-label="Rolling back">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#identifying-snapshots" class="md-nav__link">
     Identifying Snapshots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initiating-a-rollback" class="md-nav__link">
+    Initiating a rollback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirming-a-rollback" class="md-nav__link">
+    Confirming a rollback
   </a>
   
 </li>
@@ -529,15 +562,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#initiating-rollback" class="md-nav__link">
-    Initiating Rollback
+  <a href="#disk-space-management" class="md-nav__link">
+    Disk Space Management
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#finalizing-rollback" class="md-nav__link">
-    Finalizing Rollback
+  <a href="#subvolumes-health-check" class="md-nav__link">
+    Subvolumes Health Check
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    Further reading
   </a>
   
 </li>
@@ -567,31 +607,7 @@
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        Getting & installing software
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        Updating and upgrading
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        Managing snapshots
+        Additional software
       </a>
     </li>
   
@@ -888,7 +904,7 @@
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        Reporting bug reports
+        The art of reporting bugs
       </a>
     </li>
   
@@ -982,73 +998,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
-      
-      <label class="md-nav__link" for="__nav_8">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         A contributor's checklist
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="A contributor's checklist" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          A contributor's checklist
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        openSUSE distributions
       </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        desktop Environments
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        getting the right installer
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        FAQ, Issues & solutions
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -1098,14 +1051,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#choosing-a-snapshot" class="md-nav__link">
-    Choosing a Snapshot
-  </a>
-  
-    <nav class="md-nav" aria-label="Choosing a Snapshot">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#snapshot-types" class="md-nav__link">
     Snapshot Types
   </a>
@@ -1113,8 +1058,37 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#configuring-snapper" class="md-nav__link">
+    Configuring Snapper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rolling-back" class="md-nav__link">
+    Rolling back
+  </a>
+  
+    <nav class="md-nav" aria-label="Rolling back">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#identifying-snapshots" class="md-nav__link">
     Identifying Snapshots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initiating-a-rollback" class="md-nav__link">
+    Initiating a rollback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirming-a-rollback" class="md-nav__link">
+    Confirming a rollback
   </a>
   
 </li>
@@ -1125,15 +1099,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#initiating-rollback" class="md-nav__link">
-    Initiating Rollback
+  <a href="#disk-space-management" class="md-nav__link">
+    Disk Space Management
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#finalizing-rollback" class="md-nav__link">
-    Finalizing Rollback
+  <a href="#subvolumes-health-check" class="md-nav__link">
+    Subvolumes Health Check
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    Further reading
   </a>
   
 </li>
@@ -1156,13 +1137,18 @@
               
                 
                 
-                  <h1>Snapper</h1>
+                  <h1>Snapper and Btrfs</h1>
                 
                 <h2 id="snapper">Snapper<a class="headerlink" href="#snapper" title="Permanent link">⚓︎</a></h2>
-<p>Snapper is a tool for filesystem snapshot management. It can create, delete and compare snapshots and undo changes from one snapshot to the next. Snapper is a powerful maintenance tool to keep your system running, with very little downtime, if something should go wrong. Snapper has both a <strong>Command Line Interface</strong> (CLI) and <strong>Graphical Interface</strong>, not all functionality is available through the graphical interface but inexperienced users should find it sufficient for basic Snapper tasks.</p>
+<p>Snapper is a tool for filesystem snapshot management. <em>Snapshots</em> are fully defined state in your system at one point in time, just like a photography is a fully defined moment in a movie, for example. Snapper is able to create, delete and compare snapshots, and to undo changes that occurred between snapshots. It is thus a powerful maintenance tool that allows you to 'cheat' the flow of time: if you run into an outstanding bug you can use Snapper to <em>rollback</em> to a past snapshot, typically one where the bug didn't exist yet. Or if you've already moved to a past snapshot, you are able to <em>switch</em> move to a snapshot that lies in the 'future' relative to it.</p>
+<p>Snapper has both a <strong>Command Line Interface</strong> (CLI) and <strong>Graphical Interface</strong>. Not all functionality is available through the graphical interface but inexperienced users should find it sufficient for basic tasks.</p>
 <p>Snapper is deeply integrated with the Btrfs filesystem, serving as an easy to use helper for the built in functions of Btrfs. The most common Btrfs tasks can be conducted with Snapper, however, there may be instances when it is necessary to interact with Btrfs directly.</p>
-<p>Tumbleweed users should note that understanding how to use Snapper is an important step in maintaining a stable, functional system. As a rolling release, Tumbleweed, is subjected to less testing overall and the occasional system breaking update can be installed. Such problems are quickly and easily resolved with Snapper. </p>
-<h4 id="snapper-capabilities">Snapper capabilities<a class="headerlink" href="#snapper-capabilities" title="Permanent link">⚓︎</a></h4>
+<p>Tumbleweed users should note that understanding how to use Snapper is an important step in maintaining a stable, functional system. As a rolling release, Tumbleweed, is subjected to less testing overall and the occasional system breaking update can be installed. Such problems are quickly and easily resolved with Snapper.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Even though Snapper is key to a healthy Tumbleweed experience, it also benefits Leap as it allows you to quickly recover from breakages occuring before login, typically involving the GRUB bootloader or the loading of the kernel with unhealthy parameter values.</p>
+</div>
+<h3 id="snapper-capabilities">Snapper capabilities<a class="headerlink" href="#snapper-capabilities" title="Permanent link">⚓︎</a></h3>
 <ul>
 <li>Undo system changes made by <code>zypper</code> and YaST.</li>
 <li>Restore files from previous snapshots.</li>
@@ -1186,8 +1172,7 @@
 <p>Directories <code>/opt</code> and <code>/usr/local</code>, where various software and third-party products are installed are not included in snapshots by default. This prevents uninstalling the software if a system rollback is conducted.    </p>
 </li>
 </ul>
-<h3 id="choosing-a-snapshot">Choosing a Snapshot<a class="headerlink" href="#choosing-a-snapshot" title="Permanent link">⚓︎</a></h3>
-<h4 id="snapshot-types">Snapshot Types<a class="headerlink" href="#snapshot-types" title="Permanent link">⚓︎</a></h4>
+<h3 id="snapshot-types">Snapshot Types<a class="headerlink" href="#snapshot-types" title="Permanent link">⚓︎</a></h3>
 <p><code>snapper</code> features 3 types of snapshots: <em>Timeline</em>, <em>Installation</em>, and <em>Administration</em>.</p>
 <ul>
 <li><strong>Timeline</strong> snapshots are single snapshots, created every hour and old snapshots are automatically deleted. By default, the first snapshot of the last ten days, months, and years are kept. Disabled by default on partitions larger than 16 Gigabytes. The only single snapshots present may be the ones created when openSUSE was installed.</li>
@@ -1196,14 +1181,66 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The last ten important and the last ten regular snapshot pairs are kept. This total encompasses both Installation and Administration snapshot types. Snapshots are automatically deleted when they take up too much space on the disk, but four important and two regular snapshots are always kept.</p>
+<p>By default, the last ten important and the last ten regular snapshot pairs are kept. This total encompasses both Installation and Administration snapshot types. Snapshots are automatically deleted when they take up too much space on the disk, but four important and two regular snapshots are always kept.</p>
 </div>
+<h3 id="configuring-snapper">Configuring Snapper<a class="headerlink" href="#configuring-snapper" title="Permanent link">⚓︎</a></h3>
+<p>By default Snapper is configured for access with sudo privileges (typically <code>root</code>). This is because under the hood Snapper works hand-in-hand with the Btrfs file system, which is set up for <code>root</code>. Thus in this section we will assume that you will use Snapper accordingly.</p>
+<p>To get started you can display all current configurations:</p>
+<p><code>$  sudo snapper list-configs</code></p>
+<p>That would typically return:</p>
+<div class="highlight"><pre><span></span><code>Configuration | Subvolume
+--------------+------------
+root          | /
+</code></pre></div>
+<p>To show this configuration, we is by default the current user's configuration:</p>
+<p><code>$  sudo snapper -c root get-config</code> </p>
+<p>returning for example:</p>
+<div class="highlight"><pre><span></span><code>-----------------------+-------
+ALLOW_GROUPS           |       
+ALLOW_USERS            |       
+BACKGROUND_COMPARISON  | yes   
+EMPTY_PRE_POST_CLEANUP | yes   
+EMPTY_PRE_POST_MIN_AGE | 1800  
+FREE_LIMIT             | 0.2   
+FSTYPE                 | btrfs 
+NUMBER_CLEANUP         | yes   
+NUMBER_LIMIT           | 4     
+NUMBER_LIMIT_HOURLY    | 3     
+NUMBER_LIMIT_IMPORTANT | 2     
+NUMBER_MIN_AGE         | 1800  
+QGROUP                 | 1/0   
+SPACE_LIMIT            | 0.2   
+SUBVOLUME              | /     
+SYNC_ACL               | no    
+TIMELINE_CLEANUP       | yes   
+TIMELINE_CREATE        | no    
+TIMELINE_LIMIT_DAILY   | 10    
+TIMELINE_LIMIT_HOURLY  | 10    
+TIMELINE_LIMIT_MONTHLY | 10    
+TIMELINE_LIMIT_WEEKLY  | 0     
+TIMELINE_LIMIT_YEARLY  | 10    
+TIMELINE_MIN_AGE       | 1800  
+</code></pre></div>
+<p>Notice the snapshot types discussed in the previous section, but don't take this for reference (you will want superior values for the <code>NUMBER_LIMITS</code> options).</p>
+<p>To change a value, do</p>
+<p><code>$  sudo snapper -c root set-config "{option name}={new value}"</code></p>
+<p>as in:</p>
+<p><code>$  sudo snapper -c root set-config "NUMBER_LIMIT=4"</code></p>
+<p>You can create configuration profiles for various purposes. To create a new profile, do</p>
+<p><code>$  sudo snapper -c &lt;subvolume&gt; create-config &lt;subvolume id&gt;</code></p>
+<p>as in:</p>
+<p><code>$  sudo snapper -c foo create-config /foo</code></p>
+<p>You can later remove any config with:</p>
+<p><code>$  sudo snapper -c &lt;subvolume&gt; delete-config &lt;subvolume id&gt;</code></p>
+<p>as in:</p>
+<p><code>$  sudo snapper -c foo delete-config /foot</code></p>
+<h3 id="rolling-back">Rolling back<a class="headerlink" href="#rolling-back" title="Permanent link">⚓︎</a></h3>
 <h4 id="identifying-snapshots">Identifying Snapshots<a class="headerlink" href="#identifying-snapshots" title="Permanent link">⚓︎</a></h4>
 <p>There are two ways to identify which snapshot you may want to rollback to: 
 * with the <code>snapper</code> command line utility
 * with the <em>YaST</em> utility at <em>YaST</em> &gt; <em>Filesystem Snapshots</em></p>
 <p>Snapper command line:</p>
-<p><code>$ sudo snapper list</code></p>
+<p><code>$  sudo snapper list</code></p>
 <p><strong>Snapper CLI Example</strong>
 <div class="highlight"><pre><span></span><code>    $ sudo snapper list
     [sudo] password for root: 
@@ -1233,7 +1270,7 @@
 <p>As snapshots are viewed, <code>snapper</code> will create more snapshots, because administrative tasks are being performed. </p>
 </div>
 <p>Moving forward with the assumption there was an issue with the last <code>zypper</code> update, #47 is chosen as the snapshot to recover.</p>
-<h3 id="initiating-rollback">Initiating Rollback<a class="headerlink" href="#initiating-rollback" title="Permanent link">⚓︎</a></h3>
+<h4 id="initiating-a-rollback">Initiating a rollback<a class="headerlink" href="#initiating-a-rollback" title="Permanent link">⚓︎</a></h4>
 <p>Upon identification of a recovery snapshot, reboot openSUSE. At the boot menu, scroll down to, and select, <strong>Start bootloader from a read-only snapshot</strong>.</p>
 <p><img alt="Boot Menu Selection" src="../image/snapper_boot_selection.png" /></p>
 <p>On the Read-only Snapshot menu, scroll down to, and select, the desired recovery snapshot. Snapshot #47 is used here as an example. openSUSE will appear to boot as normal.</p>
@@ -1242,15 +1279,65 @@
 <p>There isn't a scroll indicator on the Read-only Snapshot Menu, but it is possible to scroll down to select more options, if available.</p>
 </div>
 <p><img alt="Boot Snapshot Selection" src="../image/snapper_snapshot_selection.png" /></p>
-<h3 id="finalizing-rollback">Finalizing Rollback<a class="headerlink" href="#finalizing-rollback" title="Permanent link">⚓︎</a></h3>
-<p>Once your system has booted, the rollback is completed by running:</p>
-<p><code>$ sudo snapper rollback</code></p>
+<h4 id="confirming-a-rollback">Confirming a rollback<a class="headerlink" href="#confirming-a-rollback" title="Permanent link">⚓︎</a></h4>
+<p>Once your system has booted, make sure you're satisfied with the current state of your system. Run some tests. Make sure any outstanding bug is not or no longer present. Then if you're satisfied, perform the rollback:</p>
+<p><code>$  sudo snapper rollback</code></p>
 <p>Your system should then be rebooted and the recovered snapshot will be the new default boot option.</p>
-<details class="note"><summary>Snapper Resources</summary><ul>
+<p>In rare cases rolling back with fail as snapper is not able to find the default sub-volume (this may happen if snapper's configuration and the state of your system have diverged in a problematic way, typically if you've made a mistake by accident). To perform a rollack nonetheless you can use the following command: </p>
+<p><code>$  sudo snapper --ambit classic rollback &lt;id&gt;</code></p>
+<p>replacing <code>&lt;id&gt;</code> with the id of the snapshot you wish to roll back to.</p>
+<h3 id="disk-space-management">Disk Space Management<a class="headerlink" href="#disk-space-management" title="Permanent link">⚓︎</a></h3>
+<p>Snapshots don't occupy much space but certain configurations might still want to remove uneeded snapshots to preventing running out of disk space.</p>
+<p>Start with a simple list:</p>
+<p><code>$  sudo snapper list</code></p>
+<p>The list features a column mentioning an estimate of the space occupied by each snapshot. You can remove unneeded snapshots with </p>
+<p><code>$  sudo snapper delete &lt;snapshot id&gt;</code></p>
+<p>You will find the value of <code>&lt;snapshot id&gt;</code> in the first column ('#').</p>
+<h3 id="subvolumes-health-check">Subvolumes Health Check<a class="headerlink" href="#subvolumes-health-check" title="Permanent link">⚓︎</a></h3>
+<p>For illustration here is a healthy structure of subvolumes obtained with</p>
+<p><code>$  sudo btrfs subvolume list -p /</code></p>
+<div class="highlight"><pre><span></span><code>ID 256 gen 70064 parent 5 top level 5 path @
+ID 257 gen 198577 parent 256 top level 256 path @/var
+ID 258 gen 198574 parent 256 top level 256 path @/usr/local
+ID 259 gen 198574 parent 256 top level 256 path @/srv
+ID 260 gen 198574 parent 256 top level 256 path @/root
+ID 261 gen 198574 parent 256 top level 256 path @/opt
+ID 262 gen 198577 parent 256 top level 256 path @/home
+ID 263 gen 198574 parent 256 top level 256 path @/boot/grub2/x86_64-efi
+ID 264 gen 198574 parent 256 top level 256 path @/boot/grub2/i386-pc
+ID 265 gen 198573 parent 256 top level 256 path @/.snapshots
+ID 1034 gen 198573 parent 265 top level 265 path @/.snapshots/224/snapshot
+ID 1141 gen 195869 parent 265 top level 265 path @/.snapshots/325/snapshot
+ID 1142 gen 195876 parent 265 top level 265 path @/.snapshots/326/snapshot
+ID 1143 gen 196235 parent 265 top level 265 path @/.snapshots/327/snapshot
+ID 1144 gen 196320 parent 265 top level 265 path @/.snapshots/328/snapshot
+</code></pre></div>
+<p>Notice how all snapshots are immediately nested under <code>@/.snapshots/&lt;snapshot id&gt;</code>. If your structure does not match this, you should probably sanitize it. Generally unhealthy structures have the shape:</p>
+<p><code>@/.snapshots/&lt;snapshot id&gt;/&lt;garbage&gt;</code></p>
+<p>where <code>&lt;garbage&gt;</code> is anything else than just <code>snapshot</code>. If you happen to be in this situation consider removing all badly nested snapshots with:</p>
+<p><code>$  sudo btrfs subvolume delete -i &lt;snapshot id&gt; &lt;path&gt;</code></p>
+<p>as in for example:</p>
+<p><code>sudo btrfs subvolume delete -i 1031 /.snapshots/171/snapshot/.snapshots/420/snapshot/.snapshots/1/snapshot</code>.</p>
+<p>You might also want to make sure the <code>/.snapshots</code> entry point is correctly registered against <code>fstab</code>:</p>
+<p><code>$  cat /etc/fstab</code></p>
+<p><code>UUID=22e658f2-1586-4ac2-8aeb-a6862c8c9a25 /.snapshots btrfs subvol=/@/.snapshots 0 0</code></p>
+<p>If this is not the case edit the <code>fstab</code> file accordingly:</p>
+<p><code>$  sudo nano /etc/fstab</code></p>
+<p>pasting on a new line</p>
+<p><code>UUID={your UUID} /.snapshots btrfs subvol=/@/.snapshots 0 0</code></p>
+<p>where the value of your UUID can be determined simply by copying from neighbour lines in the file. Look in particular for lines meeting in the pattern:</p>
+<div class="highlight"><pre><span></span><code>UID=22e658f2-1586-4ac2-8aeb-a6862c8c9a25 /var btrfs subvol=/@/var 0 0
+UUID=22e658f2-1586-4ac2-8aeb-a6862c8c9a25 /usr/local btrfs subvol=/@/usr/local 0 0
+UUID=22e658f2-1586-4ac2-8aeb-a6862c8c9a25 /srv btrfs subvol=/@/srv 0 0
+UUID=22e658f2-1586-4ac2-8aeb-a6862c8c9a25 /root btrfs subvol=/@/root 0 0
+UUID=22e658f2-1586-4ac2-8aeb-a6862c8c9a25 /opt btrfs subvol=/@/opt 0 0
+UUID=22e658f2-1586-4ac2-8aeb-a6862c8c9a25 /home btrfs subvol=/@/home 0 0
+</code></pre></div>
+<h3 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">⚓︎</a></h3>
+<ul>
 <li><a href="http://snapper.io" title="Snapper.io">Snapper.io</a></li>
 <li><a href="https://en.opensuse.org/Portal:Snapper" title="openSUSE Wiki Portal:Snapper">openSUSE Wiki Portal:Snapper</a></li>
 </ul>
-</details>
                 
                   
                     
@@ -1259,7 +1346,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-04-12
+      Last update: 2021-04-15
     
   </small>
 </div>

@@ -257,18 +257,6 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        Installation setups
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../image_choice/" class="md-nav__link">
         Preparing the installation media
       </a>
@@ -707,6 +695,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#list-all-manually-installed-packages-as-a-single-history" class="md-nav__link">
+    List all manually installed packages as a single history
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#list-all-available-patterns" class="md-nav__link">
     List all available patterns
   </a>
@@ -888,8 +883,32 @@
   
   
     <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        YaST2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Updating, upgrading, snapshots best practices
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../snapper/" class="md-nav__link">
-        Snapper
+        Snapper and Btrfs
       </a>
     </li>
   
@@ -907,31 +926,7 @@
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        Getting & installing software
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        Updating and upgrading
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        Managing snapshots
+        Additional software
       </a>
     </li>
   
@@ -1228,7 +1223,7 @@
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        Reporting bug reports
+        The art of reporting bugs
       </a>
     </li>
   
@@ -1322,73 +1317,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
-      
-      <label class="md-nav__link" for="__nav_8">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         A contributor's checklist
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="A contributor's checklist" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          A contributor's checklist
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        openSUSE distributions
       </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        desktop Environments
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        getting the right installer
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        FAQ, Issues & solutions
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -1650,6 +1582,13 @@
           <li class="md-nav__item">
   <a href="#list-all-available-packages" class="md-nav__link">
     List all available packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-manually-installed-packages-as-a-single-history" class="md-nav__link">
+    List all manually installed packages as a single history
   </a>
   
 </li>
@@ -2321,6 +2260,11 @@ or
 <ul>
 <li><code>packages</code> or <code>pa</code></li>
 </ul>
+<h5 id="list-all-manually-installed-packages-as-a-single-history">List all manually installed packages as a single history<a class="headerlink" href="#list-all-manually-installed-packages-as-a-single-history" title="Permanent link">⚓︎</a></h5>
+<p>For the entire list:</p>
+<p><code>sudo cut -d "|" -f 1-4 -s --output-delimiter " | " /var/log/zypp/history | grep -v " radd "</code></p>
+<p>For a specific package:</p>
+<p><code>sudo cut -d "|" -f 1-4 -s --output-delimiter " | " /var/log/zypp/history | grep -v " radd " | grep "&lt;package name&gt;"</code></p>
 <h5 id="list-all-available-patterns">List all available patterns<a class="headerlink" href="#list-all-available-patterns" title="Permanent link">⚓︎</a></h5>
 <ul>
 <li><code>patterns</code> or <code>pt</code></li>
@@ -2638,7 +2582,7 @@ Expert options
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-04-12
+      Last update: 2021-04-17
     
   </small>
 </div>
@@ -2683,7 +2627,7 @@ Expert options
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Snapper
+                Snapper and Btrfs
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

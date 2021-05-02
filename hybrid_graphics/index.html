@@ -449,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../updating_upgrading/" class="md-nav__link">
         Updating, upgrading, snapshots best practices
       </a>
     </li>
@@ -654,6 +654,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#intel-and-nvidia" class="md-nav__link">
     Intel and NVIDIA
@@ -665,11 +670,6 @@
   <a href="#amd-apu-and-nvidia" class="md-nav__link">
     AMD APU and NVIDIA
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1018,6 +1018,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#intel-and-nvidia" class="md-nav__link">
     Intel and NVIDIA
@@ -1029,11 +1034,6 @@
   <a href="#amd-apu-and-nvidia" class="md-nav__link">
     AMD APU and NVIDIA
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1095,11 +1095,13 @@ In case you are using KDE, a widget called <em>SUSE Prime Selector</em> can be a
 </li>
 <li>See the next sections according to your integrated and dedicated GPU combination. Alternatively, to offload rendering to the dedicated GPU (NVIDIA Optimus), see <a href="./#offloading-specific-applications-to-the-nvidia-gpu">Offloading specific applications to the NVIDIA GPU</a>. This allows you to use both graphical units simultaneously.</li>
 </ol>
-<h4 id="intel-and-nvidia">Intel and NVIDIA<a class="headerlink" href="#intel-and-nvidia" title="Permanent link">⚓︎</a></h4>
-<p>Either one of these two options:
-* From a terminal session: to switch to the NVIDIA GPU run <code>sudo prime-select nvidia</code>; conversely, for the Intel GPU run <code>sudo prime-select intel</code>. After executing either command, log out and back on to apply the changes.
-* With the KDE widget <em>SUSE Prime Selector</em>, just click it and select <em>Switch to NVidia</em>. Then log out and back in and you should be set.</p>
-<h4 id="amd-apu-and-nvidia">AMD APU and NVIDIA<a class="headerlink" href="#amd-apu-and-nvidia" title="Permanent link">⚓︎</a></h4>
+<h3 id="intel-and-nvidia">Intel and NVIDIA<a class="headerlink" href="#intel-and-nvidia" title="Permanent link">⚓︎</a></h3>
+<p>Either one of these two options:</p>
+<ul>
+<li>From a terminal session: to switch to the NVIDIA GPU run <code>sudo prime-select nvidia</code>; conversely, for the Intel GPU run <code>sudo prime-select intel</code>. After executing either command, log out and back on to apply the changes.</li>
+<li>With the KDE widget <em>SUSE Prime Selector</em>, just click it and select <em>Switch to NVidia</em>. Then log out and back in and you should be set.</li>
+</ul>
+<h3 id="amd-apu-and-nvidia">AMD APU and NVIDIA<a class="headerlink" href="#amd-apu-and-nvidia" title="Permanent link">⚓︎</a></h3>
 <p>When using XOrg 1.20.6 or higher: to make the APU the primary GPU and have the ability to offload specific applications to the dedicated GPU, you can skip to the offloading section below.</p>
 <p>If you are using an older release of XOrg, such as the case for Leap 15.2, or you wish to exclusively use the NVIDIA card, pick between the following steps:</p>
 <ul>
@@ -1108,13 +1110,7 @@ In case you are using KDE, a widget called <em>SUSE Prime Selector</em> can be a
 </ul>
 <p>After executing either command, log out and back on to apply the changes.</p>
 <h3 id="offloading-specific-applications-to-the-nvidia-gpu">Offloading specific applications to the Nvidia GPU<a class="headerlink" href="#offloading-specific-applications-to-the-nvidia-gpu" title="Permanent link">⚓︎</a></h3>
-<dl>
-<dd>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-This section only applies to users with the propietary driver and NVIDIA GeForce 600 series or higher.</div>
-</dd>
-</dl>
+<p>Warning: This section only applies to users with the propietary driver and NVIDIA GeForce 600 series or higher utilizing the <strong>nvidia-glG05</strong> driver package.</p>
 <p>With the integrated Intel GPU or AMD APU set as your main GPU, you can also offload specific applications using an envoronment variable. For example, to run <strong>supertuxkart</strong> using the the NVIDIA driver, you can launch it from a terminal session as follows:</p>
 <pre><code>__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only supertuxkart
 </code></pre>
@@ -1139,7 +1135,7 @@ This section only applies to users with the propietary driver and NVIDIA GeForce
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-03-22
+      Last update: 2021-04-21
     
   </small>
 </div>
